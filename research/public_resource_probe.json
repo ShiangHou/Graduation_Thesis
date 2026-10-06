@@ -1,0 +1,64 @@
+[
+  {
+    "resource": "financebench",
+    "url": "https://raw.githubusercontent.com/patronus-ai/financebench/main/data/financebench_open_source.jsonl",
+    "checked_date": "2026-10-06",
+    "http_status": 200,
+    "bytes": 929848,
+    "sha256": "a5a2aa673e573e55675fc3c0f9aa38c1cf59d2abc91edb077534f71f10a71877",
+    "rows": 150,
+    "first_record_fields": [
+      "financebench_id",
+      "company",
+      "doc_name",
+      "question_type",
+      "question_reasoning",
+      "domain_question_num",
+      "question",
+      "answer",
+      "justification",
+      "dataset_subset_label",
+      "evidence"
+    ],
+    "all_have_evidence": true,
+    "status": "verified"
+  },
+  {
+    "resource": "fund_quarterly_report",
+    "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/new/2026-04-22/562590_20260422_R75K.pdf",
+    "checked_date": "2026-10-06",
+    "http_status": 200,
+    "bytes": 454407,
+    "sha256": "1ea559ccf86446f02926eb98f3d9ef11a9548872389c9679220ecf0d06a7cab7",
+    "pages": 12,
+    "extractable_characters": 8507,
+    "field_presence": {
+      "基金主代码": true,
+      "投资目标": true,
+      "业绩比较基准": true,
+      "投资组合": true,
+      "占基金资产净值比例": true,
+      "标的指数": true
+    },
+    "status": "verified"
+  },
+  {
+    "resource": "fund_prospectus",
+    "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/new/2026-01-23/562820_20260123_W2AC.pdf",
+    "checked_date": "2026-10-06",
+    "http_status": 200,
+    "bytes": 1853083,
+    "sha256": "a0a7f3807194358df3425c3b30f43479b56e16c6a3230de006dff7cda4cac351",
+    "status": "verified",
+    "pages": 128,
+    "extractable_characters": 117380,
+    "field_presence": {
+      "基金主代码": false,
+      "投资目标": true,
+      "业绩比较基准": true,
+      "投资组合": true,
+      "占基金资产净值比例": true,
+      "标的指数": true
+    }
+  }
+]
