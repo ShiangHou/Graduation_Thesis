@@ -1,9 +1,0 @@
-.DS_Store
-.local/
-__pycache__/
-*.pyc
-.env
-.env.*
-data/raw/
-data/private/
-outputs/
