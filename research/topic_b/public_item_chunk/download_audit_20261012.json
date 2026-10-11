@@ -1,0 +1,43 @@
+[
+  {
+    "file": "finrank.jsonl",
+    "url": "https://raw.githubusercontent.com/datanxt/FinRank/916dc27e77b90e294ea1b3a2cc5b0abcf07392d1/FinRank.jsonl",
+    "bytes": 34129228,
+    "sha256": "e9295f680bd6085362486c90c170bce243be7f85ed18074d6ba21cb75141ac78"
+  },
+  {
+    "file": "finrank_repair_log.json",
+    "url": "https://raw.githubusercontent.com/datanxt/FinRank/916dc27e77b90e294ea1b3a2cc5b0abcf07392d1/repair_log.json",
+    "bytes": 423373,
+    "sha256": "2c3ac3ec3e4f77f470c5d6b7152b1c6bfa9f02adf265ea50f98d81e456271396"
+  },
+  {
+    "file": "finrank_splits.json",
+    "url": "https://raw.githubusercontent.com/datanxt/FinRank/916dc27e77b90e294ea1b3a2cc5b0abcf07392d1/baselines/splits.json",
+    "bytes": 360863,
+    "sha256": "666f75ab8e7fd36dd9d287db98dd70bc3e18a595db4a42889dafdc0dc811f6f8"
+  },
+  {
+    "file": "finqa_dev.json",
+    "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/dataset/dev.json",
+    "bytes": 10954658,
+    "sha256": "a847fb7e0d61a3125a1e2909852df6b89f1ee64d2c5ff1bf689e332214deee51"
+  },
+  {
+    "file": "financerag_tree.json",
+    "url": "https://huggingface.co/api/datasets/Linq-AI-Research/FinanceRAG/tree/main?recursive=true",
+    "error": "HTTP Error 401: Unauthorized"
+  },
+  {
+    "file": "finder_metadata.json",
+    "url": "https://huggingface.co/api/datasets/Linq-AI-Research/FinDER",
+    "bytes": 1830,
+    "sha256": "86790f20e7c142ab880d40eaf09ae8bcf6871ad6a59ef1343243c3c855d79441"
+  },
+  {
+    "file": "finrank_license.txt",
+    "url": "https://raw.githubusercontent.com/datanxt/FinRank/916dc27e77b90e294ea1b3a2cc5b0abcf07392d1/LICENSE",
+    "bytes": 830,
+    "sha256": "f25d6c0a113a59e82aa92797f15538a6e174ab5efd18742263cbdbadad443402"
+  }
+]

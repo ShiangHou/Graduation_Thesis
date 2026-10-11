@@ -1,0 +1,286 @@
+{
+  "task": "Rank financial disclosure items by usefulness for the public question. Return top 20 with source-bound reasons; state limitations for weak or irrelevant items. Do not claim every returned item is sufficient evidence.",
+  "query": "Which reportable business segments does Johnson & Johnson operate in as of FY2024?",
+  "candidates": [
+    {
+      "id": "I_5281c8894b6bec457f80",
+      "item": {
+        "issuer": "MRK",
+        "filing_year_raw": "2025",
+        "form": "10-K",
+        "disclosure_title_extract": "Description of Merck’s Business"
+      },
+      "chunk": "### Description of Merck’s Business\n            Merck & Co., Inc. (Merck or the Company) is a global health care company that delivers innovative health solutions through its prescription medicines, including biologic therapies, vaccines and animal health products. The Company’s operations are principally managed on a product basis and include two operating segments, Pharmaceutical and Animal Health, both of which are reportable segments.\n\n            The Pharmaceutical segment includes human health pharmaceutical and vaccine products. Human health pharmaceutical products consist of therapeutic and preventive agents, generally sold by prescription, for the treatment of human disorders. The Company sells these human health pharmaceutical products primarily to drug wholesalers and retailers, hospitals, government agencies and managed health care providers such as health maintenance organizations, pharmacy benefit managers and other institutions. Human health vaccine products consist of preventive pediatric, adolescent and adult vaccines. The Company sells these human health vaccines primarily to physicians, wholesalers, distributors and government entities.\n\n            The Animal Health segment discovers, develops, manufactures and markets a wide range of veterinary pharmaceutical and vaccine products, as well as health management solutions and services, for the prevention, treatment and control of disease in all major livestock and companion animal species. The Company also offers an extensive suite of digitally connected identification, traceability and monitoring products. The Company sells its products to veterinarians, distributors, animal producers, farmers and pet owners.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "46"
+      }
+    },
+    {
+      "id": "I_eb6e64e5dcb52592c19a",
+      "item": {
+        "issuer": "JNJ",
+        "filing_year_raw": "2023",
+        "form": "10-K",
+        "disclosure_title_extract": "Johnson & Johnson and its subsidiaries (the Company) have approximately 131,900 employees worldwide "
+      },
+      "chunk": "Johnson & Johnson and its subsidiaries (the Company) have approximately 131,900 employees worldwide engaged in the research and development, manufacture and sale of a broad range of products in the healthcare field. The Company conducts business in virtually all countries of the world with the primary focus on products related to human health and well-being.\nThe Company is organized into two business segments: Innovative Medicine and MedTech. The Innovative Medicine segment is focused on the following therapeutic areas, including Immunology, Infectious diseases, Neuroscience, Oncology, Pulmonary Hypertension, and Cardiovascular and Metabolic diseases. Products in this segment are distributed directly to retailers, wholesalers, distributors, hospitals and healthcare professionals for prescription use. The MedTech segment includes a broad portfolio of products used in the Orthopaedic, Surgery, Interventional Solutions and Vision fields. These products are distributed to wholesalers, hospitals and retailers, and used principally in the professional fields by physicians, nurses, hospitals, eye care professionals and clinics.\nThe Executive Committee of Johnson & Johnson is the principal management group responsible for the strategic operations and allocation of the resources of the Company. This Committee oversees and coordinates the activities of the Innovative Medicine and MedTech business segments.\nIn all of its product lines, the Company competes with other companies both locally and globally, throughout the world. Competition exists in all product lines without regard to the number and size of the competing companies involved. Competition in research, involving the development and the improvement of new and existing products and processes, is particularly significant. The development of new and innovative products, as well as protecting the underlying intellectual property of the Company's product portfolio, is important to the Company’s success in all areas of its business. The competitive environment requires substantial investments in continuing research.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "22"
+      }
+    },
+    {
+      "id": "I_58c313f6de70f74daabe",
+      "item": {
+        "issuer": "JNJ",
+        "filing_year_raw": "2024",
+        "form": "10-K",
+        "disclosure_title_extract": "Item 1. Business"
+      },
+      "chunk": "Item 1. Business\nGeneral\nJohnson & Johnson and its subsidiaries (the Company) have approximately 138,100 employees worldwide engaged in the research and development, manufacture and sale of a broad range of products in the healthcare field. Johnson & Johnson is a holding company, with operating companies conducting business in virtually all countries of the world. The Company’s primary focus is products related to human health and well-being. Johnson & Johnson was incorporated in the State of New Jersey in 1887.\nThe Chief Operating Decision Maker (CODM) is the Company's Chief Executive Officer (Principal Executive Officer). The Executive Committee is Johnson & Johnson’s senior leadership team responsible for setting the strategy and priorities of the Company and driving accountability at all levels. Within the strategic parameters provided by the Executive Committee, senior management groups at U.S. and international operating companies are each responsible for their own strategic plans and the day-to-day operations of those companies.\nSegments of business\nThe Company is organized into two business segments: Innovative Medicine and MedTech. Additional information required by this item is incorporated herein by reference to the narrative and tabular descriptions of segments and operating results under: Item 7. Management’s discussion and analysis of results of operations and financial condition of this Report; and Note 17 Segments of business and geographic areas of the notes to consolidated financial statements included in Item 8 of this Report.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "1"
+      }
+    },
+    {
+      "id": "I_90cbfc9362ad61a1b06f",
+      "item": {
+        "issuer": "ABBV",
+        "filing_year_raw": "2025",
+        "form": "10-K",
+        "disclosure_title_extract": "Overview"
+      },
+      "chunk": "### Overview\n            AbbVie or 'the company' refer to AbbVie Inc., or AbbVie Inc. and its consolidated subsidiaries, as the context requires. AbbVie is a global, diversified research-based biopharmaceutical company positioned for success with a comprehensive product portfolio that has leadership positions across immunology, oncology, aesthetics, neuroscience and eye care. AbbVie uses its expertise, dedicated people and unique approach to innovation to develop and market advanced therapies that address some of the world’s most complex and serious diseases. AbbVie was incorporated in Delaware on April 10, 2012. On January 1, 2013, AbbVie became an independent, publicly-traded company as a result of the distribution by Abbott Laboratories (Abbott) of 100% of the outstanding common stock of AbbVie to Abbott's shareholders.\n\n            #### Segments\n            AbbVie operates as a single global business segment dedicated to the research and development, manufacturing, commercialization and sale of innovative medicines and therapies. This operating structure enables the Chief Executive Officer, as Chief Operating Decision Maker (CODM), to allocate resources and assess business performance on a global basis in order to achieve established long-term strategic goals. Consistent with this structure, a global research and development and supply chain organization is responsible for the discovery, development, manufacturing and supply of products. Commercial efforts that coordinate the marketing, sales and distribution of these products are organized by geographic region or therapeutic area. All of these activities are supported by a global corporate administrative staff. The determination of a single business segment is consistent with the consolidated financial information regularly reviewed by the CODM for purposes of assessing performance, allocating resources and planning and forecasting future periods. See Note 16, 'Segment and Geographic Area Information' to the Consolidated Financial Statements included under Item 8, 'Financial Statements and Supplementary Data' and the sales information related to AbbVie's key products and geographies included under Item 7, 'Management's Discussion and Analysis of Financial Condition and Results of Operations.'",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "1"
+      }
+    },
+    {
+      "id": "I_a7f8c54dac127d2239ad",
+      "item": {
+        "issuer": "JNJ",
+        "filing_year_raw": "2025",
+        "form": "10-K",
+        "disclosure_title_extract": "Economic and market factors"
+      },
+      "chunk": "#### Economic and market factors\n            The Company is aware that its products are used in an environment where, for more than a decade, policymakers, consumers and businesses have expressed concerns about the rising cost of healthcare. In response to these concerns, the Company has a long-standing policy of pricing products responsibly. For the period 2014 - 2024, in the U.S., the weighted average compound annual growth rate of the Company’s net price increases for healthcare products (prescription and over-the-counter drugs, hospital and professional products) was below the U.S. Consumer Price Index (CPI).\n\n            The Company operates in certain countries where the economic conditions continue to present significant challenges. The Company continues to monitor these situations and take appropriate actions. Inflation rates continue to have an effect on worldwide economies and, consequently, on the way companies operate. The Company has accounted for operations in Argentina, Venezuela, Turkey and Egypt (beginning in the fiscal fourth quarter of 2024) as highly inflationary, as the prior three-year cumulative inflation rate surpassed 100%. This did not have a material impact to the Company's results in the period. In the face of increasing costs, the Company strives to maintain its profit margins through cost reduction programs, productivity improvements and periodic price increases.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "41"
+      }
+    },
+    {
+      "id": "I_f3c96580464f67330aa6",
+      "item": {
+        "issuer": "JNJ",
+        "filing_year_raw": "2024",
+        "form": "10-K",
+        "disclosure_title_extract": "General"
+      },
+      "chunk": "General\nJohnson & Johnson and its subsidiaries (the Company) have approximately 138,100 employees worldwide engaged in the research and development, manufacture and sale of a broad range of products in the healthcare field. Johnson & Johnson is a holding company, with operating companies conducting business in virtually all countries of the world. The Company’s primary focus is products related to human health and well-being. Johnson & Johnson was incorporated in the State of New Jersey in 1887.\nThe Chief Operating Decision Maker (CODM) is the Company's Chief Executive Officer (Principal Executive Officer). The Executive Committee is Johnson & Johnson’s senior leadership team responsible for setting the strategy and priorities of the Company and driving accountability at all levels. Within the strategic parameters provided by the Executive Committee, senior management groups at U.S. and international operating companies are each responsible for their own strategic plans and the day-to-day operations of those companies.\nSegments of business\nThe Company is organized into two business segments: Innovative Medicine and MedTech. Additional information required by this item is incorporated herein by reference to the narrative and tabular descriptions of segments and operating results under: Item 7. Management’s discussion and analysis of results of operations and financial condition of this Report; and Note 17 Segments of business and geographic areas of the notes to consolidated financial statements included in Item 8 of this Report.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "1"
+      }
+    },
+    {
+      "id": "I_18453f8d40e511610519",
+      "item": {
+        "issuer": "GM",
+        "filing_year_raw": "2025",
+        "form": "10-K",
+        "disclosure_title_extract": "Note 17 – Segment Reporting and Information about Geographic Areas Our Chief Executive Officer, as t"
+      },
+      "chunk": "Note 17 – Segment Reporting and Information about Geographic Areas Our Chief Executive Officer, as the CODM, organizes our company, manages resource allocations and measures performance among twooperating and reportable segments: (i) automotive and (ii) energy generation and storage. The automotive segment includes the design, development, manufacturing, sales and leasing of electric vehicles as well as sales of automotive regulatory credits. Additionally, the automotive segment is also comprised of services and other, which includes sales of used vehicles, non-warranty maintenance services and collision, part sales, paid Supercharging, insurance services revenue and retail merchandise sales. The energy generation and storage segment includes the design, manufacture, installation, sales and leasing of solar energy generation and energy storage products and related services and sales of solar energy systems incentives. Our CODM does not evaluate operating segments using asset or liability information. The CODM uses gross profit to allocate operating and capital resources and assesses performance of each segment by comparing actual gross profit results to historical results and previously forecasted financial information. The following table presents revenues, cost of revenues and gross profit by reportable segment (in millions): | | | | Year Ended December 31, 2024 | | | 2023 | | | 2022 | |:--------------------------------------|:----|:--|------------------------:|:----|:--|-------:|:----|:--|-------:| | Automotive segment | | | | | | | | | | | Revenues | | $ | 87,604 | | $ | 90,738 | | $ | 77,553 | | Cost of revenues (1) | | $ | 72,794 | | $ | 74,219 | | $ | 56,988 | | Gross profit | | $ | 14,810 | | $ | 16,519 | | $ | 20,565 | | Energy generation and storage segment | | | | | | | | | | | Revenues | | $ | 10,086 | | $ | 6,035 | | $ | 3,909 | | Cost of revenues (2) | | $ | 7,446 | | $ | 4,894 | | $ | 3,621 | | Gross profit | | $ | 2,640 | | $ | 1,141 | | $ | 288 | (1) Depreciation and amortization included in Cost of revenues for the automotive segment for the years ended December 31, 2024, 2023 and 2022 was $ 3.68billion, $ 3.45billion and $ 2.81billion, respectively. (2) Depreciation and amortization included in Cost of revenues for the energy generation and storage segment for the years ended December 31, 2024, 2023 and 2022 was $ 377million, $ 343million and $ 331million, respectively. The following table presents revenues by geographic area based on the sales location of our products (in millions): | | | | Year Ended December 31, 2024 | | | 2023 | | | 2022 | |:--------------------|:----|:--|------------------------:|:----|:--|-------:|:----|:--|-------:| | United States | | $ | 47,725 | | $ | 45,235 | | $ | 40,553 | | China | | | 20,944 | | | 21,745 | | | 18,145 | | Other international | | | 29,021 | | | 29,793 | | | 22,764 | | Total | | $ | 97,690 | | $ | 96,773 | | $ | 81,462 | The following table presents long-lived assets by geographic area (in millions): | | | | December 31, 2024 | | | December 31, 2023 | |:--------------------|:----|:--|-------------:|:----|:--|-------------:| | United States | | $ | 32,461 | | $ | 26,629 | | Germany | | | 4,175 | | | 4,258 | | Other international | | | 4,124 | | | 4,067 | | Total | | $ | 40,760 | | $ | 34,954 |",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "90"
+      }
+    },
+    {
+      "id": "I_b27486c1d2489040cefd",
+      "item": {
+        "issuer": "JNJ",
+        "filing_year_raw": "2024",
+        "form": "10-K",
+        "disclosure_title_extract": "The MedTech segment sales in 2024 were $31.9 billion, an increase of 4.8% from 2023, which included "
+      },
+      "chunk": "The MedTech segment sales in 2024 were $31.9 billion, an increase of 4.8% from 2023, which included operational growth of 6.2% and a negative currency impact of 1.4%. U.S. sales were $16.3 billion, an increase of 6.9% as compared to the prior year. International sales were $15.5 billion, an increase of 2.6% as compared to the prior year, which included operational growth of 5.4% and a negative currency impact of 2.8%. In 2024, the net impact of acquisitions and divestitures on the MedTech segment worldwide operational sales growth was a positive 1.5% primarily related to the Shockwave acquisition.\n\n            Major MedTech franchise sales:\n\n            | (Dollars in Millions) |     |         | 2024 |     |        | 2023 |     |      |  Total \n            Change |     |      | Operations \n                Change |     |      | Currency \n            Change   |\n            | Surgery               |     |  $9,845 |      |     | 10,037 |      |     | -1.9 |      % |     |  0.1 |          % |     | -2.0 | %        |\n            | Advanced              |     |   4,488 |      |     |  4,671 |      |     | -3.9 |        |     | -2.0 |            |     | -1.9 |          |\n            | General               |     |   5,358 |      |     |  5,366 |      |     | -0.2 |        |     |  2.0 |            |     | -2.2 |          |\n            | Orthopaedics          |     |   9,158 |      |     |  8,942 |      |     |  2.4 |        |     |  3.0 |            |     | -0.6 |          |\n            | Hips                  |     |   1,638 |      |     |  1,560 |      |     |  5.0 |        |     |  5.6 |            |     | -0.6 |          |\n            | Knees                 |     |   1,545 |      |     |  1,456 |      |     |  6.1 |        |     |  6.5 |            |     | -0.4 |          |\n            | Trauma                |     |   3,049 |      |     |  2,979 |      |     |  2.3 |        |     |  2.9 |            |     | -0.6 |          |\n            | Spine, Sports & Other |     |   2,926 |      |     |  2,947 |      |     | -0.7 |        |     | -0.1 |            |     | -0.6 |          |\n            | Cardiovascular(1)     |     |   7,707 |      |     |  6,350 |      |     | 21.4 |        |     | 22.8 |            |     | -1.4 |          |\n            | Electrophysiology     |     |   5,267 |      |     |  4,688 |      |     | 12.3 |        |     | 14.0 |            |     | -1.7 |          |\n            | Abiomed               |     |   1,496 |      |     |  1,306 |      |     |      |   14.5 |     |      |       14.9 |     | -0.4 |          |\n            | Shockwave(2)          |     |     564 |      |     |      — |      |     |      |      * |     |      |          * |     |    — |          |\n            | Other Cardiovascular  |     |     380 |      |     |    356 |      |     |  6.9 |        |     |  8.4 |            |     | -1.5 |          |\n            | Vision                |     |   5,146 |      |     |  5,072 |      |     |  1.5 |        |     |  3.0 |            |     | -1.5 |          |\n            | Contact Lenses/Other  |     |   3,733 |      |     |  3,702 |      |     |  0.8 |        |     |  2.6 |            |     | -1.8 |          |\n            | Surgical              |     |   1,413 |      |     |  1,370 |      |     |  3.2 |        |     |  4.3 |            |     | -1.1 |          |\n            | Total MedTech Sales   |     | $31,857 |      |     | 30,400 |      |     |  4.8 |      % |     |  6.2 |          % |     | -1.4 | %        |",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "28"
+      }
+    },
+    {
+      "id": "I_79a33ce701884126ac97",
+      "item": {
+        "issuer": "PFE",
+        "filing_year_raw": "2025",
+        "form": "10-K",
+        "disclosure_title_extract": "COMMERCIAL OPERATIONS"
+      },
+      "chunk": "### COMMERCIAL OPERATIONS\n            We manage our commercial operations through a global structure consisting of three operating segments, each led by a single manager: Biopharma, PC1 and Pfizer Ignite. Biopharma, our innovative science-based biopharmaceutical business, is engaged in the discovery, development, manufacture, marketing, sale and distribution of biopharmaceutical products worldwide. PC1 is our contract development and manufacturing organization and a leading supplier of specialty active pharmaceutical ingredients. Pfizer Ignite is an offering that provides strategic guidance and end-to-end R&D services to select innovative biotech companies that align with our R&D focus areas. Biopharma is the only reportable segment. Our commercial divisions market, sell and distribute our products, and global operating functions are responsible for the research, development, manufacturing and supply of our products. The commercial structure within our Biopharma reportable segment in 2024 was comprised of the Pfizer Oncology Division, the Pfizer U.S. Commercial Division, and the Pfizer International Commercial Division:\n\n            • Pfizer Oncology Division combined the U.S. Oncology commercial organizations, global Oncology marketing organizations and global and U.S. Oncology medical affairs from both Pfizer and Seagen (which we acquired in December 2023).\n\n            • Pfizer U.S. Commercial Division included the U.S. Primary Care and U.S. Specialty Care customer groups, the Chief Marketing Office, the Global Chief Medical Affairs Office and Global Access & Value.\n\n            • Pfizer International Commercial Division included the ex-U.S. commercial and medical affairs organizations covering Pfizer’s entire product portfolio in all international markets.\n\n            As part of our continued focus on commercial execution, at the beginning of 2025, we made changes in our commercial structure, which included the transition of all activities within the Pfizer Oncology Division to other parts of Biopharma, among other changes. Specifically, within our Biopharma reportable segment, the U.S. Oncology commercial organization and the global Oncology marketing organization, which were part of the former Pfizer Oncology Division, are now part of the Pfizer U.S. Commercial Division.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "4"
+      }
+    },
+    {
+      "id": "I_0471735bd811ef3d909d",
+      "item": {
+        "issuer": "TSLA",
+        "filing_year_raw": "2025",
+        "form": "10-K",
+        "disclosure_title_extract": "Note 17 – Segment Reporting and Information about Geographic Areas Our Chief Executive Officer, as t"
+      },
+      "chunk": "Note 17 – Segment Reporting and Information about Geographic Areas Our Chief Executive Officer, as the CODM, organizes our company, manages resource allocations and measures performance among twooperating and reportable segments: (i) automotive and (ii) energy generation and storage. The automotive segment includes the design, development, manufacturing, sales and leasing of electric vehicles as well as sales of automotive regulatory credits. Additionally, the automotive segment is also comprised of services and other, which includes sales of used vehicles, non-warranty maintenance services and collision, part sales, paid Supercharging, insurance services revenue and retail merchandise sales. The energy generation and storage segment includes the design, manufacture, installation, sales and leasing of solar energy generation and energy storage products and related services and sales of solar energy systems incentives. Our CODM does not evaluate operating segments using asset or liability information. The CODM uses gross profit to allocate operating and capital resources and assesses performance of each segment by comparing actual gross profit results to historical results and previously forecasted financial information. The following table presents revenues, cost of revenues and gross profit by reportable segment (in millions): | | | | Year Ended December 31, 2024 | | | 2023 | | | 2022 | |:--------------------------------------|:----|:--|------------------------:|:----|:--|-------:|:----|:--|-------:| | Automotive segment | | | | | | | | | | | Revenues | | $ | 87,604 | | $ | 90,738 | | $ | 77,553 | | Cost of revenues (1) | | $ | 72,794 | | $ | 74,219 | | $ | 56,988 | | Gross profit | | $ | 14,810 | | $ | 16,519 | | $ | 20,565 | | Energy generation and storage segment | | | | | | | | | | | Revenues | | $ | 10,086 | | $ | 6,035 | | $ | 3,909 | | Cost of revenues (2) | | $ | 7,446 | | $ | 4,894 | | $ | 3,621 | | Gross profit | | $ | 2,640 | | $ | 1,141 | | $ | 288 | (1) Depreciation and amortization included in Cost of revenues for the automotive segment for the years ended December 31, 2024, 2023 and 2022 was $ 3.68billion, $ 3.45billion and $ 2.81billion, respectively. (2) Depreciation and amortization included in Cost of revenues for the energy generation and storage segment for the years ended December 31, 2024, 2023 and 2022 was $ 377million, $ 343million and $ 331million, respectively. The following table presents revenues by geographic area based on the sales location of our products (in millions): | | | | Year Ended December 31, 2024 | | | 2023 | | | 2022 | |:--------------------|:----|:--|------------------------:|:----|:--|-------:|:----|:--|-------:| | United States | | $ | 47,725 | | $ | 45,235 | | $ | 40,553 | | China | | | 20,944 | | | 21,745 | | | 18,145 | | Other international | | | 29,021 | | | 29,793 | | | 22,764 | | Total | | $ | 97,690 | | $ | 96,773 | | $ | 81,462 | The following table presents long-lived assets by geographic area (in millions): | | | | December 31, 2024 | | | December 31, 2023 | |:--------------------|:----|:--|-------------:|:----|:--|-------------:| | United States | | $ | 32,461 | | $ | 26,629 | | Germany | | | 4,175 | | | 4,258 | | Other international | | | 4,124 | | | 4,067 | | Total | | $ | 40,760 | | $ | 34,954 |",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "90"
+      }
+    },
+    {
+      "id": "I_ac25df3e43ee4b382a4f",
+      "item": {
+        "issuer": "TSLA",
+        "filing_year_raw": "2024",
+        "form": "10-K",
+        "disclosure_title_extract": "The aggregate carrying values of the VIEs’ assets and liabilities, after elimination of any intercom"
+      },
+      "chunk": "The aggregate carrying values of the VIEs’ assets and liabilities, after elimination of any intercompany transactions and balances, in the consolidated balance sheets were as follows (in millions): | | | | December 31, 2023 | | | December 31, 2022 | |:------------------------------------------------|:----|:--|-------------:|:----|:--|-------------:| | Assets | | | | | | | | Current assets | | | | | | | | Cash and cash equivalents | | $ | 66 | | $ | 68 | | Accounts receivable, net | | | 13 | | | 22 | | Prepaid expenses and other current assets | | | 361 | | | 274 | | Total current assets | | | 440 | | | 364 | | Solar energy systems, net | | | 3,278 | | | 4,060 | | Other non-current assets | | | 369 | | | 404 | | Total assets | | $ | 4,087 | | $ | 4,828 | | Liabilities | | | | | | | | Current liabilities | | | | | | | | Accrued liabilities and other | | $ | 67 | | $ | 69 | | Deferred revenue | | | 6 | | | 10 | | Current portion of debt and finance leases | | | 1,564 | | | 1,013 | | Total current liabilities | | | 1,637 | | | 1,092 | | Deferred revenue, net of current portion | | | 99 | | | 149 | | Debt and finance leases, net of current portion | | | 2,041 | | | 971 | | Other long-term liabilities | | | — | | | 3 | | Total liabilities | | $ | 3,777 | | $ | 2,215 | #### Note 17 – Related Party Transactions In relation to our CEO’s exercise of stock options and sale of common stock from the 2012 CEO Performance Award, Tesla withheld the appropriate amount of taxes. However, given the significant amounts involved, our CEO entered into an indemnification agreement with us in November 2021 for additional taxes owed, if any. Tesla periodically does business with certain entities with which its CEO and directors are affiliated, such as SpaceX and X Corp., in accordance with our Related Person Transactions Policy. Such transactions have not had to date, and are not currently expected to have, a material impact on our consolidated financial statements. <div align='center'>91</div> Note 18 – Segment Reporting and Information about Geographic Areas We have twooperating and reportable segments: (i) automotive and (ii) energy generation and storage. The automotive segment includes the design, development, manufacturing, sales and leasing of electric vehicles as well as sales of automotive regulatory credits. Additionally, the automotive segment is also comprised of services and other, which includes sales of used vehicles, non-warranty after-sales vehicle services, body shop and parts, paid Supercharging, vehicle insurance revenue and retail merchandise. The energy generation and storage segment includes the design, manufacture, installation, sales and leasing of solar energy generation and energy storage products and related services and sales of solar energy systems incentives. Our CODM does not evaluate operating segments using asset or liability information.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "91-92"
+      }
+    },
+    {
+      "id": "I_10b0b79ea5a83ded47ab",
+      "item": {
+        "issuer": "F",
+        "filing_year_raw": "2024",
+        "form": "10-K",
+        "disclosure_title_extract": "NOTE 26. SEGMENT INFORMATION We report segment information consistent with the way our chief operati"
+      },
+      "chunk": "#### NOTE 26. SEGMENT INFORMATION We report segment information consistent with the way our chief operating decision maker (“CODM”) evaluates the operating results and performance of the Company. On January 1, 2023, we implemented a new operating model and reporting structure. As a result of this change, we analyze the results of our business through the following segments: Ford Blue, Ford Model e, and Ford Pro (combined, replacing the previous Automotive segment), Ford Next (previously the Mobility segment), and Ford Credit. Company adjusted earnings before interest and taxes (“EBIT”) includes the financial results of these five reportable segments and Corporate Other, and net income comprises the financial results of the five reportable segments and Corporate Other, as well as Interest on Debt, Special Items, and Taxes. Additionally, past service pension and OPEB income and expense plus related assets, previously reported in the Automotive segment, have been realigned to Corporate Other. Prior period amounts were adjusted retrospectively to reflect each of the above changes. Below is a description of our reportable segments and other activities. Ford Blue Segment Ford Blue primarily includes the sale of Ford and Lincoln internal combustion engine (“ICE”) and hybrid vehicles, service parts, accessories, and digital services for retail customers, together with the associated costs of development, manufacture, and distribution of the vehicles, parts, accessories, and services. This segment focuses on developing Ford and Lincoln ICE and hybrid vehicles. Additionally, this segment provides hardware engineering and manufacturing capabilities to Ford Model e and manufactures vehicles on behalf of Ford Pro and, in certain cases, Ford Model e. Ford Blue also includes: • All sales for markets not presently in scope for Ford Model e or Ford Pro (as further described below) • In markets outside of the United States and Canada, sales to commercial, government, and rental customers of ICE and hybrid vehicles not considered core to Ford Pro • Sales of electric vehicles (“EVs”) by our unconsolidated affiliates in China • All sales of vehicles manufactured and sold to other OEMs",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "174"
+      }
+    },
+    {
+      "id": "I_527f74bbaeadaa43d4bb",
+      "item": {
+        "issuer": "JNJ",
+        "filing_year_raw": "2024",
+        "form": "10-K",
+        "disclosure_title_extract": "Description of the company and business segments"
+      },
+      "chunk": "Description of the company and business segments\nJohnson & Johnson and its subsidiaries (the Company) have approximately 138,100 employees worldwide engaged in the research and development, manufacture and sale of a broad range of products in the healthcare field. The Company conducts business in virtually all countries of the world with the primary focus on products related to human health and well-being.\nThe Company is organized into two business segments: Innovative Medicine and MedTech. The Innovative Medicine segment is focused on the following therapeutic areas: Immunology, Infectious Diseases, Neuroscience, Oncology, Pulmonary Hypertension, and Cardiovascular and Metabolism. Products in this segment are distributed directly to retailers, wholesalers, distributors, hospitals and healthcare professionals for prescription use. The MedTech segment includes a broad portfolio of products used in the Orthopaedic, Surgery, Cardiovascular (previously referred to as Interventional Solutions) and Vision fields. These products are distributed to wholesalers, hospitals and retailers, and used principally in the professional fields by physicians, nurses, hospitals, eye care professionals and clinics.\nThe Chief Operating Decision Maker (CODM) is the Company's Chief Executive Officer (Principal Executive Officer).The Executive Committee is Johnson & Johnson’s senior leadership team responsible for setting the strategy and priorities of the Company and driving accountability at all levels. Within the strategic parameters provided by the Executive Committee, senior management groups at U.S. and international operating companies are each responsible for their own strategic plans and the day-to-day operations of those companies.\nIn all of its product lines, the Company competes with other companies both locally and globally, throughout the world. Competition exists in all product lines without regard to the number and size of the competing companies involved. Competition in research, involving the development and the improvement of new and existing products and processes, is particularly significant. The development of new and innovative products, as well as protecting the underlying intellectual property of the Company's product portfolio, is important to the Company’s success in all areas of its business. The competitive environment requires substantial investments in continuing research.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "22"
+      }
+    },
+    {
+      "id": "I_5ecb935d4d8e982a8c48",
+      "item": {
+        "issuer": "MPC",
+        "filing_year_raw": "2024",
+        "form": "10-Q",
+        "disclosure_title_extract": "Select results are reflected in the following table. | (Millions of dollars) Segment adjusted EBITDA"
+      },
+      "chunk": "Select results are reflected in the following table. | (Millions of dollars) Segment adjusted EBITDA for reportable segments | | | Three Months Ended June 30, 2024 | | | 2023 | | | Six Months Ended June 30, 2024 | | | 2023 | |:------------------------------------------------------------------------------------------------|:----|:--|-------------------:|:----|:--|------:|:----|:--|-----------------:|:----|:--|-------:| | Refining & Marketing | | $ | 1,972 | | $ | 3,163 | | $ | 3,846 | | $ | 7,016 | | Midstream | | | 1,620 | | | 1,532 | | | 3,209 | | | 3,062 | | Total reportable segments | | $ | 3,592 | | $ | 4,695 | | $ | 7,055 | | $ | 10,078 | | Reconciliation of segment adjusted EBITDA for reportable segments to income before income taxes | | | | | | | | | | | | | | Total reportable segments | | $ | 3,592 | | $ | 4,695 | | $ | 7,055 | | $ | 10,078 | | Corporate | | | -200 | | | -164 | | | -404 | | | -329 | | Refining planned turnaround costs | | | -183 | | | -392 | | | -831 | | | -749 | | Gain on sale of assets(a) | | | 151 | | | — | | | 151 | | | — | | Depreciation and amortization | | | -838 | | | -834 | | | -1,665 | | | -1,634 | | Net interest and other financial costs | | | -194 | | | -142 | | | -373 | | | -296 | | Income before income taxes | | $ | 2,328 | | $ | 3,163 | | $ | 3,933 | | $ | 7,070 | | Net income attributable to MPC per diluted share | | $ | 4.33 | | $ | 5.32 | | $ | 6.88 | | $ | 11.44 |",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "125"
+      }
+    },
+    {
+      "id": "I_ceaabd354893e2197835",
+      "item": {
+        "issuer": "JNJ",
+        "filing_year_raw": "2025",
+        "form": "10-K",
+        "disclosure_title_extract": "General"
+      },
+      "chunk": "#### General\nJohnson & Johnson and its subsidiaries (the Company) have approximately 138,100 employees worldwide engaged in the research and development, manufacture and sale of a broad range of products in the healthcare field. Johnson & Johnson is a holding company, with operating companies conducting business in virtually all countries of the world. The Company’s primary focus is products related to human health and well-being. Johnson & Johnson was incorporated in the State of New Jersey in 1887.\n\nThe Chief Operating Decision Maker (CODM) is the Company's Chief Executive Officer (Principal Executive Officer). The Executive Committee is Johnson & Johnson’s senior leadership team responsible for setting the strategy and priorities of the Company and driving accountability at all levels. Within the strategic parameters provided by the Executive Committee, senior management groups at U.S. and international operating companies are each responsible for their own strategic plans and the day-to-day operations of those companies.\n\n### Segments of business\nThe Company is organized into two business segments: Innovative Medicine and MedTech. Additional information required by this item is incorporated herein by reference to the narrative and tabular descriptions of segments and operating results under: Item 7. Management’s discussion and analysis of results of operations and financial condition of this Report; and Note 17 Segments of business and geographic areas of the notes to consolidated financial statements included in Item 8 of this Report.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "1"
+      }
+    },
+    {
+      "id": "I_e4e5b4424d30ee86524a",
+      "item": {
+        "issuer": "JNJ",
+        "filing_year_raw": "2023",
+        "form": "10-K",
+        "disclosure_title_extract": "Johnson & Johnson and its subsidiaries (the Company) have approximately 131,900 employees worldwide "
+      },
+      "chunk": "Johnson & Johnson and its subsidiaries (the Company) have approximately 131,900 employees worldwide engaged in the research and development, manufacture and sale of a broad range of products in the healthcare field. The Company conducts business in virtually all countries of the world with the primary focus on products related to human health and well-being.\nThe Company is organized into two business segments: Innovative Medicine and MedTech. The Innovative Medicine segment is focused on the following therapeutic areas, including Immunology, Infectious diseases, Neuroscience, Oncology, Pulmonary Hypertension, and Cardiovascular and Metabolic diseases. Products in this segment are distributed directly to retailers, wholesalers, distributors, hospitals and healthcare professionals for prescription use. The MedTech segment includes a broad portfolio of products used in the Orthopaedic, Surgery, Interventional Solutions and Vision fields. These products are distributed to wholesalers, hospitals and retailers, and used principally in the professional fields by physicians, nurses, hospitals, eye care professionals and clinics.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "22"
+      }
+    },
+    {
+      "id": "I_9f29301e838e7e39ec19",
+      "item": {
+        "issuer": "PFE",
+        "filing_year_raw": "2024",
+        "form": "10-K",
+        "disclosure_title_extract": "We manage our commercial operations through three operating segments, each led by a single manager: "
+      },
+      "chunk": "We manage our commercial operations through three operating segments, each led by a single manager: Biopharma, PC1 and Pfizer Ignite. Biopharma is engaged in the discovery, development, manufacture, marketing, sale and distribution of biopharmaceutical products worldwide. PC1 is our contract development and manufacturing organization and a leading supplier of specialty active pharmaceutical ingredients. Pfizer Ignite is an offering that provides strategic guidance and end-to-end R&D services to select innovative biotech companies that align with Pfizer’s R&D focus areas. Prior to June 2024, PC1 and Pfizer Ignite were managed together by a single manager as part of the former Business Innovation operating segment. Biopharma is the only reportable segment. Pfizer’s CODM is the Chairman and Chief Executive Officer. Our CODM uses the revenues and earnings of the operating segments, among other factors, for performance evaluation and resource allocation. The CODM uses segment revenues and earnings in the annual budgeting process when setting strategic goals for the company and considers periodic budget-to-actual variances in segment revenues and earnings when assessing performance of the segments and making decisions about allocating resources to the operating segments. By analyzing segment financial results, the CODM can discern trends, which can inform decisions that align with the company’s goals and objectives, and help ensure risks are managed appropriately. We regularly review our operating segments and the approach used by management to evaluate performance and allocate resources.\nOur commercial divisions market, sell and distribute our products, and global operating functions are responsible for the research, development, manufacturing and supply of our products. Each operating segment is supported by our global corporate enabling functions. At the beginning of 2024, we made changes in our commercial organization to incorporate Seagen and improve focus, speed and execution. The commercial structure within our Biopharma reportable segment in 2024 was comprised of the Pfizer Oncology Division, the Pfizer U.S. Commercial Division, and the Pfizer International Commercial Division:\n•Pfizer Oncology Division combined the U.S. Oncology commercial organizations, global Oncology marketing organizations and global and U.S. Oncology medical affairs from both Pfizer and Seagen.\n•Pfizer U.S. Commercial Division included the U.S. Primary Care and U.S. Specialty Care customer groups, the Chief Marketing Office, the Global Chief Medical Affairs Office and Global Access & Value.\n•Pfizer International Commercial Division included the ex-U.S. commercial and medical affairs organizations covering Pfizer’s entire product portfolio in all international markets.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "99"
+      }
+    },
+    {
+      "id": "I_46c4530a619e6ca720d6",
+      "item": {
+        "issuer": "JNJ",
+        "filing_year_raw": "2025",
+        "form": "10-K",
+        "disclosure_title_extract": "Description of the company and business segments Johnson & Johnson and its subsidiaries (the Company"
+      },
+      "chunk": "### Description of the company and business segments Johnson & Johnson and its subsidiaries (the Company) have approximately 138,100 employees worldwide engaged in the research and development, manufacture and sale of a broad range of products in the healthcare field. The Company conducts business in virtually all countries of the world with the primary focus on products related to human health and well-being.\n\n            The Company is organized into two business segments: Innovative Medicine and MedTech. The Innovative Medicine segment is focused on the following therapeutic areas: Immunology, Infectious Diseases, Neuroscience, Oncology, Pulmonary Hypertension, and Cardiovascular and Metabolism. Products in this segment are distributed directly to retailers, wholesalers, distributors, hospitals and healthcare professionals for prescription use. The MedTech segment includes a broad portfolio of products used in the Orthopaedic, Surgery, Cardiovascular (previously referred to as Interventional Solutions) and Vision fields. These products are distributed to wholesalers, hospitals and retailers, and used principally in the professional fields by physicians, nurses, hospitals, eye care professionals and clinics.\n\n            The Chief Operating Decision Maker (CODM) is the Company's Chief Executive Officer (Principal Executive Officer).The Executive Committee is Johnson & Johnson’s senior leadership team responsible for setting the strategy and priorities of the Company and driving accountability at all levels. Within the strategic parameters provided by the Executive Committee, senior management groups at U.S. and international operating companies are each responsible for their own strategic plans and the day-to-day operations of those companies.\n\n            In all of its product lines, the Company competes with other companies both locally and globally, throughout the world. Competition exists in all product lines without regard to the number and size of the competing companies involved. Competition in research, involving the development and the improvement of new and existing products and processes, is particularly significant. The development of new and innovative products, as well as protecting the underlying intellectual property of the Company's product portfolio, is important to the Company’s success in all areas of its business. The competitive environment requires substantial investments in continuing research.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "22"
+      }
+    },
+    {
+      "id": "I_2b3371c3e16484903762",
+      "item": {
+        "issuer": "LLY",
+        "filing_year_raw": "2025",
+        "form": "10-K",
+        "disclosure_title_extract": "Note 19: Segment Information"
+      },
+      "chunk": "#### Note 19: Segment Information\n            We operate as a single reportable segment engaged in the discovery, development, manufacturing, marketing, and sales of pharmaceutical products worldwide. A global research and development organization and a supply chain organization are responsible for the discovery, development, manufacturing, and supply of our products. Our commercial organizations market, distribute, and sell the products. The business is also supported by global corporate staff functions. Our determination that we operate as a single segment is consistent with the nature of our operations and the financial information regularly reviewed by the chief executive officer, in his capacity as the chief operating decision maker (CODM), for the purposes of evaluating performance, allocating resources, setting incentive compensation targets, and planning and forecasting for future periods.\n\n            Our purpose is to unite caring with discovery to create medicines that make life better for people around the world. Our long-term success is significantly dependent on our ability to research and develop innovative medicines. The CODM uses consolidated net income to assess performance of our company, ensuring that we are investing in future research and development while efficiently delivering products to patients. The CODM allocates research and development resources based upon several factors, including the likelihood of technical success, unmet medical needs, and the viability of commercial success. A significant component of the CODM’s decision-making process is to ensure a balanced investment in our research and development portfolio to drive near-term success and sustain for the long-term.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "106"
+      }
+    },
+    {
+      "id": "I_578538bfea9fd1d915e0",
+      "item": {
+        "issuer": "JNJ",
+        "filing_year_raw": "2024",
+        "form": "10-K",
+        "disclosure_title_extract": "Johnson & Johnson and its subsidiaries (the Company) have approximately 138,100 employees worldwide "
+      },
+      "chunk": "Johnson & Johnson and its subsidiaries (the Company) have approximately 138,100 employees worldwide engaged in the research and development, manufacture and sale of a broad range of products in the healthcare field. The Company conducts business in virtually all countries of the world with the primary focus on products related to human health and well-being.\nThe Company is organized into two business segments: Innovative Medicine and MedTech. The Innovative Medicine segment is focused on the following therapeutic areas: Immunology, Infectious Diseases, Neuroscience, Oncology, Pulmonary Hypertension, and Cardiovascular and Metabolism. Products in this segment are distributed directly to retailers, wholesalers, distributors, hospitals and healthcare professionals for prescription use. The MedTech segment includes a broad portfolio of products used in the Orthopaedic, Surgery, Cardiovascular (previously referred to as Interventional Solutions) and Vision fields. These products are distributed to wholesalers, hospitals and retailers, and used principally in the professional fields by physicians, nurses, hospitals, eye care professionals and clinics.",
+      "provenance": {
+        "dataset": "FinRank",
+        "page_number_raw": "22"
+      }
+    }
+  ]
+}

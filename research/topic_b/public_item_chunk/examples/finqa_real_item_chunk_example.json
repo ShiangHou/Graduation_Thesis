@@ -1,0 +1,258 @@
+{
+  "query": "what is the average payment volume per transaction for american express?",
+  "candidates": [
+    {
+      "id": "T01",
+      "item": {
+        "entity": "visa inc. ( 1 )",
+        "record_type": "payment_network_metrics"
+      },
+      "chunk": {
+        "table_header": [
+          "company",
+          "payments volume ( billions )",
+          "total volume ( billions )",
+          "total transactions ( billions )",
+          "cards ( millions )"
+        ],
+        "table_row": [
+          "visa inc. ( 1 )",
+          "$ 2457",
+          "$ 3822",
+          "50.3",
+          "1592"
+        ],
+        "context_before": "the following chart compares our network with those of our major competitors for calendar year 2007 : company payments volume volume transactions cards ( billions ) ( billions ) ( billions ) ( millions ) visa inc. ( 1 ) .",
+        "scope_notes": [
+          "source : the nilson report , issue 902 ( may 2008 ) and issue 903 ( may 2008 ) .",
+          "note : visa inc .",
+          "figures exclude visa europe .",
+          "figures for competitors include their respective european operations .",
+          "visa figures include visa , visa electron , and interlink brands .",
+          "visa cards include plus proprietary cards , but proprietary plus cash volume is not included .",
+          "domestic china figures are excluded .",
+          "mastercard figures include pin-based debit card figures on mastercard cards , but not maestro or cirrus figures .",
+          "china commercial funds transfers are excluded .",
+          "american express and discover include business from third-party issuers .",
+          "jcb figures are for april 2006 through march 2007 , but cards and outlets are as of september 2007 .",
+          "jcb total transaction figures are estimates ."
+        ]
+      },
+      "source": {
+        "filename": "V/2008/page_17.pdf",
+        "table_row_index": 1
+      }
+    },
+    {
+      "id": "T02",
+      "item": {
+        "entity": "mastercard",
+        "record_type": "payment_network_metrics"
+      },
+      "chunk": {
+        "table_header": [
+          "company",
+          "payments volume ( billions )",
+          "total volume ( billions )",
+          "total transactions ( billions )",
+          "cards ( millions )"
+        ],
+        "table_row": [
+          "mastercard",
+          "1697",
+          "2276",
+          "27.0",
+          "916"
+        ],
+        "context_before": "the following chart compares our network with those of our major competitors for calendar year 2007 : company payments volume volume transactions cards ( billions ) ( billions ) ( billions ) ( millions ) visa inc. ( 1 ) .",
+        "scope_notes": [
+          "source : the nilson report , issue 902 ( may 2008 ) and issue 903 ( may 2008 ) .",
+          "note : visa inc .",
+          "figures exclude visa europe .",
+          "figures for competitors include their respective european operations .",
+          "visa figures include visa , visa electron , and interlink brands .",
+          "visa cards include plus proprietary cards , but proprietary plus cash volume is not included .",
+          "domestic china figures are excluded .",
+          "mastercard figures include pin-based debit card figures on mastercard cards , but not maestro or cirrus figures .",
+          "china commercial funds transfers are excluded .",
+          "american express and discover include business from third-party issuers .",
+          "jcb figures are for april 2006 through march 2007 , but cards and outlets are as of september 2007 .",
+          "jcb total transaction figures are estimates ."
+        ]
+      },
+      "source": {
+        "filename": "V/2008/page_17.pdf",
+        "table_row_index": 2
+      }
+    },
+    {
+      "id": "T03",
+      "item": {
+        "entity": "american express",
+        "record_type": "payment_network_metrics"
+      },
+      "chunk": {
+        "table_header": [
+          "company",
+          "payments volume ( billions )",
+          "total volume ( billions )",
+          "total transactions ( billions )",
+          "cards ( millions )"
+        ],
+        "table_row": [
+          "american express",
+          "637",
+          "647",
+          "5.0",
+          "86"
+        ],
+        "context_before": "the following chart compares our network with those of our major competitors for calendar year 2007 : company payments volume volume transactions cards ( billions ) ( billions ) ( billions ) ( millions ) visa inc. ( 1 ) .",
+        "scope_notes": [
+          "source : the nilson report , issue 902 ( may 2008 ) and issue 903 ( may 2008 ) .",
+          "note : visa inc .",
+          "figures exclude visa europe .",
+          "figures for competitors include their respective european operations .",
+          "visa figures include visa , visa electron , and interlink brands .",
+          "visa cards include plus proprietary cards , but proprietary plus cash volume is not included .",
+          "domestic china figures are excluded .",
+          "mastercard figures include pin-based debit card figures on mastercard cards , but not maestro or cirrus figures .",
+          "china commercial funds transfers are excluded .",
+          "american express and discover include business from third-party issuers .",
+          "jcb figures are for april 2006 through march 2007 , but cards and outlets are as of september 2007 .",
+          "jcb total transaction figures are estimates ."
+        ]
+      },
+      "source": {
+        "filename": "V/2008/page_17.pdf",
+        "table_row_index": 3
+      }
+    },
+    {
+      "id": "T04",
+      "item": {
+        "entity": "discover",
+        "record_type": "payment_network_metrics"
+      },
+      "chunk": {
+        "table_header": [
+          "company",
+          "payments volume ( billions )",
+          "total volume ( billions )",
+          "total transactions ( billions )",
+          "cards ( millions )"
+        ],
+        "table_row": [
+          "discover",
+          "102",
+          "119",
+          "1.6",
+          "57"
+        ],
+        "context_before": "the following chart compares our network with those of our major competitors for calendar year 2007 : company payments volume volume transactions cards ( billions ) ( billions ) ( billions ) ( millions ) visa inc. ( 1 ) .",
+        "scope_notes": [
+          "source : the nilson report , issue 902 ( may 2008 ) and issue 903 ( may 2008 ) .",
+          "note : visa inc .",
+          "figures exclude visa europe .",
+          "figures for competitors include their respective european operations .",
+          "visa figures include visa , visa electron , and interlink brands .",
+          "visa cards include plus proprietary cards , but proprietary plus cash volume is not included .",
+          "domestic china figures are excluded .",
+          "mastercard figures include pin-based debit card figures on mastercard cards , but not maestro or cirrus figures .",
+          "china commercial funds transfers are excluded .",
+          "american express and discover include business from third-party issuers .",
+          "jcb figures are for april 2006 through march 2007 , but cards and outlets are as of september 2007 .",
+          "jcb total transaction figures are estimates ."
+        ]
+      },
+      "source": {
+        "filename": "V/2008/page_17.pdf",
+        "table_row_index": 4
+      }
+    },
+    {
+      "id": "T05",
+      "item": {
+        "entity": "jcb",
+        "record_type": "payment_network_metrics"
+      },
+      "chunk": {
+        "table_header": [
+          "company",
+          "payments volume ( billions )",
+          "total volume ( billions )",
+          "total transactions ( billions )",
+          "cards ( millions )"
+        ],
+        "table_row": [
+          "jcb",
+          "55",
+          "61",
+          "0.6",
+          "58"
+        ],
+        "context_before": "the following chart compares our network with those of our major competitors for calendar year 2007 : company payments volume volume transactions cards ( billions ) ( billions ) ( billions ) ( millions ) visa inc. ( 1 ) .",
+        "scope_notes": [
+          "source : the nilson report , issue 902 ( may 2008 ) and issue 903 ( may 2008 ) .",
+          "note : visa inc .",
+          "figures exclude visa europe .",
+          "figures for competitors include their respective european operations .",
+          "visa figures include visa , visa electron , and interlink brands .",
+          "visa cards include plus proprietary cards , but proprietary plus cash volume is not included .",
+          "domestic china figures are excluded .",
+          "mastercard figures include pin-based debit card figures on mastercard cards , but not maestro or cirrus figures .",
+          "china commercial funds transfers are excluded .",
+          "american express and discover include business from third-party issuers .",
+          "jcb figures are for april 2006 through march 2007 , but cards and outlets are as of september 2007 .",
+          "jcb total transaction figures are estimates ."
+        ]
+      },
+      "source": {
+        "filename": "V/2008/page_17.pdf",
+        "table_row_index": 5
+      }
+    },
+    {
+      "id": "T06",
+      "item": {
+        "entity": "diners club",
+        "record_type": "payment_network_metrics"
+      },
+      "chunk": {
+        "table_header": [
+          "company",
+          "payments volume ( billions )",
+          "total volume ( billions )",
+          "total transactions ( billions )",
+          "cards ( millions )"
+        ],
+        "table_row": [
+          "diners club",
+          "29",
+          "30",
+          "0.2",
+          "7"
+        ],
+        "context_before": "the following chart compares our network with those of our major competitors for calendar year 2007 : company payments volume volume transactions cards ( billions ) ( billions ) ( billions ) ( millions ) visa inc. ( 1 ) .",
+        "scope_notes": [
+          "source : the nilson report , issue 902 ( may 2008 ) and issue 903 ( may 2008 ) .",
+          "note : visa inc .",
+          "figures exclude visa europe .",
+          "figures for competitors include their respective european operations .",
+          "visa figures include visa , visa electron , and interlink brands .",
+          "visa cards include plus proprietary cards , but proprietary plus cash volume is not included .",
+          "domestic china figures are excluded .",
+          "mastercard figures include pin-based debit card figures on mastercard cards , but not maestro or cirrus figures .",
+          "china commercial funds transfers are excluded .",
+          "american express and discover include business from third-party issuers .",
+          "jcb figures are for april 2006 through march 2007 , but cards and outlets are as of september 2007 .",
+          "jcb total transaction figures are estimates ."
+        ]
+      },
+      "source": {
+        "filename": "V/2008/page_17.pdf",
+        "table_row_index": 6
+      }
+    }
+  ],
+  "notice": "Six-row real example only; not a 250-item pool and not model output."
+}

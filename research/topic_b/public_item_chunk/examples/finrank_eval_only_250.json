@@ -1,0 +1,1010 @@
+{
+  "source_query_id": "97546a79-b989-48df-96c5-82c119a9c38c",
+  "pool_type": "positive-preserving curated expansion, not natural retrieval",
+  "model_was_run": false,
+  "ready_for_complete_gold_evaluation": false,
+  "labels": {
+    "I_cece23edf072885e866f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_0d4a9c7e0b6b59ffb9f4": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_95b65f4f83cfd2d856e0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_924eb70109130531d11e": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3256506033b146cd7384": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_365db78ad63d9304f6c7": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_0cadd0a101346026d788": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_4abd42bc3712d166fb62": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_37de3775c901f241c779": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_d4ad958e3147c7a733ba": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_cee93425d00f9fbf1680": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_33267a1682fe431507ed": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_007a023271c50107576d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3a3107fcf030795981f9": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_a3807d2a60305eaaf3b0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_c590ab06d60ff56284e5": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_9d5388082a96e8e1bc7f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_f3c96580464f67330aa6": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_a7f8c54dac127d2239ad": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_e0620a533120a9fe9b5f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_12574467e6bf7b6dcdb5": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b5aaf5d7cdfdeba90d69": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_2f0456e1d785fc1b3f1a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_71bddee8fed9c1849098": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_1ca3d9355507ce6cd058": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_0b8b57491da954be7630": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_6c413c4d5d00f1e985cc": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_1ccb4718a5854c57e3e5": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_9dc1756252870bb7732c": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_4f78ae4059226f73d648": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ba4695cc6554a36cf299": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ec4999572381b6f3fbad": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_711591c721d0afec852e": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_02e5cdf64432ac0e9097": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_723e41b8605b303fdc7d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_a92ba8da65a69839343c": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_de8ab0dea1d4d0329aa9": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_9f8b34cbcd8fb06445ed": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_f776ddbe6eaddaef5cce": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b1f5740b226cc314e91f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_9985c446e208aaf1502b": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ee7c77f7957694be0566": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_e919aa666c1f090e9900": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_6fc53d362ee9e9f0f142": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_8ed89388ff9ff1335297": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5ff62e111c7ca5a1a0e0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_578538bfea9fd1d915e0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_d31fe5ae56a3139640a4": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_2a4ed8b7dc5fe8282005": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_c877de19cb697725fb93": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_47c985440a2c8f176de2": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_be24977df5c6a75c6453": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_54eb03fe8e1b0f0b5bb6": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_631b400e7d5cb29b08ea": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_72da51dab12e33414d23": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_32141150f81d94240517": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_1cc21da495cfa886875b": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_dec9b269e8891662d83f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_35dcacd6e213b7c15ab1": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_4326f8b2d6a5daf6a12b": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_97bbc06e186a26275aff": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_24ed896dcfe965a141f3": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_94f97965aa0dcda5c8a0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_45212716aedf7ee5b952": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b3761ab1c7993392beb1": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_22c4ee3ad73c9aae6ee2": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_d0284711e5cfbea8cda9": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_54322b7f17af44eb4155": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_7c22ad51281fca35d8ea": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_f9da4e33046654ad2af4": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_f1b73c41a7691deb4623": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_98989c8b3f37458bd4bf": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_00359f0ddc303feb1f98": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_8e6e78b3e4a607d46db4": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_fe12ad302e9194d4ac54": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_bb2aac0311e473ec189f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_529b459cee62731d6ec2": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_c3c66c2a1b0768a9621d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_549ed6a65d2f6680a539": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_4b8462733e6af4f3abfc": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ca0e2dfe1f0dfb6c78bb": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_35fac436fd9d8b815742": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_bddacfdb647dd79c6a43": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b141550d0933d5f9ef21": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_77d805b32c6363da8ff9": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_62bc9a7465fa704928f2": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_de401722e0c0a9d36008": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_c514f8aaf1c334f3723d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_944c9c09026e1cdb3f7e": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_8d15ebdcacf75f9b316f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b6f9436cdedc00a8d8e7": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b700d92f0fff47750c00": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5bdd5ec1173a0a8cee66": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_055698bc09bcb2477e04": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3b948ba85ae73f9b5472": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_1439e2f097fc3b1c8643": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_f27316e05f55f017b624": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5bca27784b625eb1e8f0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_90fdbd2166fa1303682a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_358701bd057c983fa5e9": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_719ba7cd86a15c8c179b": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3b6dfa2cd4e200272c08": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_2d4ecfb44f9e220490dc": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_a68cd4724ddeda52ac18": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_7e389b1a3451bdea5f9d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_46f43958f00cc1883934": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3491dab5b21b1efd9992": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3306b6243d38228c980f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_315c2b59850fc15e0acf": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_8fd75dea1538e0f61255": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_80a45a39d093d2b02c04": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_a1a00abf28184dc5af49": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5f8f3500643ae7629c25": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_787b505563373de8fb35": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5813f2e63af2569abaf9": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_919fd5459c69d4a171d9": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_a3ee3da156d36e5d80da": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_cebc02bd797a21b7ed84": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_7d9592416d7796ca78e0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_46398ba1d787039af1e8": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_579f2bc3017888070ff4": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ef78142d24978d13299d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_0e97b73f6bef777cd3a6": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_6e2d825b7de4185a2ca9": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_807911ab4810be772db8": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b3da087af590fb173ba3": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_72d8ddd8f3a71ca87e52": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_4d27e678318b2c3b3508": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_141618dfcd9a60a565c0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_2762703a0759bd513453": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_90cbfc9362ad61a1b06f": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_b4189eeaddae668f421d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_10b0b79ea5a83ded47ab": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_c8d3262bef4c66c6d6a8": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_181cd3007ed2d852c4d4": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_79a33ce701884126ac97": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_9acf2b98cb8b6fcc6696": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_c3be121d3f4a69fcf3a8": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_a25dc16db76baa01d692": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5a8e46c9fa11e93da271": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_8aad7185ca66025da0d4": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b27486c1d2489040cefd": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_9c859aa7e5fc89422675": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_4907beb7e16757f76ce5": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_da7954af54fa805d5c62": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_dc6bc29872a745f60fcc": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_c29ee476bbebbe051238": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3021e23b1ba31c1e6802": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_673f1ace499553205bdc": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_a3543d3fabed1e3b61fc": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_58c313f6de70f74daabe": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_27e54c4ed19b4233d7dd": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_1db26784f17baf69d954": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_7f572274f132aa08a037": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3cc7a6a30de028c647f5": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_36b5d9ac8c678a24f2cd": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ff0842544cf3f77fc223": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_6793f4dd386df449f6e0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_7905737aeaf7dbc4d02a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_f74b7ad63a1821dff5a1": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_643c81ffc0fa7a150ce8": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_f98ce5b0d81bf1cbcbff": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_7d3dcff60c6081c61cc9": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_d33e2a868f8632e9cf93": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_057c258c0d8da1b5b345": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_2abe3881ba334e699d7e": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_fe9e14f7e09432f0d3b2": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_66f8e6a9142c9726a408": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_7c11d28ad58a44638822": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_4886bf19cbffd8e92d25": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5b55f625f32d820a46ac": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_0471735bd811ef3d909d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_95f02be14870f197ed51": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_001d4fc22d1460ecb859": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_70a1e270b336223b3b4a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_c291b52e8e22c2155266": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b67d0fef5c857fdf5b86": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_1d0f7dbede9e96ceafac": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_9e9fd1102eab036622f5": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ac25df3e43ee4b382a4f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_4d4bf258cb6d7e8684ce": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_95c978f98282c0b07ceb": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_d1b8ddb3d9966bdcc7b8": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_cb542f7655219aa3232b": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_e949a447b880a11c0735": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_aa4059c74d44da531c6b": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_c04b4fd0667b4d7152f5": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_687f60db3f9839c56539": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3c908f3e93e2af6bdf9d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_7da8c0b736c2904addaa": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_8304a174b00daa24fcb0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_c300ed86f4e0914a82cd": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_e5366acadfa64a30974a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_df08ccae72217510134f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_46c4530a619e6ca720d6": {
+      "relevance": 1,
+      "status": "source_positive"
+    },
+    "I_ceaabd354893e2197835": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ee4b86b4ad34dc0528b2": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_aa5d09e540f0f5c7485d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_9f29301e838e7e39ec19": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_34a60f7c6f3015e2475c": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_561861420112f49b37c7": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_783398b6b011025651b8": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_faafe714f2c1e8f375c4": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_fd257d26fc6c700e63be": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_89b77620f5fc0f6dc300": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_66cac407c02f92358665": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_df301db4250078f6c0da": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_9b3c4cfc06f6689350c3": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_18453f8d40e511610519": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_f039f6b5088ff1cf608d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_84de7dd666554078f6e6": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3b75c96d80c7c33e5bfe": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_86cd5ec73a1cbac5626e": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_52a6a35736f77a834547": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b35223c35ccded53a210": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_9df8555f42b98e32a598": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_7da35b175d03e87cd9f8": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_76e4a6ca8871fd8ee7ef": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3858442b5c90c6ffa4fe": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3a69ef076c74cf954a78": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_e4e9c18269715e8fef04": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_7a7772249e2af54aecd2": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_680b9894a79187caf816": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_26ae3f57bad47c7c74a0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_551e845ffc24f18d2d47": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3c5139524cf8bc0158da": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_cc03c88f7a75a189a56b": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5ecb935d4d8e982a8c48": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ee56cf338503cb0435fd": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_d35c75d0c3a957478e39": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_dfb8420372eedfd4058f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_dffa511fbb3dc563f549": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5d955817e1a6089c476f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_8488bde22dfe7cf76375": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_e03e74dbd3d3d27f83a3": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5593b9b3e5175d3e540c": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b28432f0cfdaef0c25bf": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_d87d8df3fa817c386a57": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_e4e5b4424d30ee86524a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_cc653370fac809341357": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_af7adb1d221329b6961e": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_7fe0a24c7dc158b7d18d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_117e9655968c09c4413f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_87940fa8412af057aaa4": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_eb6e64e5dcb52592c19a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_2b3371c3e16484903762": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_527f74bbaeadaa43d4bb": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_344e6f4344354686981c": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5281c8894b6bec457f80": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_bb12b6dca3e485cbb5a5": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    }
+  },
+  "source_answer_evaluation_only": "As of FY2024, Johnson & Johnson operates in two main segments: Innovative Medicine and MedTech. Innovative Medicine focuses on the development and manufacturing of medicines for prescription use. These products are distributed to intermediaries such as retailers, wholesalers, distributors, hospitals and healthcare professionals, to prescribe them directly to their patients. It covers therapeutic areas: Immunology, Infectious Diseases, Neuroscience, Oncology, Pulmonary Hypertension, Cardiovascular and Metabolism. The MedTech segment designs and markets medical devices and technologies for Orthopaedics, Surgery, Cardiovascular, and Vision care. Its products are primarily used by medical professionals in hospitals, clinics, and specialized care settings. Johnson & Johnson therefore participates through its portfolio in important aspects of the care and treatment of patients with various diseases.",
+  "notice": "Other records’ passages are NOT automatically negatives. Expanded labels need audit; metadata year is filing year, not automatically fiscal period."
+}

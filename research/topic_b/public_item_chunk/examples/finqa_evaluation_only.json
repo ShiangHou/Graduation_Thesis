@@ -1,0 +1,9 @@
+{
+  "source_id": "V/2008/page_17.pdf-1",
+  "gold_evidence_keys": [
+    "table_3"
+  ],
+  "answer": "127.40",
+  "program": "divide(637, const_5)",
+  "notice": "Gold source evidence labels, not exhaustive new multi-report pool labels. Filename 2008 is not table period: context says calendar 2007; JCB has additional period caveats."
+}

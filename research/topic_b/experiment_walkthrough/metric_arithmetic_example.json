@@ -1,0 +1,38 @@
+{
+  "status": "synthetic arithmetic example, not model output",
+  "ranking": [
+    "U1",
+    "A",
+    "U2",
+    "U3",
+    "B",
+    "U4",
+    "U5",
+    "U6",
+    "U7",
+    "U8",
+    "U9",
+    "U10",
+    "U11",
+    "U12",
+    "U13",
+    "U14",
+    "U15",
+    "U16",
+    "U17",
+    "U18"
+  ],
+  "qrels": {
+    "A": 1,
+    "B": 1
+  },
+  "metrics": {
+    "ndcg_at_20": 0.6240505200038379,
+    "recall_at_20": 1.0,
+    "precision_at_20": 0.1,
+    "rr_at_20": 0.5,
+    "pool_recall": 1.0,
+    "conditional_pool_recall_at_20": 1.0,
+    "conditional_pool_ndcg_at_20": 0.6240505200038379
+  }
+}

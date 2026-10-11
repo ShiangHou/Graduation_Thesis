@@ -1,0 +1,37 @@
+{
+  "status": "real record with evidence IDs aligned; gold kept for inspection only",
+  "record": {
+    "example_id": "ie-val-0",
+    "subset": "ie",
+    "split": "testmini",
+    "statement": "As of December 31, 2023, the Company measured total assets at fair value of $32,253 thousand and had a long-term debt carrying value of solar sale leasebacks amounting to $278.4 million, categorized within the Level 2 fair value hierarchy.",
+    "explanation": "1. From paragraph 93, the total fair value of assets as of December 31, 2023, is explicitly stated as $42,146 thousand.\n2. Paragraph 89 provides the carrying value of solar sale leasebacks, specified as $296.3 million as of December 31, 2023.\n3. According to paragraph 90, the Company's debt, which would include the sale leasebacks, is disclosed under Level 2 of the fair value hierarchy.\n4. The statement incorrectly states the total fair value of assets as $32,253 thousand and the carrying value of solar sale leasebacks as $278.4 million. This is inconsistent because the correct total fair value is $42,146 thousand, and the carrying value of solar sale leasebacks is $296.3 million as of December 31, 2023.",
+    "entailment_label": false,
+    "relevant_context": [
+      89,
+      90,
+      93
+    ],
+    "report": "NJR-2024-02-06_10-Q.json"
+  },
+  "report_url": "https://www.sec.gov/Archives/edgar/data/356309/000035630924000027/njr-20231231.htm",
+  "report_sha256": "363695a6defd8dffd9ce7985aadba44fa851b04694b2e15daf92638f1cd62da9",
+  "report_candidate_count": 304,
+  "evidence_blocks": [
+    {
+      "id": 89,
+      "context": "(1)Excludes NJNG's debt issuance costs of $ 10.2 M and $ 9.8 M as of December 31, 2023 and September 30, 2023, respectively.\n(2)Excludes NJR's debt issuance costs of $ 3.5 M and $ 3.7 M as of December 31, 2023 and September 30, 2023, respectively. The Company enters into sale leaseback transactions for certain commercial solar assets and natural gas meters. These transactions are recorded within long-term debt on the Unaudited Condensed Consolidated Balance Sheets. The carrying value of solar sale leasebacks was $ 296.3 M and $ 278.4 M and the estimated fair value was $ 297.0 M and $ 268.1 M as of December 31, 2023 and September 30, 2023, respectively. The carrying value of the natural gas meter sale leasebacks was $ 38.2 M and $ 31.4 M and the estimated fair value of certain natural gas meter sale leasebacks amounted to $ 29.8 M and $ 20.9 M as of December 31, 2023 and September 30, 2023, respectively.",
+      "type": "paragraph"
+    },
+    {
+      "id": 90,
+      "context": "The Company utilizes a discounted cash flow method to determine the fair value of its debt. Inputs include observable municipal and corporate yields, as appropriate for the maturity of the specific issue and the Company's credit rating. As of December 31, 2023, the Company discloses its debt within Level 2 of the fair value hierarchy.",
+      "type": "paragraph"
+    },
+    {
+      "id": 93,
+      "context": "Assets and liabilities measured at fair value on a recurring basis are summarized as follows:\n\n| Quoted Prices in Active Markets for Identical Assets | Significant Other Observable Inputs | Significant Unobservable Inputs |\n| (Thousands) | (Level 1) | (Level 2) | (Level 3) | Total |\n| As of December 31, 2023 |\n| Assets: |\n| Physical commodity contracts | $ | — | $ | 9,893 | $ | — | $ | 9,893 |\n| Financial commodity contracts | 29,056 | — | — | 29,056 |\n| Money market funds | 86 | — | — | 86 |\n| Other | 3,111 | — | — | 3,111 |\n| Total assets at fair value | $ | 32,253 | $ | 9,893 | $ | — | $ | 42,146 |\n| Liabilities: |\n| Physical commodity contracts | $ | — | $ | 16,764 | $ | — | $ | 16,764 |\n| Financial commodity contracts | 3,896 | — | — | 3,896 |\n| Total liabilities at fair value | $ | 3,896 | $ | 16,764 | $ | — | $ | 20,660 |",
+      "type": "table"
+    }
+  ]
+}

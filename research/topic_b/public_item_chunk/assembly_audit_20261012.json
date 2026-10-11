@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-12",
+  "finrank": {
+    "records": 1185,
+    "unique_query_ids": 1185,
+    "source_tickers": 22,
+    "passages": 2322,
+    "hard_negatives": 6021,
+    "unique_raw_texts": 5230,
+    "unique_normalized_texts": 4796,
+    "unique_source_bound_cards": 5269,
+    "text_with_multiple_source_metadata": 259,
+    "median_candidate_chars_occurrence_weighted": 2985,
+    "median_candidate_regex_words_occurrence_weighted": 370,
+    "qid_label_mismatches": 56,
+    "source_text_sha1_mismatch_ids": [
+      "7348b1d4-1cfd-44de-85b0-0c306f5a2dea:hn3",
+      "a433d145-0743-4a8f-b6eb-a3d13736f3ea:p1",
+      "9cbdd6d1-ada6-4219-bf4b-a34a3941d9bd:hn1",
+      "9f6f8650-85ae-4788-ad24-075bd6fd2e7d:p1",
+      "63ec8b0b-73b7-460f-8a11-01ee4a6cff69:p1",
+      "cad957d8-11f7-41d6-95bc-ea1b7e894988:hn0",
+      "78cc0fb1-0f6d-4d43-9dc8-5e98ac0bf1ed:p0",
+      "78cc0fb1-0f6d-4d43-9dc8-5e98ac0bf1ed:hn0",
+      "e983fc5b-d044-4cef-a9b1-3cd098bf0515:p0",
+      "e983fc5b-d044-4cef-a9b1-3cd098bf0515:p1",
+      "aa739e92-8d7d-4fef-ada8-e7ee98ae96be:p0",
+      "aa739e92-8d7d-4fef-ada8-e7ee98ae96be:p2",
+      "aa739e92-8d7d-4fef-ada8-e7ee98ae96be:hn0",
+      "03aae627-4015-438d-ada9-cfcd9aeef134:hn0",
+      "03aae627-4015-438d-ada9-cfcd9aeef134:hn1",
+      "7a8e836c-d2b8-4a9e-b8a0-fc55e09dd19f:hn0",
+      "7a8e836c-d2b8-4a9e-b8a0-fc55e09dd19f:hn1",
+      "581641ad-492d-40db-9e29-a518b6d60142:hn0",
+      "581641ad-492d-40db-9e29-a518b6d60142:hn1"
+    ],
+    "split_regimes": [
+      "random",
+      "ticker",
+      "sector",
+      "year",
+      "doctype"
+    ],
+    "first_demo_known_positive": 1,
+    "first_demo_known_negative": 6,
+    "expanded_250_unjudged": 243
+  },
+  "finqa": {
+    "downloaded_split": "dev only",
+    "records": 883,
+    "first_id": "V/2008/page_17.pdf-1",
+    "first_question": "what is the average payment volume per transaction for american express?",
+    "first_table_items": 6
+  },
+  "scope": "Read-only source audit and deterministic construction demo. No model inference, no training, no claimed hallucination result."
+}

@@ -1,0 +1,174 @@
+[
+  {
+    "name": "fiqa",
+    "checked_date": "2026-10-10",
+    "duplicate_corpus_ids": 0,
+    "duplicate_query_ids": 0,
+    "empty_title_and_text_count": 38,
+    "empty_ids": [
+      "115636",
+      "117276",
+      "12229",
+      "126502",
+      "138418",
+      "14135",
+      "153104",
+      "167128",
+      "169220",
+      "189754",
+      "206368",
+      "207473",
+      "215635",
+      "237392",
+      "248226",
+      "254541",
+      "290110",
+      "319894",
+      "325407",
+      "33445",
+      "356535",
+      "358213",
+      "360125",
+      "399083",
+      "40982",
+      "414219",
+      "441462",
+      "447488",
+      "470232",
+      "486245",
+      "528558",
+      "54960",
+      "552533",
+      "572451",
+      "587667",
+      "597929",
+      "66248",
+      "7915"
+    ],
+    "empty_documents_in_positive_qrels": [
+      "115636",
+      "117276",
+      "12229",
+      "126502",
+      "138418",
+      "14135",
+      "153104",
+      "167128",
+      "169220",
+      "189754",
+      "206368",
+      "207473",
+      "215635",
+      "237392",
+      "248226",
+      "254541",
+      "290110",
+      "319894",
+      "325407",
+      "33445",
+      "356535",
+      "358213",
+      "360125",
+      "399083",
+      "40982",
+      "414219",
+      "441462",
+      "447488",
+      "470232",
+      "486245",
+      "528558",
+      "54960",
+      "552533",
+      "572451",
+      "587667",
+      "597929",
+      "66248",
+      "7915"
+    ],
+    "query_split_overlap_counts": {
+      "dev__test": 0,
+      "dev__train": 0,
+      "test__train": 0
+    },
+    "qrels_checks": {
+      "train": {
+        "duplicate_pairs": 0,
+        "missing_query_ids": [],
+        "missing_document_ids": [],
+        "positive_qrels_with_empty_text": 35
+      },
+      "test": {
+        "duplicate_pairs": 0,
+        "missing_query_ids": [],
+        "missing_document_ids": [],
+        "positive_qrels_with_empty_text": 1
+      },
+      "dev": {
+        "duplicate_pairs": 0,
+        "missing_query_ids": [],
+        "missing_document_ids": [],
+        "positive_qrels_with_empty_text": 2
+      }
+    }
+  },
+  {
+    "name": "nfcorpus",
+    "checked_date": "2026-10-10",
+    "duplicate_corpus_ids": 0,
+    "duplicate_query_ids": 0,
+    "empty_title_and_text_count": 0,
+    "empty_ids": [],
+    "empty_documents_in_positive_qrels": [],
+    "query_split_overlap_counts": {
+      "dev__test": 0,
+      "dev__train": 0,
+      "test__train": 0
+    },
+    "qrels_checks": {
+      "train": {
+        "duplicate_pairs": 0,
+        "missing_query_ids": [],
+        "missing_document_ids": [],
+        "positive_qrels_with_empty_text": 0
+      },
+      "test": {
+        "duplicate_pairs": 0,
+        "missing_query_ids": [],
+        "missing_document_ids": [],
+        "positive_qrels_with_empty_text": 0
+      },
+      "dev": {
+        "duplicate_pairs": 0,
+        "missing_query_ids": [],
+        "missing_document_ids": [],
+        "positive_qrels_with_empty_text": 0
+      }
+    }
+  },
+  {
+    "name": "scifact",
+    "checked_date": "2026-10-10",
+    "duplicate_corpus_ids": 0,
+    "duplicate_query_ids": 0,
+    "empty_title_and_text_count": 0,
+    "empty_ids": [],
+    "empty_documents_in_positive_qrels": [],
+    "query_split_overlap_counts": {
+      "test__train": 0
+    },
+    "qrels_checks": {
+      "train": {
+        "duplicate_pairs": 0,
+        "missing_query_ids": [],
+        "missing_document_ids": [],
+        "positive_qrels_with_empty_text": 0
+      },
+      "test": {
+        "duplicate_pairs": 0,
+        "missing_query_ids": [],
+        "missing_document_ids": [],
+        "positive_qrels_with_empty_text": 0
+      }
+    }
+  }
+]

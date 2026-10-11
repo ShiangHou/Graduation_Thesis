@@ -1,0 +1,90 @@
+{
+  "source_query_id": "97546a79-b989-48df-96c5-82c119a9c38c",
+  "pool_type": "positive-preserving curated expansion, not natural retrieval",
+  "model_was_run": false,
+  "ready_for_complete_gold_evaluation": false,
+  "labels": {
+    "I_5281c8894b6bec457f80": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_eb6e64e5dcb52592c19a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_58c313f6de70f74daabe": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_90cbfc9362ad61a1b06f": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_a7f8c54dac127d2239ad": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_f3c96580464f67330aa6": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_18453f8d40e511610519": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b27486c1d2489040cefd": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_79a33ce701884126ac97": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_0471735bd811ef3d909d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ac25df3e43ee4b382a4f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_10b0b79ea5a83ded47ab": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_527f74bbaeadaa43d4bb": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5ecb935d4d8e982a8c48": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ceaabd354893e2197835": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_e4e5b4424d30ee86524a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_9f29301e838e7e39ec19": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_46c4530a619e6ca720d6": {
+      "relevance": 1,
+      "status": "source_positive"
+    },
+    "I_2b3371c3e16484903762": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_578538bfea9fd1d915e0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    }
+  },
+  "source_answer_evaluation_only": "As of FY2024, Johnson & Johnson operates in two main segments: Innovative Medicine and MedTech. Innovative Medicine focuses on the development and manufacturing of medicines for prescription use. These products are distributed to intermediaries such as retailers, wholesalers, distributors, hospitals and healthcare professionals, to prescribe them directly to their patients. It covers therapeutic areas: Immunology, Infectious Diseases, Neuroscience, Oncology, Pulmonary Hypertension, Cardiovascular and Metabolism. The MedTech segment designs and markets medical devices and technologies for Orthopaedics, Surgery, Cardiovascular, and Vision care. Its products are primarily used by medical professionals in hospitals, clinics, and specialized care settings. Johnson & Johnson therefore participates through its portfolio in important aspects of the care and treatment of patients with various diseases.",
+  "notice": "Other records’ passages are NOT automatically negatives. Expanded labels need audit; metadata year is filing year, not automatically fiscal period."
+}

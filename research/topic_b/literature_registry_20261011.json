@@ -1,0 +1,924 @@
+{
+  "checked_at": "2026-10-11",
+  "scope": "合并本次扩展阅读与此前专项核对；论文/基准研究去重，同一工作的版本与代码不另计。",
+  "reading_definitions": {
+    "M": "核对关键方法及相关实验/分析段落；非逐字通读全篇附录",
+    "A": "核对摘要、任务与元数据",
+    "C": "作者仓库/模型卡说明检查；未执行",
+    "D": "关联公开数据已下载并解析"
+  },
+  "count": 80,
+  "reading_count": {
+    "M": 59,
+    "A": 21
+  },
+  "model_experiments_run": false,
+  "entries": [
+    {
+      "id": "P01",
+      "category": "一、排序形式与基础方法",
+      "title_and_status": "RankGPT / Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents，EMNLP 2023",
+      "primary_url": "https://aclanthology.org/2023.emnlp-main.923/",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "生成 ID 排列；滑窗及排序蒸馏；典型 N=100、b=20",
+      "scope_and_limitation": "排名生成的基础基线；滑窗已有；不能把清洗后的排列当原始协议成功率"
+    },
+    {
+      "id": "P02",
+      "category": "一、排序形式与基础方法",
+      "title_and_status": "Large Language Models are Effective Text Rankers with Pairwise Ranking Prompting，Findings NAACL 2024",
+      "primary_url": "https://aclanthology.org/2024.findings-naacl.97/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "PRP 两文档比较，结合排序算法",
+      "scope_and_limitation": "比较成本取决于算法；不是所有 PRP 都做全配对"
+    },
+    {
+      "id": "P03",
+      "category": "一、排序形式与基础方法",
+      "title_and_status": "A Setwise Approach for Effective and Highly Efficient Zero-shot Ranking with Large Language Models，作者版本/SIGIR 2024",
+      "primary_url": "https://arxiv.org/abs/2310.09497",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "短集合选优，m 叉堆等排序程序",
+      "scope_and_limitation": "一次判断多个候选已有；组大小与调用次数共同影响成本"
+    },
+    {
+      "id": "P04",
+      "category": "一、排序形式与基础方法",
+      "title_and_status": "PRP-Graph: Pairwise Ranking Prompting to LLMs with Graph Aggregation for Effective Text Re-ranking，ACL 2024",
+      "primary_url": "https://aclanthology.org/2024.acl-long.313/",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "偏好比较构图、置信度与图聚合",
+      "scope_and_limitation": "图聚合、选择性比较与置信加权已有"
+    },
+    {
+      "id": "P05",
+      "category": "一、排序形式与基础方法",
+      "title_and_status": "ListT5: Listwise Reranking with Fusion-in-Decoder Improves Zero-shot Retrieval，2024 作者版本",
+      "primary_url": "https://arxiv.org/abs/2402.15838",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "分文档编码、FiD、小组锦标赛及缓存",
+      "scope_and_limitation": "小模型、分候选编码的实用参照；不输出逐条证据理由"
+    },
+    {
+      "id": "P06",
+      "category": "一、排序形式与基础方法",
+      "title_and_status": "RankZephyr: Effective and Robust Zero-Shot Listwise Reranking is a Breeze!，2023 起作者版本",
+      "primary_url": "https://arxiv.org/abs/2312.02724",
+      "reading": [
+        "A",
+        "C"
+      ],
+      "method_and_scale": "列表排序蒸馏，数量/顺序泛化",
+      "scope_and_limitation": "专门排序模型基线；本矩阵不据摘要填写详细训练预算"
+    },
+    {
+      "id": "P07",
+      "category": "一、排序形式与基础方法",
+      "title_and_status": "FIRST: Faster Improved Listwise Reranking with Single Token Decoding，EMNLP 2024",
+      "primary_url": "https://aclanthology.org/2024.emnlp-main.491/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "首个标识符 token 的 logits 排名",
+      "scope_and_limitation": "减少解码，不消除长输入 prefill；API 需支持相应概率"
+    },
+    {
+      "id": "P08",
+      "category": "一、排序形式与基础方法",
+      "title_and_status": "TourRank: Utilizing Large Language Models for Documents Ranking with a Tournament-Inspired Strategy，2024 起作者版本",
+      "primary_url": "https://arxiv.org/abs/2406.11678",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "多轮分组、淘汰与聚合",
+      "scope_and_limitation": "锦标赛流程不是新方法；本矩阵未核验全部附录"
+    },
+    {
+      "id": "P09",
+      "category": "一、排序形式与基础方法",
+      "title_and_status": "BracketRank: Large Language Model Document Ranking via Reasoning-based Competitive Elimination，ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.acl-long.153/",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "推理式竞争淘汰、自适应分组、多轨处理",
+      "scope_and_limitation": "推理＋淘汰已有；不能只用新 pipeline 名称体现差异"
+    },
+    {
+      "id": "P10",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "Found in the Middle: Permutation Self-Consistency Improves Listwise Ranking in Large Language Models，NAACL 2024",
+      "primary_url": "https://aclanthology.org/2024.naacl-long.129/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "PSC 多排列聚合；Top-100 滑窗与 Top-20 直接输入",
+      "scope_and_limitation": "排列投票已是强基线；额外调用必须计费"
+    },
+    {
+      "id": "P11",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "Batched Self-Consistency Improves LLM Relevance Assessment and Ranking，EMNLP 2025",
+      "primary_url": "https://aclanthology.org/2025.emnlp-main.1661/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "N=30/90，b=30；STB/BTS 改变同伴或仅改变顺序",
+      "scope_and_limitation": "直接研究批量评分位置偏差和分组；窗口足够仍会退化"
+    },
+    {
+      "id": "P12",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "Measuring the Inconsistency of Large Language Models in Preferential Ranking，KnowLLM 2024",
+      "primary_url": "https://aclanthology.org/2024.knowllm-1.14/",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "传递性、反对称、反转、无关选项独立性诊断",
+      "scope_and_limitation": "诊断轴可迁移；加入有用的互补证据不必保持原排名"
+    },
+    {
+      "id": "P13",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "Learning from Emptiness: De-biasing Listwise Rerankers with Content-Agnostic Probability Calibration，ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.acl-short.68/",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "CapCal：空内容输入估计结构先验并校准 logits",
+      "scope_and_limitation": "去位置/ID 先验已有；本地 logits 路线更易适配"
+    },
+    {
+      "id": "P14",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "Beyond Sampling: Self-Sorting for Long-Context Ranking，Findings EACL 2026",
+      "primary_url": "https://aclanthology.org/2026.findings-eacl.256/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "生成多个排名再比较排名，融合内部位置和跨列表偏好；部分 N=1000",
+      "scope_and_limitation": "已有长池与二层聚合；不能混用正例保留池和真实检索池结果"
+    },
+    {
+      "id": "P15",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "More Efficient LLM Reranking with Whole-Pool, Setwise, Long-Context Language Models，2026 预印本",
+      "primary_url": "https://arxiv.org/abs/2606.01782",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "全池迭代选优/劣、DualEnd；已读更新版",
+      "scope_and_limitation": "长窗口不代表总 tokens 少；重复读取全池可能近似二次增长"
+    },
+    {
+      "id": "P16",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "Self-Calibrated Listwise Reranking with Large Language Models / SCaLR，2024 起作者版本",
+      "primary_url": "https://arxiv.org/abs/2411.04602",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "分候选编码、点式/列表视角校准；N 可达 1000",
+      "scope_and_limitation": "一般可扩展全局比较不是空白；这里未独立确认最终会议版本"
+    },
+    {
+      "id": "P17",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "One Pass, Any Order: Position-Invariant Listwise Reranking for LLM-Based Recommendation / InvariRank，2026 作者版本",
+      "primary_url": "https://arxiv.org/abs/2604.27599",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "跨候选 mask、共享位置参照、LambdaRank；推荐候选 K=25",
+      "scope_and_limitation": "推荐评分任务；阻断候选交互换稳定，普通聊天 API 不能实现"
+    },
+    {
+      "id": "P18",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "LLM-based Listwise Reranking under the Effect of Positional Bias / DebiasFirst，2026 预印本",
+      "primary_url": "https://arxiv.org/abs/2604.03642",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "位置增强＋IPS 加权 RankNet/LM；N=100、b=20",
+      "scope_and_limitation": "后训练去偏已有；非在线 RL，原训练多卡"
+    },
+    {
+      "id": "P19",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "Equal Ranking Quality, Different Decisions: Measuring and Reducing Order Dependence in LLM Scorers / OC-SFT，2026 预印本",
+      "primary_url": "https://arxiv.org/html/2608.26762v2",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "组内等级 token 评分、教师监督＋排列一致性；N=100、b=20",
+      "scope_and_limitation": "明确区分 nDCG 与决策稳定；仓库当前 source-only，不含已验证可下载的 adapters/silver labels"
+    },
+    {
+      "id": "P20",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "Contextual Relevance and Adaptive Sampling for LLM-Based Document Reranking / TS-SetRank，ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.acl-long.94/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "GRPO 训练 b=10 相关性判断器；Thompson sampling 覆盖 N=100",
+      "scope_and_limitation": "上下文＋自适应预算直接近邻；调度规则不是 RL 学到的策略"
+    },
+    {
+      "id": "P21",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "Active Learners as Efficient PRP Rerankers，2026 预印本",
+      "primary_url": "https://arxiv.org/abs/2605.14236",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "主动挑选偏好比较，噪声、集合/排序恢复",
+      "scope_and_limitation": "“只比较不确定对”已有；必须同预算比较"
+    },
+    {
+      "id": "P22",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "Generate to Accelerate: Improved Reranking via LLM-Generated Pivot Documents / DynamicRLT，2026 预印本",
+      "primary_url": "https://arxiv.org/abs/2604.09492",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "生成 pivot、动态分区/滑动策略",
+      "scope_and_limitation": "合成参考不是真候选；需固定论文/代码版本"
+    },
+    {
+      "id": "P23",
+      "category": "二、顺序依赖、比较上下文与预算",
+      "title_and_status": "BoundaryMORPH: Budgeted Reranking via Active Set Selection for Diffuse Retrieval，2026-09 预印本",
+      "primary_url": "https://arxiv.org/abs/2609.27213",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "GP 先验与边界不确定性分配评估预算",
+      "scope_and_limitation": "极近的主动预算工作；潜在相关性≠同次判断观测误差依赖"
+    },
+    {
+      "id": "P24",
+      "category": "三、压缩、直接评分与长金融文档",
+      "title_and_status": "Compress-then-Rank: Faster and Better Listwise Reranking with Large Language Models via Ranking-Aware Passage Compression，AAAI 2026",
+      "primary_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40811",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "C2R：每段多向量压缩、共享 Mistral-7B、联合 SFT；典型 8 向量/段；评测 Top-100",
+      "scope_and_limitation": "压缩器训练约千万预训练段落；并非“提示词摘要＋排序”；向量无现成可展示引文"
+    },
+    {
+      "id": "P25",
+      "category": "三、压缩、直接评分与长金融文档",
+      "title_and_status": "Leveraging Passage Embeddings for Efficient Listwise Reranking with Large Language Models / PE-Rank，2024 起作者版本",
+      "primary_url": "https://arxiv.org/abs/2406.14848",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "逐段 embedding 输入、对齐/排序训练、动态受限解码",
+      "scope_and_limitation": "合法候选选择与压缩已有；需本地模型改造"
+    },
+    {
+      "id": "P26",
+      "category": "三、压缩、直接评分与长金融文档",
+      "title_and_status": "ResRank: Unifying Retrieval and Listwise Reranking via End-to-End Joint Training with Residual Passage Compression，2026 预印本",
+      "primary_url": "https://arxiv.org/abs/2604.22180",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "编码成单向量，残差结合原表征与列表上下文，端到端联合训练",
+      "scope_and_limitation": "信息保留与跨候选交互已有设计；不解决展示理由出处"
+    },
+    {
+      "id": "P27",
+      "category": "三、压缩、直接评分与长金融文档",
+      "title_and_status": "CompRank: Efficient LLM Reranking via Token-Level Compression and Decoding-Free Scoring，2026 预印本",
+      "primary_url": "https://arxiv.org/abs/2606.11700",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "分段 token/KV 压缩、候选独立表征、attention 直接评分、CopyNet 监督；30–500 条分析",
+      "scope_and_limitation": "**直接长池解码失败证据**；完整排列的 missing IDs 不能照搬为 Top-20 错误定义；非理由忠实性实验"
+    },
+    {
+      "id": "P28",
+      "category": "三、压缩、直接评分与长金融文档",
+      "title_and_status": "Query-focused and Memory-aware Reranker for Long Context Processing / QRRanker，2026 预印本",
+      "primary_url": "https://arxiv.org/abs/2602.12192",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "query-focused heads 选取与对比排序训练、记忆去噪；50 文档训练",
+      "scope_and_limitation": "注意力打分可避开生成排列；关注 QA/记忆，不证明注意力是内部原因"
+    },
+    {
+      "id": "P29",
+      "category": "三、压缩、直接评分与长金融文档",
+      "title_and_status": "FinCARDS: Card-Based Analyst Reranking for Financial Document Question Answering，Findings ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.findings-acl.1244/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "实体/指标/时期/逐字数值/证据字段；BM25→卡片筛选→随机分组 Borda；N≤150、b≈15–25、≤5 轮、Jaccard 早停",
+      "scope_and_limitation": "**结构证据＋长文档稳定排序直接近邻**；输出审计轨迹，未以逐条自由理由忠实性金标作为主指标"
+    },
+    {
+      "id": "P30",
+      "category": "四、重排与理由生成的不同组织方式",
+      "title_and_status": "ExaRanker: Explanation-Augmented Neural Ranker，2023 作者论文",
+      "primary_url": "https://arxiv.org/abs/2301.10521",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "标签＋解释监督训练 seq2seq ranker",
+      "scope_and_limitation": "解释作训练信号已有；标签正确不保证解释依据正确"
+    },
+    {
+      "id": "P31",
+      "category": "四、重排与理由生成的不同组织方式",
+      "title_and_status": "ExaRanker-Open: Synthetic Explanation for IR using Open-Source LLMs，2024 作者论文",
+      "primary_url": "https://arxiv.org/abs/2402.06334",
+      "reading": [
+        "A",
+        "C"
+      ],
+      "method_and_scale": "开源模型生成解释用于排序训练",
+      "scope_and_limitation": "降低教师费用；具体效果以原任务为界，未核验所有训练细节"
+    },
+    {
+      "id": "P32",
+      "category": "四、重排与理由生成的不同组织方式",
+      "title_and_status": "Rank1: Test-Time Compute for Reranking in Information Retrieval，2025 作者论文",
+      "primary_url": "https://arxiv.org/abs/2502.18418",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "DeepSeek-R1 相关性推理蒸馏、pointwise；60 万以上原始推理例",
+      "scope_and_limitation": "测试时推理可帮助复杂相关性判断；并非 long-list 理由绑定研究"
+    },
+    {
+      "id": "P33",
+      "category": "四、重排与理由生成的不同组织方式",
+      "title_and_status": "JudgeRank: Leveraging Large Language Models for Reasoning-Intensive Reranking，2024 起作者论文",
+      "primary_url": "https://arxiv.org/abs/2411.00142",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "query 分析→query-aware 抽取摘要→Yes/No 概率；BRIGHT",
+      "scope_and_limitation": "先证据分析再评分已有；是 pointwise 多阶段，非一次 Top-20 全池输出"
+    },
+    {
+      "id": "P34",
+      "category": "四、重排与理由生成的不同组织方式",
+      "title_and_status": "DeAR: Dual-Stage Document Reranking with Reasoning Agents via LLM Distillation，Findings EMNLP 2025",
+      "primary_url": "https://aclanthology.org/2025.findings-emnlp.306/",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "Stage1 pointwise KL＋排序监督；Stage2 约 20K 教师理由/排列 SFT，细排 Top-20",
+      "scope_and_limitation": "分开细粒度评分与跨文档推理已有；未直接证明自由理由忠实"
+    },
+    {
+      "id": "P35",
+      "category": "四、重排与理由生成的不同组织方式",
+      "title_and_status": "REARANK: Reasoning Re-ranking Agent via Reinforcement Learning，EMNLP 2025",
+      "primary_url": "https://aclanthology.org/2025.emnlp-main.125/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "GRPO：归一化 nDCG@10＋格式；N=100、b=20",
+      "scope_and_limitation": "RL 排序质量直接基线；奖励不核对每句证据"
+    },
+    {
+      "id": "P36",
+      "category": "四、重排与理由生成的不同组织方式",
+      "title_and_status": "Rank-R1: Enhancing Reasoning in LLM-based Document Rerankers via Reinforcement Learning，SIGIR 2026 作者正式版",
+      "primary_url": "https://cs.uwaterloo.ca/~jimmylin/publications/Zhuang_etal_SIGIR2026_RankR1.pdf",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "GRPO b=20 集合选优；相关命中＋格式奖励",
+      "scope_and_limitation": "2025 预印本的正式更新；不直接优化有序 Top-20 或理由出处"
+    },
+    {
+      "id": "P37",
+      "category": "四、重排与理由生成的不同组织方式",
+      "title_and_status": "ERank: Fusing Supervised Fine-Tuning and Reinforcement Learning for Effective and Efficient Text Reranking，AAAI 2026",
+      "primary_url": "https://ojs.aaai.org/index.php/AAAI/article/view/40261",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "细粒度 pointwise SFT＋列表导出奖励 GRPO；公开 4B",
+      "scope_and_limitation": "**资源适配强基线**；推理仍单条输入，原多卡训练不等于 24GB 可复现"
+    },
+    {
+      "id": "P38",
+      "category": "四、重排与理由生成的不同组织方式",
+      "title_and_status": "Explain then Rank: Scale Calibration of Neural Rankers Using Natural Language Explanations from LLMs，Findings ACL 2025",
+      "primary_url": "https://aclanthology.org/2025.findings-acl.1167/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "多解释合成 meta-NLE，再用神经 ranker 评分；TREC19–22/NTCIR14；MSE、CB-ECE、nDCG",
+      "scope_and_limitation": "解释不确定性与分数校准已有；meta-NLE 可遗漏或添加事实，非来源真实性保证"
+    },
+    {
+      "id": "P39",
+      "category": "四、重排与理由生成的不同组织方式",
+      "title_and_status": "ReasoningRec: Bridging Personalized Recommendations and Human-Interpretable Explanations through LLM Reasoning，Findings NAACL 2025",
+      "primary_url": "https://aclanthology.org/2025.findings-naacl.454/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "用户偏好/厌恶＋item 描述，教师解释蒸馏；MovieLens/Amazon；AUC、BERTScore",
+      "scope_and_limitation": "主要是用户-item 喜好预测，不能描述为 250 产品 listwise 重排证据"
+    },
+    {
+      "id": "P40",
+      "category": "四、重排与理由生成的不同组织方式",
+      "title_and_status": "RecExplainer: Aligning Large Language Models for Explaining Recommendation Models，2023 起作者版本",
+      "primary_url": "https://arxiv.org/abs/2311.10947",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "行为、意图、混合对齐 LLM 与推荐模型；决策模仿及解释评价",
+      "scope_and_limitation": "解释外部 ranker 与同一 LLM 自解释是两种目标；好评不是内部忠实性证明"
+    },
+    {
+      "id": "P41",
+      "category": "四、重排与理由生成的不同组织方式",
+      "title_and_status": "Beyond Ranking Accuracy: Evaluating LLM-Cited Feature Rationales for Next Basket Repurchase Recommendation，2026-08 预印本",
+      "primary_url": "https://arxiv.org/abs/2608.30333",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "28 历史特征卡片→得分＋3 个特征名＋理由；跨模型特征遮蔽；Instacart/DC",
+      "scope_and_limitation": "排序效果与特征证据效用分别评测；不以 SHAP 当绝对金标；不研究长文本池"
+    },
+    {
+      "id": "P42",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "CFE2 / Counterfactual Editing for Search Result Explanation，2023 起作者版本、ICTIR 2024",
+      "primary_url": "https://arxiv.org/abs/2301.10389",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "编辑 query 使原次优文档超过原最优；FlipRate、接近度、流畅度、人工评价",
+      "scope_and_limitation": "反事实解释排名已有；主要编辑 query，非长池跨 chunk 理由纠错"
+    },
+    {
+      "id": "P43",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "CREDENCE: Counterfactual Explanations for Document Ranking，2023 作者版本",
+      "primary_url": "https://arxiv.org/abs/2302.04983",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "交互式修改 query、目标/其他文档解释排名",
+      "scope_and_limitation": "不能宣称首次对文档排序做反事实干预"
+    },
+    {
+      "id": "P44",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "Pair Difficulty Matters: Rethinking Pairwise LLM-as-a-Judge Evaluation and Consistency，2026-09 预印本",
+      "primary_url": "https://arxiv.org/abs/2609.37577",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "BT 强度差视角，按 gold-gap 分桶一致性与人类排名",
+      "scope_and_limitation": "近难对不稳定不一定有害；理论依赖 BT，非长池结论或普适因果定律"
+    },
+    {
+      "id": "P45",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "A Necessary Step toward Faithfulness: Measuring and Improving Consistency in Free-Text Explanations / PEX，EMNLP 2025",
+      "primary_url": "https://aclanthology.org/2025.emnlp-main.797/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "条件概率/weight-of-evidence 评测解释与判断一致，重选解释、DPO",
+      "scope_and_limitation": "分类任务；使模型被理由说服不等于事实支持，也不是充分因果忠实"
+    },
+    {
+      "id": "P46",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "Outcome Accuracy is Not Enough: Aligning the Reasoning Process of Reward Models，ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.acl-long.1924/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "MetaJudge 原子理由一对一匹配；AP rationale×outcome 奖励，GRPO",
+      "scope_and_limitation": "“结果＋理由奖励”及乘法门控已存在；人类理由对齐不等于唯一正确内部推理"
+    },
+    {
+      "id": "P47",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "Training Large Language Models for Self-Explanation Faithfulness，2026 作者论文/另有 Re-Align workshop 版本",
+      "primary_url": "https://arxiv.org/abs/2607.21090",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "干预是否翻转决策与解释是否提到干预对齐，GRPO；Phi-CCT；检测复制/沉默等作弊",
+      "scope_and_limitation": "**反事实解释奖励直接近邻**；任务是分类/常识，非来源支持；固定基模影响标签会随训练过时"
+    },
+    {
+      "id": "P48",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "FaithLens: Detecting and Explaining Faithfulness Hallucination，Findings ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.findings-acl.689/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "幻觉检测＋解释；合成筛选 SFT→GRPO，正确性＋解释帮助弱模型分类",
+      "scope_and_limitation": "可作 verifier 参考；解释易懂/可预测标签≠真实反映 reranker 依据"
+    },
+    {
+      "id": "P49",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "ERASER: A Benchmark to Evaluate Rationalized NLP Models，ACL 2020",
+      "primary_url": "https://aclanthology.org/2020.acl-main.408/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "理由抽取金标、sufficiency/comprehensiveness 删除检验",
+      "scope_and_limitation": "证据效用可迁移；遮蔽 OOD 与替代证据使因果解释有限"
+    },
+    {
+      "id": "P50",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "Faithfulness Tests for Natural Language Explanations，ACL 2023",
+      "primary_url": "https://aclanthology.org/2023.acl-short.25/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "反事实预测变化是否在理由提及、输入重建测试",
+      "scope_and_limitation": "反事实检验不是新指标；不完备，失败率不是总体不忠实率"
+    },
+    {
+      "id": "P51",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "Walk the Talk? Measuring the Faithfulness of Large Language Model Explanations，ICLR 2025",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/b5ec50eb177908f21f78ed0d76ed525c-Paper-Conference.pdf",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "概念反事实＋层级贝叶斯估计，比较实际影响与解释声称影响",
+      "scope_and_limitation": "避免把文本蕴含叫内部因果忠实；仍依赖干预有效性假设"
+    },
+    {
+      "id": "P52",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "Enabling Large Language Models to Generate Text with Citations / ALCE，EMNLP 2023",
+      "primary_url": "https://aclanthology.org/2023.emnlp-main.398/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "引用生成、正确性与完整性评价",
+      "scope_and_limitation": "引文出现、支持断言、覆盖所有断言是不同检查"
+    },
+    {
+      "id": "P53",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation，EMNLP 2023",
+      "primary_url": "https://aclanthology.org/2023.emnlp-main.741/",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "原子事实逐个判定支持",
+      "scope_and_limitation": "可借原子断言单位；自由世界事实与绑定当前 chunk 是不同判定集"
+    },
+    {
+      "id": "P54",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "RAGTruth: A Hallucination Corpus for Developing Trustworthy Retrieval-Augmented Language Models，ACL 2024",
+      "primary_url": "https://aclanthology.org/2024.acl-long.585/",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "RAG 输出人工标注幻觉语料",
+      "scope_and_limitation": "可辅助 verifier，不自带 rerank Top-20 理由金标"
+    },
+    {
+      "id": "P55",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "Attribute or Abstain: Large Language Models as Long Document Assistants，EMNLP 2024",
+      "primary_url": "https://aclanthology.org/2024.emnlp-main.463/",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "长文档归因、作答与拒答评价",
+      "scope_and_limitation": "拒绝/缺证据要计可用覆盖率，不能拒绝一切刷支持率"
+    },
+    {
+      "id": "P56",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "Language Models Don't Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting，2023 作者论文",
+      "primary_url": "https://arxiv.org/abs/2305.04388",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "干预偏置对结果与表述影响的对照",
+      "scope_and_limitation": "看起来有道理的 CoT 不是行为忠实保证"
+    },
+    {
+      "id": "P57",
+      "category": "五、解释约束、反事实检验与训练",
+      "title_and_status": "Chain-of-Thought Reasoning In The Wild Is Not Always Faithful，2025 作者论文",
+      "primary_url": "https://arxiv.org/abs/2503.08679",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "自然场景 CoT 忠实性研究",
+      "scope_and_limitation": "辅助背景；不把非 rerank 实验量直接套到业务"
+    },
+    {
+      "id": "P58",
+      "category": "六、后训练与长上下文偏好优化",
+      "title_and_status": "Stable-RAG: Mitigating Retrieval-Permutation-Induced Hallucinations in Retrieval-Augmented Generation，ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.acl-long.1188/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "Top-5 QA，排列隐藏状态聚类、偏好数据、DPO",
+      "scope_and_limitation": "优化下游回答生成器；不是 250 条 reranker，但排列幻觉后训练已有"
+    },
+    {
+      "id": "P59",
+      "category": "六、后训练与长上下文偏好优化",
+      "title_and_status": "Chunks as Arms: Multi-Armed Bandit-Guided Sampling for Long-Context LLM Preference Optimization，ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.acl-long.161/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "LongMab：chunk bandit/UCB rollout 构造 DPO 偏好",
+      "scope_and_limitation": "自适应证据采样可迁移；训练样本选择不等于推理预算调度"
+    },
+    {
+      "id": "P60",
+      "category": "六、后训练与长上下文偏好优化",
+      "title_and_status": "Optimizing RAG Rerankers with LLM Feedback via Reinforcement Learning / RRPO，ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.acl-long.1406/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "下游答案效果奖励、reference baseline 降方差",
+      "scope_and_limitation": "正式版已核验；训练方差下降不等于输入排列稳定"
+    },
+    {
+      "id": "P61",
+      "category": "六、后训练与长上下文偏好优化",
+      "title_and_status": "Structure-aware Relative Policy Optimization for Ranking / SRPO，2026 预印本",
+      "primary_url": "https://arxiv.org/abs/2607.25268",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "输出排名距离影响优势；经典 LTR 与 E2Rank-0.6B、16 候选",
+      "scope_and_limitation": "top-weighted 排序 RL 已有；PL 采样排列不等于生成长理由 rollout"
+    },
+    {
+      "id": "P62",
+      "category": "六、后训练与长上下文偏好优化",
+      "title_and_status": "Mitigating Selection Bias in Large Language Models via Permutation-Aware GRPO，ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.acl-long.1621/",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "PA-GRPO：跨输入排列身份一致性＋正确性；选择题/成对 judge",
+      "scope_and_limitation": "简单排列一致 reward 已有；迁移到 ties 和有序 Top-20 需要新验证"
+    },
+    {
+      "id": "P63",
+      "category": "七、长度机制与可控剪枝",
+      "title_and_status": "Lost in the Middle: How Language Models Use Long Contexts，TACL 2024",
+      "primary_url": "https://aclanthology.org/2024.tacl-1.9/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "长上下文多文档 QA 位置实验",
+      "scope_and_limitation": "有效利用不足；不是业务根因已确认"
+    },
+    {
+      "id": "P64",
+      "category": "七、长度机制与可控剪枝",
+      "title_and_status": "RULER: What's the Real Context Size of Your Long-Context Language Models?，2024 作者论文",
+      "primary_url": "https://arxiv.org/abs/2404.06654",
+      "reading": [
+        "A",
+        "C"
+      ],
+      "method_and_scale": "长上下文检索、聚合、推理测试",
+      "scope_and_limitation": "标称窗口与有效能力区别；不能替代排序/理由实验"
+    },
+    {
+      "id": "P65",
+      "category": "七、长度机制与可控剪枝",
+      "title_and_status": "Positional Bias in Long-Document Ranking: Impact, Assessment, and Mitigation，IJCNLP 2025",
+      "primary_url": "https://aclanthology.org/2025.ijcnlp-long.46/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "FarRelevant 将相关片段移至长文不同位置，比较 long-doc rankers 与微调",
+      "scope_and_limitation": "**长文档≠长候选池**；可以设计 chunk 内证据位置实验，合成性需披露"
+    },
+    {
+      "id": "P66",
+      "category": "七、长度机制与可控剪枝",
+      "title_and_status": "Certified Error Control of Candidate Set Pruning for Two-Stage Relevance Ranking，EMNLP 2022",
+      "primary_url": "https://aclanthology.org/2022.emnlp-main.23/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "校准集、风险置信界、剪枝阈值，处理排名损失不可达约束",
+      "scope_and_limitation": "已有风险控制剪枝；保证是分布/期望风险与校准置信，不是每 query、每理由无错"
+    },
+    {
+      "id": "P67",
+      "category": "七、长度机制与可控剪枝",
+      "title_and_status": "ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability，ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.acl-long.1005/",
+      "reading": [
+        "A",
+        "C"
+      ],
+      "method_and_scale": "强推理数据与排序训练、公开作者代码/模型入口",
+      "scope_and_limitation": "理由能力的补充强基线；未核验全部训练章节，不把 CoT 当证据金标"
+    },
+    {
+      "id": "P68",
+      "category": "七、长度机制与可控剪枝",
+      "title_and_status": "Don't Be Misled by Style: A Style-Adaptive Reranker for Capturing Effective Knowledge in RAG / SARK，ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.acl-long.302/",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "风格增强、支持性与列表偏好联合训练",
+      "scope_and_limitation": "内容保持改写的稳健训练也已有，不能把风格增强本身说成空白"
+    },
+    {
+      "id": "P69",
+      "category": "七、长度机制与可控剪枝",
+      "title_and_status": "How Good are LLM-based Rerankers? An Empirical Analysis of State-of-the-Art Reranking Models，Findings EMNLP 2025",
+      "primary_url": "https://aclanthology.org/2025.findings-emnlp.305/",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "benchmark、训练重合、效率与 FutureQueryEval",
+      "scope_and_limitation": "关注数据污染；新时间不自动证明训练未见"
+    },
+    {
+      "id": "P70",
+      "category": "七、长度机制与可控剪枝",
+      "title_and_status": "A Survey of Reasoning-Intensive Retrieval: Progress and Challenges，ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.acl-long.1949/",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "推理密集检索综述",
+      "scope_and_limitation": "用于线索追踪，不能把其所有引用计成已读论文"
+    },
+    {
+      "id": "P71",
+      "category": "七、长度机制与可控剪枝",
+      "title_and_status": "Towards Faithful Model Explanation in NLP: A Survey，Computational Linguistics 2024",
+      "primary_url": "https://aclanthology.org/2024.cl-2.6/",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "解释忠实性概念与评价综述",
+      "scope_and_limitation": "明确术语、排除过度因果结论；不以综述代替原方法"
+    },
+    {
+      "id": "P72",
+      "category": "八、基准、成本与新反例",
+      "title_and_status": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models，2021",
+      "primary_url": "https://arxiv.org/abs/2104.08663",
+      "reading": [
+        "A",
+        "C",
+        "D"
+      ],
+      "method_and_scale": "多领域检索；FiQA/NFCorpus/SciFact 发布包已解析",
+      "scope_and_limitation": "相关性 qrels 无理由金标；已下载不等于所有测试负例都有人工判定"
+    },
+    {
+      "id": "P73",
+      "category": "八、基准、成本与新反例",
+      "title_and_status": "BRIGHT: A Realistic and Challenging Benchmark for Reasoning-Intensive Retrieval，2024 起作者论文",
+      "primary_url": "https://arxiv.org/abs/2407.12883",
+      "reading": [
+        "A",
+        "C"
+      ],
+      "method_and_scale": "需要推理的 query-document 相关性",
+      "scope_and_limitation": "有助判断 CoT 是否必要；不同检索器/改写影响候选质量"
+    },
+    {
+      "id": "P74",
+      "category": "八、基准、成本与新反例",
+      "title_and_status": "T2Ranking: A large-scale Chinese Benchmark for Passage Ranking，2023",
+      "primary_url": "https://arxiv.org/abs/2304.03679",
+      "reading": [
+        "A",
+        "C"
+      ],
+      "method_and_scale": "中文 30 万以上 queries、200 万以上 passages、四级相关性",
+      "scope_and_limitation": "贴中文业务；只核验资源入口/结构，尚未下载解析；需构建检索池，无理由标签"
+    },
+    {
+      "id": "P75",
+      "category": "八、基准、成本与新反例",
+      "title_and_status": "FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering，2025",
+      "primary_url": "https://arxiv.org/abs/2508.14052",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "文档类型排序、单文档 chunk 排序，0/1/2 相关性；长金融证据",
+      "scope_and_limitation": "文中规模口径有差异；本次未确认完整 chunk/qrels 下载包，不能承诺开箱复现"
+    },
+    {
+      "id": "P76",
+      "category": "八、基准、成本与新反例",
+      "title_and_status": "Attention in Large Language Models Yields Efficient Zero-Shot Re-Rankers / ICR，ICLR 2025",
+      "primary_url": "https://proceedings.iclr.cc/paper_files/paper/2025/file/b5b1890a7c1a79fe9b32b0f442347089-Paper-Conference.pdf",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "attention 聚合，N/A 查询校准，两次 forward 不生成排名",
+      "scope_and_limitation": "无生成评分代表基线；O(1) forward 次数不是 O(1) FLOPs/显存"
+    },
+    {
+      "id": "P77",
+      "category": "八、基准、成本与新反例",
+      "title_and_status": "PRISM: Prompt-Refined In-Context System Modeling for Financial Retrieval，2025 起作者论文",
+      "primary_url": "https://arxiv.org/abs/2511.14130",
+      "reading": [
+        "A"
+      ],
+      "method_and_scale": "基于文档类型和任务的提示推理金融检索",
+      "scope_and_limitation": "补充 FinAgentBench 相关工作，尚未核验全部实验"
+    },
+    {
+      "id": "P78",
+      "category": "八、基准、成本与新反例",
+      "title_and_status": "Rerank Before You Reason: Analyzing Reranking Tradeoffs through Effective Token Cost in Deep Search Agents，Findings ACL 2026",
+      "primary_url": "https://aclanthology.org/2026.findings-acl.1289/",
+      "reading": [
+        "M"
+      ],
+      "method_and_scale": "BrowseComp-Plus；输入/缓存/输出加权 ETC；检索100、细排10/20/50、给 agent Top-5",
+      "scope_and_limitation": "业务 agent 成本近邻；ETC 系数不是普适价格，跨模型需额外折算"
+    },
+    {
+      "id": "P79",
+      "category": "八、基准、成本与新反例",
+      "title_and_status": "MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents，EMNLP 2024",
+      "primary_url": "https://aclanthology.org/2024.emnlp-main.499/",
+      "reading": [
+        "A",
+        "C"
+      ],
+      "method_and_scale": "小型 evidence-claim 核验器、合成训练、LLM-AggreFact",
+      "scope_and_limitation": "可用于辅助检查；目标领域要用人工标签校准，不把其输出当金标"
+    },
+    {
+      "id": "P80",
+      "category": "八、基准、成本与新反例",
+      "title_and_status": "Rethinking Reasoning in Document Ranking: Why Chain-of-Thought Falls Short，2025 起预印本",
+      "primary_url": "https://arxiv.org/abs/2510.08985",
+      "reading": [
+        "M",
+        "C"
+      ],
+      "method_and_scale": "控制 direct/reason 与 point/list；ECE、TPR/TNR、跨域与 GRPO 对照",
+      "scope_and_limitation": "**必要反例**：部分设置 CoT 过置信、负例假阳性更多；不能推成所有 CoT 无效"
+    }
+  ]
+}

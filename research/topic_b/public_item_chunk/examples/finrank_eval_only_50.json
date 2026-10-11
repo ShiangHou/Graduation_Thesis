@@ -1,0 +1,210 @@
+{
+  "source_query_id": "97546a79-b989-48df-96c5-82c119a9c38c",
+  "pool_type": "positive-preserving curated expansion, not natural retrieval",
+  "model_was_run": false,
+  "ready_for_complete_gold_evaluation": false,
+  "labels": {
+    "I_c04b4fd0667b4d7152f5": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_76e4a6ca8871fd8ee7ef": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_eb6e64e5dcb52592c19a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_18453f8d40e511610519": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_de8ab0dea1d4d0329aa9": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_0471735bd811ef3d909d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_527f74bbaeadaa43d4bb": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_9d5388082a96e8e1bc7f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b3761ab1c7993392beb1": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_46c4530a619e6ca720d6": {
+      "relevance": 1,
+      "status": "source_positive"
+    },
+    "I_a7f8c54dac127d2239ad": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_89b77620f5fc0f6dc300": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_58c313f6de70f74daabe": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_578538bfea9fd1d915e0": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b27486c1d2489040cefd": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_fd257d26fc6c700e63be": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_6c413c4d5d00f1e985cc": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_f3c96580464f67330aa6": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_95f02be14870f197ed51": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_7a7772249e2af54aecd2": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_2762703a0759bd513453": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_3858442b5c90c6ffa4fe": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_9f29301e838e7e39ec19": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5ecb935d4d8e982a8c48": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ceaabd354893e2197835": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_4326f8b2d6a5daf6a12b": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_2f0456e1d785fc1b3f1a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_e03e74dbd3d3d27f83a3": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_e4e5b4424d30ee86524a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_27e54c4ed19b4233d7dd": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_1cc21da495cfa886875b": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5b55f625f32d820a46ac": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_c291b52e8e22c2155266": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_8d15ebdcacf75f9b316f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_c29ee476bbebbe051238": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_8ed89388ff9ff1335297": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_b141550d0933d5f9ef21": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ac25df3e43ee4b382a4f": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_057c258c0d8da1b5b345": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_ef78142d24978d13299d": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_10b0b79ea5a83ded47ab": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_90cbfc9362ad61a1b06f": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_673f1ace499553205bdc": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_d4ad958e3147c7a733ba": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_9985c446e208aaf1502b": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_5281c8894b6bec457f80": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_7905737aeaf7dbc4d02a": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    },
+    "I_79a33ce701884126ac97": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_2b3371c3e16484903762": {
+      "relevance": 0,
+      "status": "source_hard_negative"
+    },
+    "I_1439e2f097fc3b1c8643": {
+      "relevance": null,
+      "status": "UNJUDGED"
+    }
+  },
+  "source_answer_evaluation_only": "As of FY2024, Johnson & Johnson operates in two main segments: Innovative Medicine and MedTech. Innovative Medicine focuses on the development and manufacturing of medicines for prescription use. These products are distributed to intermediaries such as retailers, wholesalers, distributors, hospitals and healthcare professionals, to prescribe them directly to their patients. It covers therapeutic areas: Immunology, Infectious Diseases, Neuroscience, Oncology, Pulmonary Hypertension, Cardiovascular and Metabolism. The MedTech segment designs and markets medical devices and technologies for Orthopaedics, Surgery, Cardiovascular, and Vision care. Its products are primarily used by medical professionals in hospitals, clinics, and specialized care settings. Johnson & Johnson therefore participates through its portfolio in important aspects of the care and treatment of patients with various diseases.",
+  "notice": "Other records’ passages are NOT automatically negatives. Expanded labels need audit; metadata year is filing year, not automatically fiscal period."
+}

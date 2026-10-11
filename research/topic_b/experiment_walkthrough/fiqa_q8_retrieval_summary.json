@@ -1,0 +1,49 @@
+{
+  "status": "one-query illustrative retrieval; no LLM results",
+  "fiqa_zip_sha256": "32c7df99ed21252fdfb2cf3f5673502a8d245ee0c44c4a133570d92ce2b3ad02",
+  "query": "How to deposit a cheque issued to an associate in my business into my business account?",
+  "corpus_count": 57638,
+  "retriever": {
+    "type": "custom BM25",
+    "k1": 1.2,
+    "b": 0.75,
+    "tokenizer": "lowercase regex [a-z0-9]+",
+    "stopwords": false,
+    "stemming": false,
+    "tie_break": "lexicographic document ID"
+  },
+  "gold_ranks": {
+    "566392": 56019,
+    "65404": 1
+  },
+  "pool_metrics": {
+    "80": {
+      "ndcg_at_20": 0.6131471927654584,
+      "recall_at_20": 0.5,
+      "precision_at_20": 0.05,
+      "rr_at_20": 1.0,
+      "pool_recall": 0.5,
+      "conditional_pool_recall_at_20": 1.0,
+      "conditional_pool_ndcg_at_20": 1.0
+    },
+    "150": {
+      "ndcg_at_20": 0.6131471927654584,
+      "recall_at_20": 0.5,
+      "precision_at_20": 0.05,
+      "rr_at_20": 1.0,
+      "pool_recall": 0.5,
+      "conditional_pool_recall_at_20": 1.0,
+      "conditional_pool_ndcg_at_20": 1.0
+    },
+    "250": {
+      "ndcg_at_20": 0.6131471927654584,
+      "recall_at_20": 0.5,
+      "precision_at_20": 0.05,
+      "rr_at_20": 1.0,
+      "pool_recall": 0.5,
+      "conditional_pool_recall_at_20": 1.0,
+      "conditional_pool_ndcg_at_20": 1.0
+    }
+  },
+  "pool_definition": "prefixes of the same retrieval run; no gold injection"
+}

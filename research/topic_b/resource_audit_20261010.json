@@ -1,0 +1,235 @@
+[
+  {
+    "name": "fiqa",
+    "url": "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/fiqa.zip",
+    "checked_date": "2026-10-10",
+    "http_status": 200,
+    "download_status": "downloaded",
+    "bytes": 17948027,
+    "sha256": "32c7df99ed21252fdfb2cf3f5673502a8d245ee0c44c4a133570d92ce2b3ad02",
+    "inspection": {
+      "fiqa/qrels/train.tsv": {
+        "rows": 14166,
+        "query_count": 5500,
+        "grades": {
+          "1": 14166
+        },
+        "mean_positive_per_query": 2.5756363636363635,
+        "positive_count_quantiles": {
+          "min": 1,
+          "median": 2.0,
+          "p90": 5,
+          "p95": 7,
+          "max": 23
+        }
+      },
+      "fiqa/qrels/test.tsv": {
+        "rows": 1706,
+        "query_count": 648,
+        "grades": {
+          "1": 1706
+        },
+        "mean_positive_per_query": 2.632716049382716,
+        "positive_count_quantiles": {
+          "min": 1,
+          "median": 2.0,
+          "p90": 5,
+          "p95": 7,
+          "max": 15
+        }
+      },
+      "fiqa/qrels/dev.tsv": {
+        "rows": 1238,
+        "query_count": 500,
+        "grades": {
+          "1": 1238
+        },
+        "mean_positive_per_query": 2.476,
+        "positive_count_quantiles": {
+          "min": 1,
+          "median": 2.0,
+          "p90": 5,
+          "p95": 6,
+          "max": 20
+        }
+      },
+      "fiqa/corpus.jsonl": {
+        "rows": 57638,
+        "fields": [
+          "_id",
+          "metadata",
+          "text",
+          "title"
+        ]
+      },
+      "fiqa/queries.jsonl": {
+        "rows": 6648,
+        "fields": [
+          "_id",
+          "metadata",
+          "text"
+        ]
+      }
+    },
+    "corpus_characters_quantiles": {
+      "min": 0,
+      "median": 522.0,
+      "p90": 1551,
+      "p95": 2097,
+      "max": 16990
+    },
+    "corpus_characters_mean": 767.2108157812554,
+    "status": "parsed_and_counted"
+  },
+  {
+    "name": "scifact",
+    "url": "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/scifact.zip",
+    "checked_date": "2026-10-10",
+    "http_status": 200,
+    "download_status": "downloaded",
+    "bytes": 2816079,
+    "sha256": "536e14446a0ba56ed1398ab1055f39fe852686ecad24a6306c80c490fa8e0165",
+    "inspection": {
+      "scifact/qrels/train.tsv": {
+        "rows": 919,
+        "query_count": 809,
+        "grades": {
+          "1": 919
+        },
+        "mean_positive_per_query": 1.1359703337453646,
+        "positive_count_quantiles": {
+          "min": 1,
+          "median": 1,
+          "p90": 1,
+          "p95": 2,
+          "max": 5
+        }
+      },
+      "scifact/qrels/test.tsv": {
+        "rows": 339,
+        "query_count": 300,
+        "grades": {
+          "1": 339
+        },
+        "mean_positive_per_query": 1.13,
+        "positive_count_quantiles": {
+          "min": 1,
+          "median": 1.0,
+          "p90": 1,
+          "p95": 2,
+          "max": 5
+        }
+      },
+      "scifact/corpus.jsonl": {
+        "rows": 5183,
+        "fields": [
+          "_id",
+          "metadata",
+          "text",
+          "title"
+        ]
+      },
+      "scifact/queries.jsonl": {
+        "rows": 1109,
+        "fields": [
+          "_id",
+          "metadata",
+          "text"
+        ]
+      }
+    },
+    "corpus_characters_quantiles": {
+      "min": 221,
+      "median": 1426,
+      "p90": 2124,
+      "p95": 2436,
+      "max": 10127
+    },
+    "corpus_characters_mean": 1499.41173065792,
+    "status": "parsed_and_counted"
+  },
+  {
+    "name": "nfcorpus",
+    "url": "https://public.ukp.informatik.tu-darmstadt.de/thakur/BEIR/datasets/nfcorpus.zip",
+    "checked_date": "2026-10-10",
+    "http_status": 200,
+    "download_status": "downloaded",
+    "bytes": 2448432,
+    "sha256": "efe5be03f8c5b86a5870102d0599d227c8c6e2484328e68c6522560385671b0b",
+    "inspection": {
+      "nfcorpus/qrels/train.tsv": {
+        "rows": 110575,
+        "query_count": 2590,
+        "grades": {
+          "1": 110575
+        },
+        "mean_positive_per_query": 42.69305019305019,
+        "positive_count_quantiles": {
+          "min": 1,
+          "median": 18.0,
+          "p90": 77,
+          "p95": 142,
+          "max": 1363
+        }
+      },
+      "nfcorpus/qrels/test.tsv": {
+        "rows": 12334,
+        "query_count": 323,
+        "grades": {
+          "2": 576,
+          "1": 11758
+        },
+        "mean_positive_per_query": 38.18575851393189,
+        "positive_count_quantiles": {
+          "min": 1,
+          "median": 16,
+          "p90": 69,
+          "p95": 153,
+          "max": 475
+        }
+      },
+      "nfcorpus/qrels/dev.tsv": {
+        "rows": 11385,
+        "query_count": 324,
+        "grades": {
+          "2": 521,
+          "1": 10864
+        },
+        "mean_positive_per_query": 35.138888888888886,
+        "positive_count_quantiles": {
+          "min": 1,
+          "median": 18.5,
+          "p90": 68,
+          "p95": 102,
+          "max": 919
+        }
+      },
+      "nfcorpus/corpus.jsonl": {
+        "rows": 3633,
+        "fields": [
+          "_id",
+          "metadata",
+          "text",
+          "title"
+        ]
+      },
+      "nfcorpus/queries.jsonl": {
+        "rows": 3237,
+        "fields": [
+          "_id",
+          "metadata",
+          "text"
+        ]
+      }
+    },
+    "corpus_characters_quantiles": {
+      "min": 123,
+      "median": 1615,
+      "p90": 2123,
+      "p95": 2327,
+      "max": 10090
+    },
+    "corpus_characters_mean": 1590.783925130746,
+    "status": "parsed_and_counted"
+  }
+]

@@ -1,0 +1,209 @@
+{
+  "checked_at": "2026-10-11T10:08:09.948118",
+  "source": "https://github.com/yilunzhao/FinDVer",
+  "files": [
+    {
+      "file": "testmini.json",
+      "url": "https://raw.githubusercontent.com/yilunzhao/FinDVer/main/data/testmini.json",
+      "bytes": 971086,
+      "sha256": "09ffb848fec6cc38c7df153500f63388fa5fb7d9bc78300690ddbb83fa4e403a",
+      "count": 700,
+      "keys": [
+        "example_id",
+        "subset",
+        "split",
+        "statement",
+        "explanation",
+        "entailment_label",
+        "relevant_context",
+        "report"
+      ],
+      "subsets": {
+        "ie": 250,
+        "numeric": 250,
+        "knowledge": 200
+      },
+      "nonempty": {
+        "explanation": 450,
+        "relevant_context": 700,
+        "statement": 700,
+        "report": 700
+      },
+      "entailment_values": {
+        "False": 350,
+        "True": 350
+      },
+      "sample": {
+        "example_id": "ie-val-0",
+        "subset": "ie",
+        "split": "testmini",
+        "statement": "As of December 31, 2023, the Company measured total assets at fair value of $32,253 thousand and had a long-term debt carrying value of solar sale leasebacks amounting to $278.4 million, categorized within the Level 2 fair value hierarchy.",
+        "explanation": "1. From paragraph 93, the total fair value of assets as of December 31, 2023, is explicitly stated as $42,146 thousand.\n2. Paragraph 89 provides the carrying value of solar sale leasebacks, specified as $296.3 million as of December 31, 2023.\n3. According to paragraph 90, the Company's debt, which would include the sale leasebacks, is disclosed under Level 2 of the fair value hierarchy.\n4. The statement incorrectly states the total fair value of assets as $32,253 thousand and the carrying value of solar sale leasebacks as $278.4 million. This is inconsistent because the correct total fair value is $42,146 thousand, and the carrying value of solar sale leasebacks is $296.3 million as of December 31, 2023.",
+        "entailment_label": false,
+        "relevant_context": [
+          89,
+          90,
+          93
+        ],
+        "report": "NJR-2024-02-06_10-Q.json"
+      },
+      "explanation_by_subset_label": [
+        {
+          "subset": "ie",
+          "label": "False",
+          "status": "nonempty",
+          "count": 125
+        },
+        {
+          "subset": "ie",
+          "label": "True",
+          "status": "nonempty",
+          "count": 125
+        },
+        {
+          "subset": "numeric",
+          "label": "False",
+          "status": "missing_or_empty",
+          "count": 125
+        },
+        {
+          "subset": "numeric",
+          "label": "True",
+          "status": "missing_or_empty",
+          "count": 125
+        },
+        {
+          "subset": "knowledge",
+          "label": "True",
+          "status": "nonempty",
+          "count": 100
+        },
+        {
+          "subset": "knowledge",
+          "label": "False",
+          "status": "nonempty",
+          "count": 100
+        }
+      ],
+      "missing_explanation_key": 250,
+      "unique_reports": 255,
+      "all_keys": [
+        "entailment_label",
+        "example_id",
+        "execution_result",
+        "explaination",
+        "explanation",
+        "knowledge",
+        "python_calculation",
+        "relevant_context",
+        "report",
+        "split",
+        "statement",
+        "subset"
+      ],
+      "nonempty_explaination_alternate": 250,
+      "nonempty_explanation_normalized": 700,
+      "normalization_rule": "explanation if nonempty else explaination; preserve original keys"
+    },
+    {
+      "file": "test.json",
+      "url": "https://raw.githubusercontent.com/yilunzhao/FinDVer/main/data/test.json",
+      "bytes": 1831233,
+      "sha256": "7cfef6889d0355a0d07c06e66ab46e6fcd4ebf06080c0f908409c7be4c7aa3b7",
+      "count": 1700,
+      "keys": [
+        "example_id",
+        "subset",
+        "split",
+        "statement",
+        "explanation",
+        "entailment_label",
+        "relevant_context",
+        "report"
+      ],
+      "subsets": {
+        "ie": 600,
+        "numeric": 600,
+        "knowledge": 500
+      },
+      "nonempty": {
+        "explanation": 1100,
+        "relevant_context": 1700,
+        "statement": 1700,
+        "report": 1700
+      },
+      "entailment_values": {
+        "False": 849,
+        "True": 851
+      },
+      "sample": {
+        "example_id": "ie-test-0",
+        "subset": "ie",
+        "split": "test",
+        "statement": "Ciena's revenue from the Networking Platforms segment increased primarily due to a rise in Optical Networking sales to communication service providers, and the company faced higher effective tax rates in 2024 compared to 2023 because of tax benefits from a gain on a cost method equity investment in 2023.",
+        "explanation": "1. Paragraph 103 describes how the Networking Platforms segment revenue decreased, primarily reflecting a decline in Optical Networking sales, mainly to communication providers.\n2. Paragraph 41 explains that the effective tax rate for the quarter ended January 27, 2024, was higher than for the quarter ended January 28, 2023, primarily due to a tax benefit in 2023 from a gain on a cost method equity investment.\n3. The statement is incorrect because it suggests that revenue from the Networking Platforms segment increased due to a rise in Optical Networking sales to communication service providers, whereas the revenue actually decreased due to a decline in Optical Networking sales.",
+        "entailment_label": false,
+        "relevant_context": [
+          41,
+          103
+        ],
+        "report": "CIEN-2024-03-07_10-Q.json"
+      },
+      "explanation_by_subset_label": [
+        {
+          "subset": "ie",
+          "label": "False",
+          "status": "nonempty",
+          "count": 300
+        },
+        {
+          "subset": "ie",
+          "label": "True",
+          "status": "nonempty",
+          "count": 300
+        },
+        {
+          "subset": "numeric",
+          "label": "True",
+          "status": "missing_or_empty",
+          "count": 300
+        },
+        {
+          "subset": "numeric",
+          "label": "False",
+          "status": "missing_or_empty",
+          "count": 300
+        },
+        {
+          "subset": "knowledge",
+          "label": "False",
+          "status": "nonempty",
+          "count": 249
+        },
+        {
+          "subset": "knowledge",
+          "label": "True",
+          "status": "nonempty",
+          "count": 251
+        }
+      ],
+      "missing_explanation_key": 0,
+      "unique_reports": 439,
+      "all_keys": [
+        "entailment_label",
+        "example_id",
+        "explanation",
+        "relevant_context",
+        "report",
+        "split",
+        "statement",
+        "subset"
+      ],
+      "nonempty_explaination_alternate": 0,
+      "nonempty_explanation_normalized": 1100,
+      "normalization_rule": "explanation if nonempty else explaination; preserve original keys"
+    }
+  ],
+  "model_experiments_run": false,
+  "overlapping_reports_between_splits": 155
+}
