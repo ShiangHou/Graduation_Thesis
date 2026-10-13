@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-12",
+  "file": "选题2_三问文献综述与研究路线.xmind",
+  "sha256": "9ae9b4068d3ef9adb447d4daa74f2d4fdd4c3117637278877e47ef95936a7660",
+  "sheet_count": 6,
+  "topic_count": 610,
+  "unique_papers": 115,
+  "core_papers": 89,
+  "direction_count": 20,
+  "reading_count": {
+    "M": 88,
+    "A": 27
+  },
+  "checks": [
+    "ZIP CRC",
+    "JSON parse and round-trip",
+    "unique topic IDs",
+    "paper links complete",
+    "OPML XML parse"
+  ],
+  "native_xmind_open_verified": false,
+  "note": "未检测到本机XMind；已验证文件结构，未声称完成客户端打开测试。"
+}

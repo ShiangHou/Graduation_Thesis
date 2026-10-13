@@ -1,0 +1,113 @@
+{
+  "repo": "https://github.com/aolaoban/Graph-Bounded_Financial_Reasoning",
+  "commit": "e1c1704eacfb8a3a522999d4a0ea726189bf5482",
+  "date": "2026-10-10",
+  "root_license_file_found": false,
+  "license_note": "No root license file was found in the inspected checkout at this revision; not an authorization to redistribute.",
+  "datasets": {
+    "data/CFBenchmark/cfben_nsdata.json": {
+      "rows": 11,
+      "sha256": "7070c153cac984b83e86a1913fa1bf1f4146f818696f0e0bf53ed626c33ede43",
+      "negative_types": {
+        "Entity": 4,
+        "Term": 4,
+        "Time": 3
+      },
+      "answer_types": {}
+    },
+    "data/CFBenchmark/金融指标计算.json": {
+      "rows": 70,
+      "sha256": "685c5452f189cadac5a6634adfc674e77af64bc0e99c5188ba63bfe644e09176",
+      "negative_types": {},
+      "answer_types": {}
+    },
+    "data/CFBenchmark/金融数值提取.json": {
+      "rows": 70,
+      "sha256": "93ca066c45818dd289e5bf61dfa14d9d7e6b591be990cea3a0403929d3abcf8b",
+      "negative_types": {},
+      "answer_types": {}
+    },
+    "data/FinQA/finqa.json": {
+      "rows": 1050,
+      "sha256": "b11bf7da50f117f03f7ec8f2c991d2bdf1221cf498af397df7ab053799a4ea0d",
+      "negative_types": {},
+      "answer_types": {},
+      "parent_question_exact_matches_to_official_splits": {
+        "train": 7,
+        "dev": 2,
+        "test": 1050
+      },
+      "matching_caveat": "Question-text matching only; duplicate question strings require context/source matching before final deduplication."
+    },
+    "data/FinQA/finqa_nsdata.json": {
+      "rows": 97,
+      "sha256": "da8cb16ffc02031df3c8d50cc18d67898b1cb2b34813b31383e8bc29985e6e6c",
+      "negative_types": {
+        "Term": 35,
+        "Entity": 35,
+        "Time": 27
+      },
+      "answer_types": {},
+      "parent_question_exact_matches_to_official_splits": {
+        "train": 2,
+        "dev": 0,
+        "test": 97
+      },
+      "matching_caveat": "Question-text matching only; duplicate question strings require context/source matching before final deduplication."
+    },
+    "data/FinanceReasoning/easy.json": {
+      "rows": 1000,
+      "sha256": "53890ee130f33759cf53cc71943248671e27e6035e75e4234373587784e56dd9",
+      "negative_types": {},
+      "answer_types": {}
+    },
+    "data/FinanceReasoning/financereasoning_nsdata.json": {
+      "rows": 412,
+      "sha256": "7a1cbea23ca4633a67d21b0ec9fbcf41ba0d61cc8964776b60361ce074d289b4",
+      "negative_types": {
+        "Entity": 163,
+        "Term": 158,
+        "Time": 91
+      },
+      "answer_types": {}
+    },
+    "data/FinanceReasoning/hard.json": {
+      "rows": 238,
+      "sha256": "ca8c055ef104176131da2e0f533897350cde3b93c4754575b09c7c7fbd046d9f",
+      "negative_types": {},
+      "answer_types": {}
+    },
+    "data/FinanceReasoning/medium.json": {
+      "rows": 1000,
+      "sha256": "98098f9b54c0a8c6192b3f3f8b7afe514b0fef2b0972ff0fe63ff43202c20e22",
+      "negative_types": {},
+      "answer_types": {}
+    },
+    "data/TAT-QA/tatqa.json": {
+      "rows": 1663,
+      "sha256": "a14d33ffb049072b67077564c3c03c19fa8fc9d4ca2c885d55d4739b02e9aead",
+      "negative_types": {},
+      "answer_types": {
+        "span": 714,
+        "multi-span": 210,
+        "arithmetic": 699,
+        "count": 40
+      }
+    },
+    "data/TAT-QA/tatqa_nsdata.json": {
+      "rows": 151,
+      "sha256": "b10057d567d1cecd83aee6a20b9b47429efc777328aad0fdc96263ba870c0647",
+      "negative_types": {
+        "Time": 41,
+        "Entity": 55,
+        "Term": 55
+      },
+      "answer_types": {
+        "multi-span": 24,
+        "arithmetic": 73,
+        "span": 50,
+        "count": 4
+      }
+    }
+  }
+}

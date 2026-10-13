@@ -1,0 +1,119 @@
+[
+  {
+    "name": "gbfr/data/CFBenchmark/cfben_nsdata.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/CFBenchmark/cfben_nsdata.json",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "e54101b245d9c297a304774e210abea552faeb64",
+    "status": "downloaded",
+    "bytes": 15325,
+    "sha256": "7070c153cac984b83e86a1913fa1bf1f4146f818696f0e0bf53ed626c33ede43"
+  },
+  {
+    "name": "gbfr/data/CFBenchmark/金融指标计算.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/CFBenchmark/金融指标计算.json",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "17509ace68bdacce271bee61fa1c6f60fb9ce4a7",
+    "status": "downloaded",
+    "bytes": 32229,
+    "sha256": "685c5452f189cadac5a6634adfc674e77af64bc0e99c5188ba63bfe644e09176"
+  },
+  {
+    "name": "gbfr/data/CFBenchmark/金融数值提取.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/CFBenchmark/金融数值提取.json",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "54d45b556681d9cf12cb253aa200d98e12c59b2a",
+    "status": "downloaded",
+    "bytes": 69110,
+    "sha256": "93ca066c45818dd289e5bf61dfa14d9d7e6b591be990cea3a0403929d3abcf8b"
+  },
+  {
+    "name": "gbfr/data/FinQA/finqa.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/FinQA/finqa.json",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "abd2fba8f28b8045e5d83fb8c79ead1c21f39fb8",
+    "status": "downloaded",
+    "bytes": 4622450,
+    "sha256": "b11bf7da50f117f03f7ec8f2c991d2bdf1221cf498af397df7ab053799a4ea0d"
+  },
+  {
+    "name": "gbfr/data/FinQA/finqa_nsdata.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/FinQA/finqa_nsdata.json",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "9edf2ed202c71f58af50934f6a1ce392ce64d8b9",
+    "status": "downloaded",
+    "bytes": 482952,
+    "sha256": "da8cb16ffc02031df3c8d50cc18d67898b1cb2b34813b31383e8bc29985e6e6c"
+  },
+  {
+    "name": "gbfr/data/FinanceReasoning/easy.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/FinanceReasoning/easy.json",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "889872cbf6d7d78f968f6544942bc765cfdc6eef",
+    "status": "downloaded",
+    "bytes": 4052714,
+    "sha256": "53890ee130f33759cf53cc71943248671e27e6035e75e4234373587784e56dd9"
+  },
+  {
+    "name": "gbfr/data/FinanceReasoning/financereasoning_nsdata.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/FinanceReasoning/financereasoning_nsdata.json",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "d029d04e3e38b98fe645cc3211a02543357522cd",
+    "status": "downloaded",
+    "bytes": 1677845,
+    "sha256": "7a1cbea23ca4633a67d21b0ec9fbcf41ba0d61cc8964776b60361ce074d289b4"
+  },
+  {
+    "name": "gbfr/data/FinanceReasoning/hard.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/FinanceReasoning/hard.json",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "f6b2e6a1ceb8e88ace020a10652914d7c2bb306a",
+    "status": "downloaded",
+    "bytes": 874349,
+    "sha256": "ca8c055ef104176131da2e0f533897350cde3b93c4754575b09c7c7fbd046d9f"
+  },
+  {
+    "name": "gbfr/data/FinanceReasoning/medium.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/FinanceReasoning/medium.json",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "e6dc022e6794761686c39715cd8fe3dd35da0ece",
+    "status": "downloaded",
+    "bytes": 3610611,
+    "sha256": "98098f9b54c0a8c6192b3f3f8b7afe514b0fef2b0972ff0fe63ff43202c20e22"
+  },
+  {
+    "name": "gbfr/data/TAT-QA/tatqa.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/TAT-QA/tatqa.json",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "146383ad6c175936fd1cf769dc66fb2761091dc8",
+    "status": "downloaded",
+    "bytes": 3514785,
+    "sha256": "a14d33ffb049072b67077564c3c03c19fa8fc9d4ca2c885d55d4739b02e9aead"
+  },
+  {
+    "name": "gbfr/data/TAT-QA/tatqa_nsdata.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/TAT-QA/tatqa_nsdata.json",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "6d79b516d5b22fd87e253ce1c93d4b7064653829",
+    "status": "downloaded",
+    "bytes": 409833,
+    "sha256": "b10057d567d1cecd83aee6a20b9b47429efc777328aad0fdc96263ba870c0647"
+  },
+  {
+    "name": "gbfr/README.md",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/README.md",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "c7343ade6d9adb61e490a55e4a0d6d6db5d37dfb",
+    "status": "downloaded",
+    "bytes": 7851,
+    "sha256": "601a01af52279b0e4af1b6eca98f726f7d0a48186dd6cac7c92754896a6b5391"
+  },
+  {
+    "name": "gbfr/knowledge_base/README.md",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/knowledge_base/README.md",
+    "checked_date": "2026-10-10",
+    "cache_verified_against_pinned_git_blob": "3d2c42093d97e2c4b887c2492c91d3ffa337b290",
+    "status": "downloaded",
+    "bytes": 3103,
+    "sha256": "08cae64b1185586aa88942f3f72edd29ce933a8ad81976cfd89c12f9db656417"
+  }
+]

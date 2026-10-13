@@ -1,0 +1,42 @@
+{
+  "finqa": {
+    "repo": "czyssrs/FinQA",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  "tatqa": {
+    "repo": "NExTplusplus/TAT-QA",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  "verifin": {
+    "repo": "verifiedfinance/anon",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  "financebench": {
+    "repo": "patronus-ai/financebench",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  "financereasoning": {
+    "repo": "BUPT-Reasoning-Lab/FinanceReasoning",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  "numberdiagnosis": {
+    "repo": "microsoft/NumberDiagnosis",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  "gbfr": {
+    "repo": "aolaoban/Graph-Bounded_Financial_Reasoning",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  "finground": {
+    "repo": "bettyguo/FinGround",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  "docmath": {
+    "repo": "yale-nlp/DocMath-Eval",
+    "error": "HTTP Error 403: rate limit exceeded"
+  },
+  "tatllm": {
+    "repo": "fengbinzhu/TAT-LLM",
+    "error": "HTTP Error 403: rate limit exceeded"
+  }
+}

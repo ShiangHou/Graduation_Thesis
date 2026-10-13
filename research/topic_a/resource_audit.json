@@ -1,0 +1,424 @@
+{
+  "date": "2026-10-10",
+  "kind": "DATA_AND_EVALUATOR_AUDIT_NOT_MODEL_RESULTS",
+  "python": "3.14.0",
+  "finqa": {
+    "train": {
+      "questions": 6251,
+      "groups": {
+        "page": 2110,
+        "report_company_year": 741,
+        "company": 135
+      },
+      "with_nonempty_gold_inds": 6251,
+      "roundtrip_exact_matches": 6251,
+      "invalid_programs": 0,
+      "roundtrip_mismatches": []
+    },
+    "dev": {
+      "questions": 883,
+      "groups": {
+        "page": 299,
+        "report_company_year": 224,
+        "company": 97
+      },
+      "with_nonempty_gold_inds": 883,
+      "roundtrip_exact_matches": 883,
+      "invalid_programs": 0,
+      "roundtrip_mismatches": []
+    },
+    "test": {
+      "questions": 1147,
+      "groups": {
+        "page": 380,
+        "report_company_year": 278,
+        "company": 100
+      },
+      "with_nonempty_gold_inds": 1147,
+      "roundtrip_exact_matches": 1147,
+      "invalid_programs": 0,
+      "roundtrip_mismatches": []
+    },
+    "split_group_intersections": {
+      "train__dev": {
+        "page": 0,
+        "report_company_year": 197,
+        "company": 96
+      },
+      "train__test": {
+        "page": 0,
+        "report_company_year": 243,
+        "company": 99
+      },
+      "dev__test": {
+        "page": 0,
+        "report_company_year": 93,
+        "company": 78
+      }
+    }
+  },
+  "tatqa": {
+    "train": {
+      "contexts": 2201,
+      "questions": 13215,
+      "answer_types": {
+        "multi-span": 1645,
+        "span": 5722,
+        "arithmetic": 5543,
+        "count": 305
+      },
+      "with_nonempty_mapping": 0,
+      "with_nonempty_facts": 0,
+      "with_nonempty_derivation": 6603,
+      "gold_self_score_em_f1_scale_op": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    "dev": {
+      "contexts": 278,
+      "questions": 1668,
+      "answer_types": {
+        "span": 701,
+        "multi-span": 217,
+        "arithmetic": 718,
+        "count": 32
+      },
+      "with_nonempty_mapping": 0,
+      "with_nonempty_facts": 0,
+      "with_nonempty_derivation": 834,
+      "gold_self_score_em_f1_scale_op": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    "test_gold": {
+      "contexts": 277,
+      "questions": 1663,
+      "answer_types": {
+        "span": 714,
+        "multi-span": 210,
+        "arithmetic": 699,
+        "count": 40
+      },
+      "with_nonempty_mapping": 0,
+      "with_nonempty_facts": 1660,
+      "with_nonempty_derivation": 831,
+      "gold_self_score_em_f1_scale_op": [
+        1.0,
+        1.0,
+        1.0,
+        0.0
+      ]
+    },
+    "table_uid_intersections": {
+      "train__dev": 0,
+      "train__test_gold": 0,
+      "dev__test_gold": 0
+    },
+    "tagop_train": {
+      "questions": 13215,
+      "arithmetic_questions": 5543,
+      "with_nonempty_mapping": 13215,
+      "arithmetic_with_mapping": 5543,
+      "with_nonempty_facts": 13215,
+      "field_presence": {
+        "uid": 13215,
+        "order": 13215,
+        "question": 13215,
+        "answer": 13215,
+        "derivation": 13215,
+        "answer_type": 13215,
+        "answer_from": 13215,
+        "facts": 13215,
+        "mapping": 13215,
+        "rel_paragraphs": 13215,
+        "req_comparison": 13215,
+        "scale": 13215
+      },
+      "arithmetic_with_table_mapping": 5421,
+      "mapped_arithmetic_with_exact_duplicate_cell_text": 722
+    },
+    "tagop_dev": {
+      "questions": 1668,
+      "arithmetic_questions": 0,
+      "with_nonempty_mapping": 0,
+      "arithmetic_with_mapping": 0,
+      "with_nonempty_facts": 0,
+      "field_presence": {
+        "uid": 1668,
+        "order": 1668,
+        "question": 1668
+      }
+    }
+  },
+  "financereasoning": {
+    "easy": {
+      "questions": 1000,
+      "source_prefixes": {
+        "CodeTAT-QA-test": 189,
+        "CodeFinQA-test": 559,
+        "FinanceMath-validation": 34,
+        "FinanceReasoning-test": 212,
+        "FinCode-test": 6
+      }
+    },
+    "medium": {
+      "questions": 1000,
+      "source_prefixes": {
+        "FinanceReasoning-test": 540,
+        "FinanceMath-validation": 104,
+        "FinCode-test": 27,
+        "CodeTAT-QA-test": 99,
+        "CodeFinQA-test": 230
+      }
+    },
+    "hard": {
+      "questions": 238,
+      "source_prefixes": {
+        "CodeFinQA-test": 6,
+        "FinanceReasoning-test": 156,
+        "FinanceMath-validation": 62,
+        "FinCode-test": 14
+      }
+    }
+  },
+  "financebench": {
+    "questions": 150,
+    "gpt-4_oracle_released_labels": {
+      "Correct Answer": 126,
+      "Incorrect Answer": 15,
+      "Refusal": 9
+    },
+    "gpt-4-1106-preview_oracle_released_labels": {
+      "Correct Answer": 128,
+      "Incorrect Answer": 22
+    }
+  },
+  "verifin_published_counts_reexpressed": [
+    {
+      "dataset": "xbrlfiling",
+      "run": "gpt-5.5",
+      "n": 600,
+      "accepts": 560,
+      "answer_coverage": 0.9333333333333333,
+      "decision_coverage": 1.0,
+      "accepted_error_rate": 0.0
+    },
+    {
+      "dataset": "xbrlfiling",
+      "run": "claude-haiku-4.5",
+      "n": 600,
+      "accepts": 455,
+      "answer_coverage": 0.7583333333333333,
+      "decision_coverage": 0.9883333333333333,
+      "accepted_error_rate": 0.0
+    },
+    {
+      "dataset": "xbrlfiling",
+      "run": "fino1-identity-pending",
+      "n": 600,
+      "accepts": 436,
+      "answer_coverage": 0.7266666666666667,
+      "decision_coverage": 0.9866666666666667,
+      "accepted_error_rate": 0.0
+    },
+    {
+      "dataset": "xbrlfiling",
+      "run": "qwen3-30b",
+      "n": 600,
+      "accepts": 304,
+      "answer_coverage": 0.5066666666666667,
+      "decision_coverage": 0.9966666666666667,
+      "accepted_error_rate": 0.0
+    },
+    {
+      "dataset": "xbrlfiling",
+      "run": "llama-3.1-8b",
+      "n": 600,
+      "accepts": 74,
+      "answer_coverage": 0.12333333333333334,
+      "decision_coverage": 0.9733333333333334,
+      "accepted_error_rate": 0.0
+    },
+    {
+      "dataset": "xbrlfiling",
+      "run": "qwen2.5-7b",
+      "n": 600,
+      "accepts": 35,
+      "answer_coverage": 0.058333333333333334,
+      "decision_coverage": 0.9833333333333333,
+      "accepted_error_rate": 0.0
+    },
+    {
+      "dataset": "xbrlfiling",
+      "run": "direct-llm",
+      "n": 600,
+      "accepts": 600,
+      "answer_coverage": 1.0,
+      "decision_coverage": 1.0,
+      "accepted_error_rate": 0.15333333333333332
+    },
+    {
+      "dataset": "xbrlfiling",
+      "run": "llm-judge",
+      "n": 600,
+      "accepts": 221,
+      "answer_coverage": 0.36833333333333335,
+      "decision_coverage": 1.0,
+      "accepted_error_rate": 0.11764705882352941
+    },
+    {
+      "dataset": "xbrlfiling",
+      "run": "judge-plus-formula",
+      "n": 600,
+      "accepts": 555,
+      "answer_coverage": 0.925,
+      "decision_coverage": 1.0,
+      "accepted_error_rate": 0.13513513513513514
+    },
+    {
+      "dataset": "xbrlfiling",
+      "run": "program-of-thought",
+      "n": 600,
+      "accepts": 450,
+      "answer_coverage": 0.75,
+      "decision_coverage": 0.9633333333333334,
+      "accepted_error_rate": 0.013333333333333334
+    },
+    {
+      "dataset": "financebench",
+      "run": "claude-haiku-4.5",
+      "n": 67,
+      "accepts": 28,
+      "answer_coverage": 0.417910447761194,
+      "decision_coverage": 0.8059701492537313,
+      "accepted_error_rate": 0.0
+    },
+    {
+      "dataset": "financebench",
+      "run": "fino1-identity-pending",
+      "n": 67,
+      "accepts": 32,
+      "answer_coverage": 0.47761194029850745,
+      "decision_coverage": 0.8208955223880597,
+      "accepted_error_rate": 0.0
+    },
+    {
+      "dataset": "financebench",
+      "run": "qwen3-30b",
+      "n": 67,
+      "accepts": 24,
+      "answer_coverage": 0.3582089552238806,
+      "decision_coverage": 0.7761194029850746,
+      "accepted_error_rate": 0.0
+    },
+    {
+      "dataset": "financebench",
+      "run": "llama-3.1-8b",
+      "n": 67,
+      "accepts": 10,
+      "answer_coverage": 0.14925373134328357,
+      "decision_coverage": 0.582089552238806,
+      "accepted_error_rate": 0.0
+    },
+    {
+      "dataset": "financebench",
+      "run": "qwen2.5-7b",
+      "n": 67,
+      "accepts": 10,
+      "answer_coverage": 0.14925373134328357,
+      "decision_coverage": 0.4925373134328358,
+      "accepted_error_rate": 0.0
+    },
+    {
+      "dataset": "financebench",
+      "run": "direct-llm",
+      "n": 67,
+      "accepts": 64,
+      "answer_coverage": 0.9552238805970149,
+      "decision_coverage": 0.9552238805970149,
+      "accepted_error_rate": 0.28125
+    },
+    {
+      "dataset": "financebench",
+      "run": "llm-judge",
+      "n": 67,
+      "accepts": 29,
+      "answer_coverage": 0.43283582089552236,
+      "decision_coverage": 0.9552238805970149,
+      "accepted_error_rate": 0.2413793103448276
+    },
+    {
+      "dataset": "financebench",
+      "run": "judge-plus-formula",
+      "n": 67,
+      "accepts": 47,
+      "answer_coverage": 0.7014925373134329,
+      "decision_coverage": 0.9552238805970149,
+      "accepted_error_rate": 0.2765957446808511
+    },
+    {
+      "dataset": "financebench",
+      "run": "program-of-thought",
+      "n": 67,
+      "accepts": 44,
+      "answer_coverage": 0.6567164179104478,
+      "decision_coverage": 0.9552238805970149,
+      "accepted_error_rate": 0.09090909090909091
+    },
+    {
+      "dataset": "financebench",
+      "run": "haiku-retrieved-evidence",
+      "n": 67,
+      "accepts": 30,
+      "answer_coverage": 0.44776119402985076,
+      "decision_coverage": 0.6716417910447762,
+      "accepted_error_rate": 0.0
+    }
+  ],
+  "input_hash_check": [
+    "finqa/README.md",
+    "finqa/LICENSE",
+    "finqa/dataset/train.json",
+    "finqa/dataset/dev.json",
+    "finqa/dataset/test.json",
+    "finqa/code/evaluate/evaluate.py",
+    "finqa/code/generator/constant_list.txt",
+    "tatqa/README.md",
+    "tatqa/LICENSE",
+    "tatqa/dataset_raw/tatqa_dataset_train.json",
+    "tatqa/dataset_raw/tatqa_dataset_dev.json",
+    "tatqa/dataset_raw/tatqa_dataset_test_gold.json",
+    "tatqa/dataset_tagop/tatqa_dataset_train.json",
+    "tatqa/dataset_tagop/tatqa_dataset_dev.json",
+    "tatqa/tatqa_metric.py",
+    "tatqa/tatqa_utils.py",
+    "tatqa/tatqa_eval.py",
+    "verifin/README.md",
+    "verifin/results/README.md",
+    "verifin/results/paper_metrics.csv",
+    "verifin/results/scoring_policy.json",
+    "verifin/results/manual_adjudications.json",
+    "verifin/scripts/paper_scoring.py",
+    "verifin/data/multicompany_provable/data/provable_calcrequired.jsonl",
+    "verifin/data/numerical_questions.jsonl",
+    "verifin/datasets/xbrlbench-600/DATASET_CARD.md",
+    "verifin/datasets/xbrlbench-600/LICENSE_PENDING.md",
+    "financebench/README.md",
+    "financebench/data/financebench_open_source.jsonl",
+    "financebench/results/gpt-4-1106-preview_oracle.jsonl",
+    "financebench/results/gpt-4_oracle.jsonl",
+    "financereasoning/README.md",
+    "financereasoning/evaluation.py",
+    "financereasoning/data/FinanceReasoning/easy.json",
+    "financereasoning/data/FinanceReasoning/medium.json",
+    "financereasoning/data/FinanceReasoning/hard.json",
+    "numberdiagnosis/README.md",
+    "numberdiagnosis/data/perturbation/tatqa/tatqa.py"
+  ]
+}

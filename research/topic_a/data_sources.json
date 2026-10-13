@@ -1,0 +1,198 @@
+[
+  {
+    "name": "finqa/README.md",
+    "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/README.md",
+    "git_blob_sha": "8fc89f8402714c39385a80c3d7d5e947ae27fcab"
+  },
+  {
+    "name": "finqa/LICENSE",
+    "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/LICENSE",
+    "git_blob_sha": "fb3b513238ba5ec7e0799cb1190ff30c759a5bdf"
+  },
+  {
+    "name": "finqa/dataset/train.json",
+    "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/dataset/train.json",
+    "git_blob_sha": "a6c2c5a60f9abe3fba5a793cc4d9e1dee2e09209",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/.local/shortlist_probe/finqa_train.json"
+  },
+  {
+    "name": "finqa/dataset/dev.json",
+    "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/dataset/dev.json",
+    "git_blob_sha": "970f239f591c782b17df420c0d343b780737f3da",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/.local/shortlist_probe/finqa_dev.json"
+  },
+  {
+    "name": "finqa/dataset/test.json",
+    "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/dataset/test.json",
+    "git_blob_sha": "59958c7c3bb3b21f4dff6bc912a0fe0ae710aee0",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/.local/shortlist_probe/finqa_test.json"
+  },
+  {
+    "name": "finqa/code/evaluate/evaluate.py",
+    "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/code/evaluate/evaluate.py",
+    "git_blob_sha": "4829a4ca58a5725fb3f7a46b3b23b7f7e848a512"
+  },
+  {
+    "name": "finqa/code/generator/constant_list.txt",
+    "url": "https://raw.githubusercontent.com/czyssrs/FinQA/0f16e2867befa6840783e58be38c9efb9229d742/code/generator/constant_list.txt",
+    "git_blob_sha": "1a1eed3d16d62fd60b343bd9b235573dd9cb2998"
+  },
+  {
+    "name": "tatqa/README.md",
+    "url": "https://raw.githubusercontent.com/NExTplusplus/TAT-QA/870accc41953dcde885aabeb963d94aabdc0fbc3/README.md",
+    "git_blob_sha": "13718343e75798a4708851c54af99e1daf7b4397"
+  },
+  {
+    "name": "tatqa/LICENSE",
+    "url": "https://raw.githubusercontent.com/NExTplusplus/TAT-QA/870accc41953dcde885aabeb963d94aabdc0fbc3/LICENSE",
+    "git_blob_sha": "7855a66ee0e672eda63b018d8b0d37f848b4015a"
+  },
+  {
+    "name": "tatqa/dataset_raw/tatqa_dataset_train.json",
+    "url": "https://raw.githubusercontent.com/NExTplusplus/TAT-QA/870accc41953dcde885aabeb963d94aabdc0fbc3/dataset_raw/tatqa_dataset_train.json",
+    "git_blob_sha": "ec6a61be61ea7bb92c3278877e46e8488cc5203c",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/.local/shortlist_probe/tatqa_train.json"
+  },
+  {
+    "name": "tatqa/dataset_raw/tatqa_dataset_dev.json",
+    "url": "https://raw.githubusercontent.com/NExTplusplus/TAT-QA/870accc41953dcde885aabeb963d94aabdc0fbc3/dataset_raw/tatqa_dataset_dev.json",
+    "git_blob_sha": "48075c812af3fe6698b1d5cb50d9dbf358d52784",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/.local/shortlist_probe/tatqa_dev.json"
+  },
+  {
+    "name": "tatqa/dataset_raw/tatqa_dataset_test_gold.json",
+    "url": "https://raw.githubusercontent.com/NExTplusplus/TAT-QA/870accc41953dcde885aabeb963d94aabdc0fbc3/dataset_raw/tatqa_dataset_test_gold.json",
+    "git_blob_sha": "3d5d3b691af572646ba9b1ac4d8f78c5dca09732",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/.local/shortlist_probe/tatqa_test_gold.json"
+  },
+  {
+    "name": "tatqa/dataset_tagop/tatqa_dataset_train.json",
+    "url": "https://raw.githubusercontent.com/NExTplusplus/TAT-QA/870accc41953dcde885aabeb963d94aabdc0fbc3/dataset_tagop/tatqa_dataset_train.json",
+    "git_blob_sha": "cd3f5105abbe752fcb5ff445fff8e090a0d2ed2e"
+  },
+  {
+    "name": "tatqa/dataset_tagop/tatqa_dataset_dev.json",
+    "url": "https://raw.githubusercontent.com/NExTplusplus/TAT-QA/870accc41953dcde885aabeb963d94aabdc0fbc3/dataset_tagop/tatqa_dataset_dev.json",
+    "git_blob_sha": "4089cdab842bf7e581612318b05717ad433e3802"
+  },
+  {
+    "name": "tatqa/tatqa_metric.py",
+    "url": "https://raw.githubusercontent.com/NExTplusplus/TAT-QA/870accc41953dcde885aabeb963d94aabdc0fbc3/tatqa_metric.py",
+    "git_blob_sha": "80f45360fd5303110b9e31ad1b54ad6dfd3f9d18"
+  },
+  {
+    "name": "tatqa/tatqa_utils.py",
+    "url": "https://raw.githubusercontent.com/NExTplusplus/TAT-QA/870accc41953dcde885aabeb963d94aabdc0fbc3/tatqa_utils.py",
+    "git_blob_sha": "2c7c7246a73330af3bd290bf746ca9014ef73ebb"
+  },
+  {
+    "name": "tatqa/tatqa_eval.py",
+    "url": "https://raw.githubusercontent.com/NExTplusplus/TAT-QA/870accc41953dcde885aabeb963d94aabdc0fbc3/tatqa_eval.py",
+    "git_blob_sha": "5d40665e0a52630ba078aefa0a31144bc7cba8bc"
+  },
+  {
+    "name": "verifin/README.md",
+    "url": "https://raw.githubusercontent.com/verifiedfinance/anon/5c49943e8aa43f3dc03c1b2058a73469b22c5c5e/README.md",
+    "git_blob_sha": "a8689bce9d77e26acef465f1e2c50aca8072bb3b"
+  },
+  {
+    "name": "verifin/results/README.md",
+    "url": "https://raw.githubusercontent.com/verifiedfinance/anon/5c49943e8aa43f3dc03c1b2058a73469b22c5c5e/results/README.md",
+    "git_blob_sha": "28bb06ecc536f88e803140f91696457a860a4a1b"
+  },
+  {
+    "name": "verifin/results/paper_metrics.csv",
+    "url": "https://raw.githubusercontent.com/verifiedfinance/anon/5c49943e8aa43f3dc03c1b2058a73469b22c5c5e/results/paper_metrics.csv",
+    "git_blob_sha": "3984792d58331d90cd1cc255925e359fd6a02a90"
+  },
+  {
+    "name": "verifin/results/scoring_policy.json",
+    "url": "https://raw.githubusercontent.com/verifiedfinance/anon/5c49943e8aa43f3dc03c1b2058a73469b22c5c5e/results/scoring_policy.json",
+    "git_blob_sha": "c56d295e2777c31c4b53b7dd7cab137d6be1b8b4"
+  },
+  {
+    "name": "verifin/results/manual_adjudications.json",
+    "url": "https://raw.githubusercontent.com/verifiedfinance/anon/5c49943e8aa43f3dc03c1b2058a73469b22c5c5e/results/manual_adjudications.json",
+    "git_blob_sha": "6cfcdc1e6e4eab0ab46ac26535b34fc1a491e795"
+  },
+  {
+    "name": "verifin/scripts/paper_scoring.py",
+    "url": "https://raw.githubusercontent.com/verifiedfinance/anon/5c49943e8aa43f3dc03c1b2058a73469b22c5c5e/scripts/paper_scoring.py",
+    "git_blob_sha": "507dbe282c41a4931941d58ccfdc2b4e8af7de65"
+  },
+  {
+    "name": "verifin/data/multicompany_provable/data/provable_calcrequired.jsonl",
+    "url": "https://raw.githubusercontent.com/verifiedfinance/anon/5c49943e8aa43f3dc03c1b2058a73469b22c5c5e/data/multicompany_provable/data/provable_calcrequired.jsonl",
+    "git_blob_sha": "13eb2422c18445a59be62019711c1091794c2aad"
+  },
+  {
+    "name": "verifin/data/numerical_questions.jsonl",
+    "url": "https://raw.githubusercontent.com/verifiedfinance/anon/5c49943e8aa43f3dc03c1b2058a73469b22c5c5e/data/numerical_questions.jsonl",
+    "git_blob_sha": "b389d208ed8f78aa215e5db35eb608868bd01749"
+  },
+  {
+    "name": "verifin/datasets/xbrlbench-600/DATASET_CARD.md",
+    "url": "https://raw.githubusercontent.com/verifiedfinance/anon/5c49943e8aa43f3dc03c1b2058a73469b22c5c5e/datasets/xbrlbench-600/DATASET_CARD.md",
+    "git_blob_sha": "6591ed1299cc39497de589d7de2490f49ae29aab"
+  },
+  {
+    "name": "verifin/datasets/xbrlbench-600/LICENSE_PENDING.md",
+    "url": "https://raw.githubusercontent.com/verifiedfinance/anon/5c49943e8aa43f3dc03c1b2058a73469b22c5c5e/datasets/xbrlbench-600/LICENSE_PENDING.md",
+    "git_blob_sha": "9ceaabbd61b709f05fe87afd6e10adf8862ebd60"
+  },
+  {
+    "name": "financebench/README.md",
+    "url": "https://raw.githubusercontent.com/patronus-ai/financebench/cc39aeb4afdf33909ee1412188bf89035950c2eb/README.md",
+    "git_blob_sha": "bed5639eaeb17f93a818f55b99d03b398a469864"
+  },
+  {
+    "name": "financebench/data/financebench_open_source.jsonl",
+    "url": "https://raw.githubusercontent.com/patronus-ai/financebench/cc39aeb4afdf33909ee1412188bf89035950c2eb/data/financebench_open_source.jsonl",
+    "git_blob_sha": "4aef1d43a443474ba193f158f2baf70550ff528d"
+  },
+  {
+    "name": "financebench/results/gpt-4-1106-preview_oracle.jsonl",
+    "url": "https://raw.githubusercontent.com/patronus-ai/financebench/cc39aeb4afdf33909ee1412188bf89035950c2eb/results/gpt-4-1106-preview_oracle.jsonl",
+    "git_blob_sha": "bff7bfc7ab4c272e8e6e876e539858eb83b1d582"
+  },
+  {
+    "name": "financebench/results/gpt-4_oracle.jsonl",
+    "url": "https://raw.githubusercontent.com/patronus-ai/financebench/cc39aeb4afdf33909ee1412188bf89035950c2eb/results/gpt-4_oracle.jsonl",
+    "git_blob_sha": "44f52b8382346ed34a22e21c31d9e5a96f52acf6"
+  },
+  {
+    "name": "financereasoning/README.md",
+    "url": "https://raw.githubusercontent.com/BUPT-Reasoning-Lab/FinanceReasoning/b0fe6455396f831955e4eb988472b4a563403bc5/README.md",
+    "git_blob_sha": "7ff727d0bcf2384f1427a7950a7a08e147509143"
+  },
+  {
+    "name": "financereasoning/evaluation.py",
+    "url": "https://raw.githubusercontent.com/BUPT-Reasoning-Lab/FinanceReasoning/b0fe6455396f831955e4eb988472b4a563403bc5/evaluation.py",
+    "git_blob_sha": "591ed8bd969b31d5cbc934e5e338b0e075bd2355"
+  },
+  {
+    "name": "financereasoning/data/FinanceReasoning/easy.json",
+    "url": "https://raw.githubusercontent.com/BUPT-Reasoning-Lab/FinanceReasoning/b0fe6455396f831955e4eb988472b4a563403bc5/data/FinanceReasoning/easy.json",
+    "git_blob_sha": "889872cbf6d7d78f968f6544942bc765cfdc6eef"
+  },
+  {
+    "name": "financereasoning/data/FinanceReasoning/medium.json",
+    "url": "https://raw.githubusercontent.com/BUPT-Reasoning-Lab/FinanceReasoning/b0fe6455396f831955e4eb988472b4a563403bc5/data/FinanceReasoning/medium.json",
+    "git_blob_sha": "e6dc022e6794761686c39715cd8fe3dd35da0ece"
+  },
+  {
+    "name": "financereasoning/data/FinanceReasoning/hard.json",
+    "url": "https://raw.githubusercontent.com/BUPT-Reasoning-Lab/FinanceReasoning/b0fe6455396f831955e4eb988472b4a563403bc5/data/FinanceReasoning/hard.json",
+    "git_blob_sha": "f6b2e6a1ceb8e88ace020a10652914d7c2bb306a"
+  },
+  {
+    "name": "numberdiagnosis/README.md",
+    "url": "https://raw.githubusercontent.com/microsoft/NumberDiagnosis/b646a7179b4619dadfae009a4e68a562394c8ad9/README.md",
+    "git_blob_sha": "5cd659f543b781043638ec5b0f06335e8f9949bd"
+  },
+  {
+    "name": "numberdiagnosis/data/perturbation/tatqa/tatqa.py",
+    "url": "https://raw.githubusercontent.com/microsoft/NumberDiagnosis/b646a7179b4619dadfae009a4e68a562394c8ad9/data/perturbation/tatqa/tatqa.py",
+    "git_blob_sha": "78acf99a1ceb5df59be7d86e57c0037bec2c3cfd"
+  }
+]

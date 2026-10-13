@@ -1,0 +1,81 @@
+{
+  "seed": "topic-a-20261010-v1",
+  "rule": "hash-sort groups, boundaries floor(0.6*n), floor(0.8*n), floor(0.9*n)",
+  "official_dev": "calibration only",
+  "official_test": "final answer evaluation only",
+  "caveat": "FinQA official dev/test share report groups with train; no report independence claim.",
+  "counts": {
+    "finqa": {
+      "binding_diagnostic_test": {
+        "questions": 708,
+        "groups": 75,
+        "answer_types": {
+          "program": 708
+        }
+      },
+      "generator_or_binding_train": {
+        "questions": 3532,
+        "groups": 444,
+        "answer_types": {
+          "program": 3532
+        }
+      },
+      "method_tune": {
+        "questions": 708,
+        "groups": 74,
+        "answer_types": {
+          "program": 708
+        }
+      },
+      "selector_train": {
+        "questions": 1303,
+        "groups": 148,
+        "answer_types": {
+          "program": 1303
+        }
+      }
+    },
+    "tatqa": {
+      "binding_diagnostic_test": {
+        "questions": 1326,
+        "groups": 221,
+        "answer_types": {
+          "span": 555,
+          "multi-span": 182,
+          "arithmetic": 556,
+          "count": 33
+        }
+      },
+      "generator_or_binding_train": {
+        "questions": 7926,
+        "groups": 1320,
+        "answer_types": {
+          "multi-span": 983,
+          "span": 3452,
+          "arithmetic": 3306,
+          "count": 185
+        }
+      },
+      "method_tune": {
+        "questions": 1320,
+        "groups": 220,
+        "answer_types": {
+          "span": 572,
+          "arithmetic": 565,
+          "multi-span": 152,
+          "count": 31
+        }
+      },
+      "selector_train": {
+        "questions": 2643,
+        "groups": 440,
+        "answer_types": {
+          "span": 1143,
+          "arithmetic": 1116,
+          "multi-span": 328,
+          "count": 56
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+[
+  {
+    "name": "gbfr/data/CFBenchmark/cfben_nsdata.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/CFBenchmark/cfben_nsdata.json",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/data/CFBenchmark/cfben_nsdata.json",
+    "git_blob_sha": "e54101b245d9c297a304774e210abea552faeb64"
+  },
+  {
+    "name": "gbfr/data/CFBenchmark/金融指标计算.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/CFBenchmark/金融指标计算.json",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/data/CFBenchmark/金融指标计算.json",
+    "git_blob_sha": "17509ace68bdacce271bee61fa1c6f60fb9ce4a7"
+  },
+  {
+    "name": "gbfr/data/CFBenchmark/金融数值提取.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/CFBenchmark/金融数值提取.json",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/data/CFBenchmark/金融数值提取.json",
+    "git_blob_sha": "54d45b556681d9cf12cb253aa200d98e12c59b2a"
+  },
+  {
+    "name": "gbfr/data/FinQA/finqa.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/FinQA/finqa.json",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/data/FinQA/finqa.json",
+    "git_blob_sha": "abd2fba8f28b8045e5d83fb8c79ead1c21f39fb8"
+  },
+  {
+    "name": "gbfr/data/FinQA/finqa_nsdata.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/FinQA/finqa_nsdata.json",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/data/FinQA/finqa_nsdata.json",
+    "git_blob_sha": "9edf2ed202c71f58af50934f6a1ce392ce64d8b9"
+  },
+  {
+    "name": "gbfr/data/FinanceReasoning/easy.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/FinanceReasoning/easy.json",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/data/FinanceReasoning/easy.json",
+    "git_blob_sha": "889872cbf6d7d78f968f6544942bc765cfdc6eef"
+  },
+  {
+    "name": "gbfr/data/FinanceReasoning/financereasoning_nsdata.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/FinanceReasoning/financereasoning_nsdata.json",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/data/FinanceReasoning/financereasoning_nsdata.json",
+    "git_blob_sha": "d029d04e3e38b98fe645cc3211a02543357522cd"
+  },
+  {
+    "name": "gbfr/data/FinanceReasoning/hard.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/FinanceReasoning/hard.json",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/data/FinanceReasoning/hard.json",
+    "git_blob_sha": "f6b2e6a1ceb8e88ace020a10652914d7c2bb306a"
+  },
+  {
+    "name": "gbfr/data/FinanceReasoning/medium.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/FinanceReasoning/medium.json",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/data/FinanceReasoning/medium.json",
+    "git_blob_sha": "e6dc022e6794761686c39715cd8fe3dd35da0ece"
+  },
+  {
+    "name": "gbfr/data/TAT-QA/tatqa.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/TAT-QA/tatqa.json",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/data/TAT-QA/tatqa.json",
+    "git_blob_sha": "146383ad6c175936fd1cf769dc66fb2761091dc8"
+  },
+  {
+    "name": "gbfr/data/TAT-QA/tatqa_nsdata.json",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/data/TAT-QA/tatqa_nsdata.json",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/data/TAT-QA/tatqa_nsdata.json",
+    "git_blob_sha": "6d79b516d5b22fd87e253ce1c93d4b7064653829"
+  },
+  {
+    "name": "gbfr/README.md",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/README.md",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/README.md",
+    "git_blob_sha": "c7343ade6d9adb61e490a55e4a0d6d6db5d37dfb"
+  },
+  {
+    "name": "gbfr/knowledge_base/README.md",
+    "url": "https://raw.githubusercontent.com/aolaoban/Graph-Bounded_Financial_Reasoning/e1c1704eacfb8a3a522999d4a0ea726189bf5482/knowledge_base/README.md",
+    "cached_path": "/Users/houshang.1/Documents/learn/毕业论文/Graduation_Thesis/.local/topic_a/gbfr_repo/knowledge_base/README.md",
+    "git_blob_sha": "3d2c42093d97e2c4b887c2492c91d3ffa337b290"
+  }
+]

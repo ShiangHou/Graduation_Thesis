@@ -1,0 +1,944 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>金融长池重排｜三问文献地图</title><style>
+body{margin:0;background:#f4f6f9;color:#172c42;font:16px/1.8 system-ui,"PingFang SC",sans-serif}main{max-width:1180px;margin:auto;padding:40px 28px}h1{font-size:30px;margin-bottom:10px}header{border-bottom:3px solid #167580;padding-bottom:22px;margin-bottom:28px}details{margin:10px 0;background:white;border:1px solid #dbe4eb;border-radius:10px}summary{cursor:pointer;padding:12px 16px;font-weight:650}details>div{padding:0 16px 12px 26px;border-left:3px solid #d9e9eb;margin-left:18px}p{margin:7px 0}a{color:#067785;font-size:13px}pre{white-space:pre-wrap;font:13px/1.8 system-ui;background:#f5f7f8;padding:14px;border-radius:8px;color:#526270}small{color:#566776}button{background:#126c79;color:white;border:0;padding:9px 18px;border-radius:6px;margin-right:10px;cursor:pointer}section{margin:28px 0}nav a{margin-right:18px;font-size:15px}input{padding:10px;border:1px solid #bbb;border-radius:6px;width:300px;max-width:85%}.hint{color:#526270}.hit{outline:2px solid #dd9c40}</style><main><header><small>毕业论文选题 2 · 文献地图 · 2026-10-12</small><h1>金融 item＋chunk 长候选池重排</h1><p>为什么失效 → 出现什么、如何衡量 → 如何缓解与后训练</p><p class="hint">115项工作索引；论文节点可展开查看方法、适用边界与一次来源。M/A是阅读深度，不是实验结果。</p><button onclick="document.querySelectorAll('details').forEach(x=>x.open=true)">全部展开</button><button onclick="document.querySelectorAll('details').forEach(x=>x.open=false)">全部折叠</button><input placeholder="查找标题，例如 SelfCite" oninput="search(this.value)"></header><nav><a href="#s0">00 总览与阅读说明</a><a href="#s1">RQ1 为什么失效</a><a href="#s2">RQ2 出现什么及如何衡量</a><a href="#s3">RQ3 如何缓解与后训练</a><a href="#s4">04 创新边界与实验落点</a><a href="#s5">05 外围文献与检索边界</a></nav><section id="s0"><details open><summary>00 总览与阅读说明</summary><div><details open><summary>RQ1 为什么失效</summary><div><p>1.1 长度与证据位置｜可接受长输入≠可靠利用；区分位置效应与获取证据后的推理退化。</p><p>1.2 独立实体数与属性绑定｜长池还增加需要区分的实体和关系，不能只以token长度解释。</p><p>1.3 相似干扰、知识冲突与充分性｜语义相似但不支持，比随机噪声更值得单独研究；更多上下文也可能改善覆盖。</p><p>1.4 金融语义中的多重约束｜金融证据需同时匹配主体、期间、指标、口径、单位与出处。</p><p>1.5 排序位置偏差与比较不一致｜输入顺序会影响排名，比较可非传递；集合稳定不等于解释可靠。</p><p>1.6 联合任务与后训练分布｜排序+理由同时生成的额外负担是待检验假设；引用训练也能带来收益。</p></div></details><details open><summary>RQ2 出现什么及如何衡量</summary><div><p>2.1 无依据与矛盾声明｜原子声明检查；将支持、矛盾、证据不足分开。</p><p>2.2 出处错配与item归属错误｜全池能找到同一句话，仍可能归错item；合法引用ID不保证支持。</p><p>2.3 支持性≠贡献性≠内部推理忠实｜外部证据支持可以评测；生成解释不自动等于模型真实决策过程。</p><p>2.4 排序质量与集合/次序稳定｜必须用相关性qrels测质量，再用配对扰动测稳定；不以两次重合率代替正确性。</p><p>2.5 覆盖、弃答与格式错误｜空理由、少推、重复、池外ID、截断属于不同失效，不能混成一个幻觉率。</p><p>2.6 金融公开数据能提供什么｜优先公开披露item+chunk；QA和检测数据需改造，不能冒充现成长池排序金标。</p></div></details><details open><summary>RQ3 如何缓解与后训练</summary><div><p>3.1 小组排序与候选管理｜滑窗、pairwise、setwise、树/锦标赛解决单次比较规模，但可能损失召回。</p><p>3.2 金融卡片与规则约束｜结构字段匹配、证据卡和元数据过滤是直接近邻，必须作为强基线。</p><p>3.3 分离排序、取证与理由生成｜先定位证据，再生成或核验理由；局部读取可减少跨item污染。</p><p>3.4 排序蒸馏与证据SFT｜排序蒸馏、解释监督和抗干扰SFT均已有；数据构造比换训练名更关键。</p><p>3.5 偏好优化与反事实证据｜DPO/SimPO可学习正确和错误理由差异，但要防长度偏好与合成错误失真。</p><p>3.6 RL与细粒度奖励｜排序GRPO与引用PPO已有；单一NDCG奖励不覆盖理由归属，单一支持率会鼓励少说。</p><p>3.7 稳定性训练及推理聚合｜多排列聚合与顺序一致训练已有；一致可能只是稳定地错误。</p><p>3.8 核验器、拒断言与机制干预｜检测器或规则可直接清除部分错误；内部检索头路线需要可访问模型。</p></div></details><details open><summary>当前题目与边界</summary><div><p>金融信息条目长候选池重排：理由证据一致性分析与后训练优化</p><p>输入：公开query + item/主体/出处 + chunk；输出：TopK + 可验证理由</p><p>排序质量、理由支持、条目归属、有效覆盖、成本同时评测</p><p>基金业务是动机；现阶段不声称复现企业基金任务</p><p>假设：相似干扰下的绑定错误；尚无本项目模型实验结论</p></div></details><details open><summary>如何读图</summary><div><p>总索引115项；三个问题导图精选89项，跨分支重复引用不重复计数</p><p>M：方法/相关实验或分析核对；A：摘要/元数据；C：作者资源说明；D：数据解析</p><p>论文节点展开看方法和边界；点击链接看一次来源，备注列阅读范围</p><p>原80项沿用，补充35项含此前金融专题成果；并非本轮通读115篇全文</p></div></details></div></details></section><section id="s1"><details open><summary>RQ1 为什么失效</summary><div><details open><summary>1.1 长度与证据位置</summary><div><p>方向结论｜可接受长输入≠可靠利用；区分位置效应与获取证据后的推理退化。</p><p>本题实验｜固定核心证据，控制token长度；证据置前/中/后，设置oracle证据组。</p><details><summary>[P63] Lost in the Middle <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.tacl-1.9/">原文 ↗</a></summary><div><p>做了什么｜长上下文多文档 QA 位置实验</p><p>迁移与边界｜有效利用不足；不是业务根因已确认</p><pre>Lost in the Middle: How Language Models Use Long Contexts，TACL 2024
+一次来源：https://aclanthology.org/2024.tacl-1.9/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：长上下文多文档 QA 位置实验
+迁移与边界：有效利用不足；不是业务根因已确认
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P64] RULER <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2404.06654">原文 ↗</a></summary><div><p>做了什么｜长上下文检索、聚合、推理测试</p><p>迁移与边界｜标称窗口与有效能力区别；不能替代排序/理由实验</p><pre>RULER: What&#x27;s the Real Context Size of Your Long-Context Language Models?，2024 作者论文
+一次来源：https://arxiv.org/abs/2404.06654
+核对深度：A,C
+阅读范围：见20261011阅读矩阵
+做了什么：长上下文检索、聚合、推理测试
+迁移与边界：标称窗口与有效能力区别；不能替代排序/理由实验
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N29] Same Task, More Tokens: the Impact of Input Length on the Reasoning Performance of Large Language Models <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.acl-long.818/">原文 ↗</a></summary><div><p>做了什么｜保持任务核心信息，考察输入加长下推理变化。</p><p>迁移与边界｜迁移固定证据加长实验；不能把字符数当token数，模型与任务效应须独立报告。</p><pre>Same Task, More Tokens: the Impact of Input Length on the Reasoning Performance of Large Language Models，ACL 2024
+一次来源：https://aclanthology.org/2024.acl-long.818/
+核对深度：M
+阅读范围：此前输入长度控制实验
+做了什么：保持任务核心信息，考察输入加长下推理变化。
+迁移与边界：迁移固定证据加长实验；不能把字符数当token数，模型与任务效应须独立报告。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N30] Context Length Alone Hurts LLM Performance Despite Perfect Retrieval <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.findings-emnlp.1264/">原文 ↗</a></summary><div><p>做了什么｜控制正确证据获取后，研究上下文长度仍可能导致的推理退化。</p><p>迁移与边界｜补做oracle证据与原始长池组；检索成功不保证理由关系正确，结果不是所有模型必然规律。</p><pre>Context Length Alone Hurts LLM Performance Despite Perfect Retrieval，Findings EMNLP 2025
+一次来源：https://aclanthology.org/2025.findings-emnlp.1264/
+核对深度：M
+阅读范围：此前§3–5
+做了什么：控制正确证据获取后，研究上下文长度仍可能导致的推理退化。
+迁移与边界：补做oracle证据与原始长池组；检索成功不保证理由关系正确，结果不是所有模型必然规律。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N03] NoLiMa: Long-Context Evaluation Beyond Literal Matching <a target="_blank" rel="noopener" href="https://arxiv.org/html/2502.05167v1">原文 ↗</a></summary><div><p>做了什么｜降低问题与证据的字面重合，考察长上下文关联检索；字面相似干扰会误导。</p><p>迁移与边界｜比较同关键词异期间与改写同义证据；不是金融排序基准，不能移植原分数当NDCG。</p><pre>NoLiMa: Long-Context Evaluation Beyond Literal Matching，ICML 2025；所读2502.05167v1
+一次来源：https://arxiv.org/html/2502.05167v1
+核对深度：M
+阅读范围：§1、§3、实验分析概述
+做了什么：降低问题与证据的字面重合，考察长上下文关联检索；字面相似干扰会误导。
+迁移与边界：比较同关键词异期间与改写同义证据；不是金融排序基准，不能移植原分数当NDCG。
+来源批次：20261012整合补充</pre></div></details></div></details><details open><summary>1.2 独立实体数与属性绑定</summary><div><p>方向结论｜长池还增加需要区分的实体和关系，不能只以token长度解释。</p><p>本题实验｜固定总token数改变独立实体数；追踪错误理由是否来自同池另一个item。</p><details><summary>[N01] How do Language Models Bind Entities in Context? <a target="_blank" rel="noopener" href="https://arxiv.org/html/2310.17191v1">原文 ↗</a></summary><div><p>做了什么｜通过激活干预研究实体与属性的绑定ID，给出可解释的上下文绑定机制。</p><p>迁移与边界｜为公司—指标—期间串绑提供机制假设；合成任务结果不等于金融API模型的病因证明。</p><pre>How do Language Models Bind Entities in Context?，ICLR 2024；所读作者版本2310.17191v1
+一次来源：https://arxiv.org/html/2310.17191v1
+核对深度：M
+阅读范围：§2–3、引言与局限
+做了什么：通过激活干预研究实体与属性的绑定ID，给出可解释的上下文绑定机制。
+迁移与边界：为公司—指标—期间串绑提供机制假设；合成任务结果不等于金融API模型的病因证明。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N31] Mixing Mechanisms: How Language Models Retrieve Bound Entities In-Context <a target="_blank" rel="noopener" href="https://arxiv.org/html/2510.06182v1">原文 ↗</a></summary><div><p>做了什么｜用干预分析位置/词汇等实体绑定机制，固定长度考察实体数的影响。</p><p>迁移与边界｜支持N与L分离；本题先做行为干预，微观机制实验列可选，勿直接把API错理由归因于某个头。</p><pre>Mixing Mechanisms: How Language Models Retrieve Bound Entities In-Context，2025预印本2510.06182v1
+一次来源：https://arxiv.org/html/2510.06182v1
+核对深度：M
+阅读范围：此前§3、附录D
+做了什么：用干预分析位置/词汇等实体绑定机制，固定长度考察实体数的影响。
+迁移与边界：支持N与L分离；本题先做行为干预，微观机制实验列可选，勿直接把API错理由归因于某个头。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N02] Retrieval Head Mechanistically Explains Long-Context Factuality <a target="_blank" rel="noopener" href="https://arxiv.org/html/2404.15574v1">原文 ↗</a></summary><div><p>做了什么｜识别复制上下文信息的注意力头；屏蔽检索头比随机屏蔽更损害提取任务。</p><p>迁移与边界｜可用开源小模型做辅助干预；注意力图相关性本身不足以证明因果，闭源API不能直接复现。</p><pre>Retrieval Head Mechanistically Explains Long-Context Factuality，ICLR 2025；所读作者版本2404.15574v1
+一次来源：https://arxiv.org/html/2404.15574v1
+核对深度：M
+阅读范围：§2–4
+做了什么：识别复制上下文信息的注意力头；屏蔽检索头比随机屏蔽更损害提取任务。
+迁移与边界：可用开源小模型做辅助干预；注意力图相关性本身不足以证明因果，闭源API不能直接复现。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N11] RHIO: Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization <a target="_blank" rel="noopener" href="https://arxiv.org/html/2501.13573v1">原文 ↗</a></summary><div><p>做了什么｜屏蔽检索头生成模型内生错误；正负控制符联合监督，配合对比解码。</p><p>迁移与边界｜提供真实分布负例构造路线；不是DPO或GRPO，需访问内部头且额外解码有成本。</p><pre>RHIO: Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization，2025作者版本2501.13573v1
+一次来源：https://arxiv.org/html/2501.13573v1
+核对深度：M
+阅读范围：§2–6
+做了什么：屏蔽检索头生成模型内生错误；正负控制符联合监督，配合对比解码。
+迁移与边界：提供真实分布负例构造路线；不是DPO或GRPO，需访问内部头且额外解码有成本。
+来源批次：20261012整合补充</pre></div></details></div></details><details open><summary>1.3 相似干扰、知识冲突与充分性</summary><div><p>方向结论｜语义相似但不支持，比随机噪声更值得单独研究；更多上下文也可能改善覆盖。</p><p>本题实验｜随机/同公司异期/同指标异主体分别扩容；充分与缺证据分别统计。</p><details><summary>[N04] The Power of Noise: Redefining Retrieval for RAG Systems <a target="_blank" rel="noopener" href="https://arxiv.org/html/2401.14887v1">原文 ↗</a></summary><div><p>做了什么｜相关却无答案的干扰与随机噪声影响不同；部分设置加入随机文档反而有益。</p><p>迁移与边界｜必须分层控制干扰种类；反对把所有加长都解释成单调退化，不能据此建议普遍填满随机文本。</p><pre>The Power of Noise: Redefining Retrieval for RAG Systems，2024作者版本2401.14887v1
+一次来源：https://arxiv.org/html/2401.14887v1
+核对深度：M
+阅读范围：随机/相关干扰实验及讨论
+做了什么：相关却无答案的干扰与随机噪声影响不同；部分设置加入随机文档反而有益。
+迁移与边界：必须分层控制干扰种类；反对把所有加长都解释成单调退化，不能据此建议普遍填满随机文本。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N05] Sufficient Context: A New Lens on Retrieval Augmented Generation Systems <a target="_blank" rel="noopener" href="https://arxiv.org/html/2411.06037v1">原文 ↗</a></summary><div><p>做了什么｜区分输入是否含足够作答信息与模型能否正确作答，设计充分性标注。</p><p>迁移与边界｜理由支持、查询相关、证据充分是三个标签；缺证据组单独测拒绝无依据断言，不能混入充分组解释长度效应。</p><pre>Sufficient Context: A New Lens on Retrieval Augmented Generation Systems，ICLR 2025；所读2411.06037v1
+一次来源：https://arxiv.org/html/2411.06037v1
+核对深度：M
+阅读范围：§3定义、标注与AutoRater设置
+做了什么：区分输入是否含足够作答信息与模型能否正确作答，设计充分性标注。
+迁移与边界：理由支持、查询相关、证据充分是三个标签；缺证据组单独测拒绝无依据断言，不能混入充分组解释长度效应。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N12] RAGChecker: A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation <a target="_blank" rel="noopener" href="https://arxiv.org/html/2408.08067v1">原文 ↗</a></summary><div><p>做了什么｜拆分检索覆盖、上下文利用、相关/无关噪声敏感及无依据生成；增加上下文可同时提高覆盖与噪声。</p><p>迁移与边界｜理由来自池中另一条目应单独查归属，不能只检查全池支持；原框架是RAG诊断，不是列表重排。</p><pre>RAGChecker: A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation，2024作者版本2408.08067v1
+一次来源：https://arxiv.org/html/2408.08067v1
+核对深度：M
+阅读范围：诊断指标、§4.3–4.4
+做了什么：拆分检索覆盖、上下文利用、相关/无关噪声敏感及无依据生成；增加上下文可同时提高覆盖与噪声。
+迁移与边界：理由来自池中另一条目应单独查归属，不能只检查全池支持；原框架是RAG诊断，不是列表重排。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N16] Making Retrieval-Augmented Language Models Robust to Irrelevant Context <a target="_blank" rel="noopener" href="https://arxiv.org/html/2310.01558v1">原文 ↗</a></summary><div><p>做了什么｜使用NLI判断证据相关并构造不同检索质量的训练混合；少量参数高效微调改善抗干扰问答。</p><p>迁移与边界｜普通混合干扰SFT必须作为基线；无上下文也正确的回答不自动满足本题仅依据输入的约束。</p><pre>Making Retrieval-Augmented Language Models Robust to Irrelevant Context，ICLR 2024；所读2310.01558v1
+一次来源：https://arxiv.org/html/2310.01558v1
+核对深度：M
+阅读范围：§2–3
+做了什么：使用NLI判断证据相关并构造不同检索质量的训练混合；少量参数高效微调改善抗干扰问答。
+迁移与边界：普通混合干扰SFT必须作为基线；无上下文也正确的回答不自动满足本题仅依据输入的约束。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N33] Large Language Models Can Be Easily Distracted by Irrelevant Context <a target="_blank" rel="noopener" href="https://arxiv.org/html/2302.00093v3">原文 ↗</a></summary><div><p>做了什么｜在算术题中加入不改变答案的无关内容，研究性能变化与提示缓解。</p><p>迁移与边界｜提供答案保持扰动范式；不是金融、也不证明理由生成导致错误。</p><pre>Large Language Models Can Be Easily Distracted by Irrelevant Context，2023作者版本2302.00093v3
+一次来源：https://arxiv.org/html/2302.00093v3
+核对深度：M
+阅读范围：此前干扰实验与结论
+做了什么：在算术题中加入不改变答案的无关内容，研究性能变化与提示缓解。
+迁移与边界：提供答案保持扰动范式；不是金融、也不证明理由生成导致错误。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N34] Context-faithful Prompting for Large Language Models <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.11315">原文 ↗</a></summary><div><p>做了什么｜意见式提示、反事实示例改善上下文忠实性，涉及知识冲突和拒答。</p><p>迁移与边界｜作为低成本提示基线；不能预设必须后训练，需检查金融真实错误是否仍存在。</p><pre>Context-faithful Prompting for Large Language Models，Findings EMNLP 2023
+一次来源：https://arxiv.org/abs/2303.11315
+核对深度：A
+阅读范围：本轮摘要与版本信息
+做了什么：意见式提示、反事实示例改善上下文忠实性，涉及知识冲突和拒答。
+迁移与边界：作为低成本提示基线；不能预设必须后训练，需检查金融真实错误是否仍存在。
+来源批次：20261012整合补充</pre></div></details></div></details><details open><summary>1.4 金融语义中的多重约束</summary><div><p>方向结论｜金融证据需同时匹配主体、期间、指标、口径、单位与出处。</p><p>本题实验｜同数值异含义、申报年≠财务期、发行主体≠被描述实体；与同模板非金融组对照。</p><details><summary>[P29] FinCARDS <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.findings-acl.1244/">原文 ↗</a></summary><div><p>做了什么｜实体/指标/时期/逐字数值/证据字段；BM25→卡片筛选→随机分组 Borda；N≤150、b≈15–25、≤5 轮、Jaccard 早停</p><p>迁移与边界｜**结构证据＋长文档稳定排序直接近邻**；输出审计轨迹，未以逐条自由理由忠实性金标作为主指标</p><pre>FinCARDS: Card-Based Analyst Reranking for Financial Document Question Answering，Findings ACL 2026
+一次来源：https://aclanthology.org/2026.findings-acl.1244/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：实体/指标/时期/逐字数值/证据字段；BM25→卡片筛选→随机分组 Borda；N≤150、b≈15–25、≤5 轮、Jaccard 早停
+迁移与边界：**结构证据＋长文档稳定排序直接近邻**；输出审计轨迹，未以逐条自由理由忠实性金标作为主指标
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N23] FinRank: An Evidence-Grounded Benchmark for Financial Question Answering and Retrieval over SEC Filings <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2608.07400">原文 ↗</a></summary><div><p>做了什么｜提供公开金融问题、来源限定的支持证据及跨公司/期间困难负例。</p><p>迁移与边界｜最接近主数据；原池小、逐项理由待标，扩容未判断项不能当0；已下载不等于标签无误。</p><pre>FinRank: An Evidence-Grounded Benchmark for Financial Question Answering and Retrieval over SEC Filings，2026预印本2608.07400
+一次来源：https://arxiv.org/abs/2608.07400
+核对深度：M,D
+阅读范围：此前论文/数据核验；本轮摘要复核
+做了什么：提供公开金融问题、来源限定的支持证据及跨公司/期间困难负例。
+迁移与边界：最接近主数据；原池小、逐项理由待标，扩容未判断项不能当0；已下载不等于标签无误。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N24] FinQA: A Dataset of Numerical Reasoning over Financial Data <a target="_blank" rel="noopener" href="https://aclanthology.org/2021.emnlp-main.300/">原文 ↗</a></summary><div><p>做了什么｜财报表格/正文、金融问题、支持证据和程序，为数值推理提供监督。</p><p>迁移与边界｜可抽实体/指标item配原文chunk做可控诊断；答案和程序仅放评测侧；不是FiQA。</p><pre>FinQA: A Dataset of Numerical Reasoning over Financial Data，EMNLP 2021
+一次来源：https://aclanthology.org/2021.emnlp-main.300/
+核对深度：M,D
+阅读范围：此前论文与已下载dev字段核验
+做了什么：财报表格/正文、金融问题、支持证据和程序，为数值推理提供监督。
+迁移与边界：可抽实体/指标item配原文chunk做可控诊断；答案和程序仅放评测侧；不是FiQA。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N21] TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance <a target="_blank" rel="noopener" href="https://aclanthology.org/2021.acl-long.254/">原文 ↗</a></summary><div><p>做了什么｜金融表格与正文混合问答，提供数值推导和尺度，TAGOP先抽取再运算。</p><p>迁移与边界｜可扩展指标/单位诊断；问答答案不能直接转为全候选相关性等级，当前不增加为必做主数据。</p><pre>TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance，ACL 2021
+一次来源：https://aclanthology.org/2021.acl-long.254/
+核对深度：A
+阅读范围：摘要与作者数据说明
+做了什么：金融表格与正文混合问答，提供数值推导和尺度，TAGOP先抽取再运算。
+迁移与边界：可扩展指标/单位诊断；问答答案不能直接转为全候选相关性等级，当前不增加为必做主数据。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N22] MultiHiertt: Numerical Reasoning over Multi Hierarchical Tabular and Textual Data <a target="_blank" rel="noopener" href="https://aclanthology.org/2022.acl-long.454/">原文 ↗</a></summary><div><p>做了什么｜多层表头、多表和长正文问答，标注支持事实及推理；漏读表头可选错数值。</p><p>迁移与边界｜补充实体/层级/期间绑定视角；表格展开必须保留层级，当前仅列扩展资源。</p><pre>MultiHiertt: Numerical Reasoning over Multi Hierarchical Tabular and Textual Data，ACL 2022
+一次来源：https://aclanthology.org/2022.acl-long.454/
+核对深度：A
+阅读范围：摘要、引言与示例
+做了什么：多层表头、多表和长正文问答，标注支持事实及推理；漏读表头可选错数值。
+迁移与边界：补充实体/层级/期间绑定视角；表格展开必须保留层级，当前仅列扩展资源。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N28] FinLongDocQA / Document-Level Numerical Reasoning across Single and Multiple Tables in Financial Reports <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2604.03664">原文 ↗</a></summary><div><p>做了什么｜长财报中的证据定位与数值问答，关联来源和可执行推理。</p><p>迁移与边界｜长文档金融资源补充；未下载全量，不因包含出处就称为列表重排基准。</p><pre>FinLongDocQA / Document-Level Numerical Reasoning across Single and Multiple Tables in Financial Reports，2026预印本2604.03664
+一次来源：https://arxiv.org/abs/2604.03664
+核对深度：A,C
+阅读范围：此前摘要、作者仓库说明；本轮题名核对
+做了什么：长财报中的证据定位与数值问答，关联来源和可执行推理。
+迁移与边界：长文档金融资源补充；未下载全量，不因包含出处就称为列表重排基准。
+来源批次：20261012整合补充</pre></div></details></div></details><details open><summary>1.5 排序位置偏差与比较不一致</summary><div><p>方向结论｜输入顺序会影响排名，比较可非传递；集合稳定不等于解释可靠。</p><p>本题实验｜同池多排列，报告排序方差与理由错误；不要把新增真相关项导致的合理变化算失稳。</p><details><summary>[P10] PSC <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.naacl-long.129/">原文 ↗</a></summary><div><p>做了什么｜PSC 多排列聚合；Top-100 滑窗与 Top-20 直接输入</p><p>迁移与边界｜排列投票已是强基线；额外调用必须计费</p><pre>Found in the Middle: Permutation Self-Consistency Improves Listwise Ranking in Large Language Models，NAACL 2024
+一次来源：https://aclanthology.org/2024.naacl-long.129/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：PSC 多排列聚合；Top-100 滑窗与 Top-20 直接输入
+迁移与边界：排列投票已是强基线；额外调用必须计费
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P11] BSC <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.emnlp-main.1661/">原文 ↗</a></summary><div><p>做了什么｜N=30/90，b=30；STB/BTS 改变同伴或仅改变顺序</p><p>迁移与边界｜直接研究批量评分位置偏差和分组；窗口足够仍会退化</p><pre>Batched Self-Consistency Improves LLM Relevance Assessment and Ranking，EMNLP 2025
+一次来源：https://aclanthology.org/2025.emnlp-main.1661/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：N=30/90，b=30；STB/BTS 改变同伴或仅改变顺序
+迁移与边界：直接研究批量评分位置偏差和分组；窗口足够仍会退化
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P12] Preferential Ranking Inconsistency <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.knowllm-1.14/">原文 ↗</a></summary><div><p>做了什么｜传递性、反对称、反转、无关选项独立性诊断</p><p>迁移与边界｜诊断轴可迁移；加入有用的互补证据不必保持原排名</p><pre>Measuring the Inconsistency of Large Language Models in Preferential Ranking，KnowLLM 2024
+一次来源：https://aclanthology.org/2024.knowllm-1.14/
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：传递性、反对称、反转、无关选项独立性诊断
+迁移与边界：诊断轴可迁移；加入有用的互补证据不必保持原排名
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P13] CapCal <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.acl-short.68/">原文 ↗</a></summary><div><p>做了什么｜CapCal：空内容输入估计结构先验并校准 logits</p><p>迁移与边界｜去位置/ID 先验已有；本地 logits 路线更易适配</p><pre>Learning from Emptiness: De-biasing Listwise Rerankers with Content-Agnostic Probability Calibration，ACL 2026
+一次来源：https://aclanthology.org/2026.acl-short.68/
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：CapCal：空内容输入估计结构先验并校准 logits
+迁移与边界：去位置/ID 先验已有；本地 logits 路线更易适配
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P14] Beyond Sampling / Self-Sorting <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.findings-eacl.256/">原文 ↗</a></summary><div><p>做了什么｜生成多个排名再比较排名，融合内部位置和跨列表偏好；部分 N=1000</p><p>迁移与边界｜已有长池与二层聚合；不能混用正例保留池和真实检索池结果</p><pre>Beyond Sampling: Self-Sorting for Long-Context Ranking，Findings EACL 2026
+一次来源：https://aclanthology.org/2026.findings-eacl.256/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：生成多个排名再比较排名，融合内部位置和跨列表偏好；部分 N=1000
+迁移与边界：已有长池与二层聚合；不能混用正例保留池和真实检索池结果
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P17] InvariRank <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2604.27599">原文 ↗</a></summary><div><p>做了什么｜跨候选 mask、共享位置参照、LambdaRank；推荐候选 K=25</p><p>迁移与边界｜推荐评分任务；阻断候选交互换稳定，普通聊天 API 不能实现</p><pre>One Pass, Any Order: Position-Invariant Listwise Reranking for LLM-Based Recommendation / InvariRank，2026 作者版本
+一次来源：https://arxiv.org/abs/2604.27599
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：跨候选 mask、共享位置参照、LambdaRank；推荐候选 K=25
+迁移与边界：推荐评分任务；阻断候选交互换稳定，普通聊天 API 不能实现
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P18] Debias First <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2604.03642">原文 ↗</a></summary><div><p>做了什么｜位置增强＋IPS 加权 RankNet/LM；N=100、b=20</p><p>迁移与边界｜后训练去偏已有；非在线 RL，原训练多卡</p><pre>LLM-based Listwise Reranking under the Effect of Positional Bias / DebiasFirst，2026 预印本
+一次来源：https://arxiv.org/abs/2604.03642
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：位置增强＋IPS 加权 RankNet/LM；N=100、b=20
+迁移与边界：后训练去偏已有；非在线 RL，原训练多卡
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P65] Positional Bias in Long-Document Ranking <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.ijcnlp-long.46/">原文 ↗</a></summary><div><p>做了什么｜FarRelevant 将相关片段移至长文不同位置，比较 long-doc rankers 与微调</p><p>迁移与边界｜**长文档≠长候选池**；可以设计 chunk 内证据位置实验，合成性需披露</p><pre>Positional Bias in Long-Document Ranking: Impact, Assessment, and Mitigation，IJCNLP 2025
+一次来源：https://aclanthology.org/2025.ijcnlp-long.46/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：FarRelevant 将相关片段移至长文不同位置，比较 long-doc rankers 与微调
+迁移与边界：**长文档≠长候选池**；可以设计 chunk 内证据位置实验，合成性需披露
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details></div></details><details open><summary>1.6 联合任务与后训练分布</summary><div><p>方向结论｜排序+理由同时生成的额外负担是待检验假设；引用训练也能带来收益。</p><p>本题实验｜只排序、固定排名只解释、联合、先排后解释；匹配输出长度与预算。</p><details><summary>[N06] LongCite: Enabling LLMs to Generate Fine-grained Citations in Long-Context QA <a target="_blank" rel="noopener" href="https://arxiv.org/html/2409.02897v1">原文 ↗</a></summary><div><p>做了什么｜CoF自动构造句级引用SFT数据；比较带引用与不带引用的问答正确性。</p><p>迁移与边界｜联合输出可能有额外负担，但训练后可以改善；本题需实测排序与理由联合任务，不能预设一定更差。</p><pre>LongCite: Enabling LLMs to Generate Fine-grained Citations in Long-Context QA，Findings ACL 2025；所读2409.02897v1
+一次来源：https://arxiv.org/html/2409.02897v1
+核对深度：M
+阅读范围：§2–3、表3
+做了什么：CoF自动构造句级引用SFT数据；比较带引用与不带引用的问答正确性。
+迁移与边界：联合输出可能有额外负担，但训练后可以改善；本题需实测排序与理由联合任务，不能预设一定更差。
+来源批次：20261012整合补充</pre></div></details><details><summary>[P30] ExaRanker <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2301.10521">原文 ↗</a></summary><div><p>做了什么｜标签＋解释监督训练 seq2seq ranker</p><p>迁移与边界｜解释作训练信号已有；标签正确不保证解释依据正确</p><pre>ExaRanker: Explanation-Augmented Neural Ranker，2023 作者论文
+一次来源：https://arxiv.org/abs/2301.10521
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：标签＋解释监督训练 seq2seq ranker
+迁移与边界：解释作训练信号已有；标签正确不保证解释依据正确
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P35] REA-RANK <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.emnlp-main.125/">原文 ↗</a></summary><div><p>做了什么｜GRPO：归一化 nDCG@10＋格式；N=100、b=20</p><p>迁移与边界｜RL 排序质量直接基线；奖励不核对每句证据</p><pre>REARANK: Reasoning Re-ranking Agent via Reinforcement Learning，EMNLP 2025
+一次来源：https://aclanthology.org/2025.emnlp-main.125/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：GRPO：归一化 nDCG@10＋格式；N=100、b=20
+迁移与边界：RL 排序质量直接基线；奖励不核对每句证据
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P38] Explain-then-Rank <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.findings-acl.1167/">原文 ↗</a></summary><div><p>做了什么｜多解释合成 meta-NLE，再用神经 ranker 评分；TREC19–22/NTCIR14；MSE、CB-ECE、nDCG</p><p>迁移与边界｜解释不确定性与分数校准已有；meta-NLE 可遗漏或添加事实，非来源真实性保证</p><pre>Explain then Rank: Scale Calibration of Neural Rankers Using Natural Language Explanations from LLMs，Findings ACL 2025
+一次来源：https://aclanthology.org/2025.findings-acl.1167/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：多解释合成 meta-NLE，再用神经 ranker 评分；TREC19–22/NTCIR14；MSE、CB-ECE、nDCG
+迁移与边界：解释不确定性与分数校准已有；meta-NLE 可遗漏或添加事实，非来源真实性保证
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N26] FinDVer: Explainable Claim Verification over Long and Hybrid-Content Financial Documents <a target="_blank" rel="noopener" href="https://arxiv.org/html/2411.05764v1">原文 ↗</a></summary><div><p>做了什么｜研究金融声明核验、证据与解释；部分设置完整上下文/推理有益。</p><p>迁移与边界｜金融事实核验辅助集；不是排序金标，同报告变体必须防泄漏，解释字段并非全部完整。</p><pre>FinDVer: Explainable Claim Verification over Long and Hybrid-Content Financial Documents，EMNLP 2024；2411.05764v1
+一次来源：https://arxiv.org/html/2411.05764v1
+核对深度：M,D
+阅读范围：此前§5.2–5.5和JSON核验
+做了什么：研究金融声明核验、证据与解释；部分设置完整上下文/推理有益。
+迁移与边界：金融事实核验辅助集；不是排序金标，同报告变体必须防泄漏，解释字段并非全部完整。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N35] When Financial Fine-tuning Fails: A Three-Level Detectability Analysis of Numerical Hallucination in Domain-Adapted Language Models <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2609.04806">原文 ↗</a></summary><div><p>做了什么｜在特定金融摘要微调设置观察无依据数字/定量表述增加，讨论模板注入。</p><p>迁移与边界｜后训练须测数字克制和缺证据组；小规模特定设置不能推论所有金融微调必然有害。</p><pre>When Financial Fine-tuning Fails: A Three-Level Detectability Analysis of Numerical Hallucination in Domain-Adapted Language Models，2026；本综述依据arXiv版本，另检出Neurocomputing出版页
+一次来源：https://arxiv.org/abs/2609.04806
+核对深度：M
+阅读范围：此前方法核对；本轮摘要与出版线索
+做了什么：在特定金融摘要微调设置观察无依据数字/定量表述增加，讨论模板注入。
+迁移与边界：后训练须测数字克制和缺证据组；小规模特定设置不能推论所有金融微调必然有害。
+来源批次：20261012整合补充</pre></div></details></div></details></div></details></section><section id="s2"><details open><summary>RQ2 出现什么及如何衡量</summary><div><details open><summary>2.1 无依据与矛盾声明</summary><div><p>方向结论｜原子声明检查；将支持、矛盾、证据不足分开。</p><p>本题实验｜规则校验数值/单位，独立核验器加双人抽查；报告各错误类与宏平均。</p><details><summary>[P53] FActScore <a target="_blank" rel="noopener" href="https://aclanthology.org/2023.emnlp-main.741/">原文 ↗</a></summary><div><p>做了什么｜原子事实逐个判定支持</p><p>迁移与边界｜可借原子断言单位；自由世界事实与绑定当前 chunk 是不同判定集</p><pre>FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation，EMNLP 2023
+一次来源：https://aclanthology.org/2023.emnlp-main.741/
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：原子事实逐个判定支持
+迁移与边界：可借原子断言单位；自由世界事实与绑定当前 chunk 是不同判定集
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P54] RAGTruth <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.acl-long.585/">原文 ↗</a></summary><div><p>做了什么｜RAG 输出人工标注幻觉语料</p><p>迁移与边界｜可辅助 verifier，不自带 rerank Top-20 理由金标</p><pre>RAGTruth: A Hallucination Corpus for Developing Trustworthy Retrieval-Augmented Language Models，ACL 2024
+一次来源：https://aclanthology.org/2024.acl-long.585/
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：RAG 输出人工标注幻觉语料
+迁移与边界：可辅助 verifier，不自带 rerank Top-20 理由金标
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P79] MiniCheck <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.emnlp-main.499/">原文 ↗</a></summary><div><p>做了什么｜小型 evidence-claim 核验器、合成训练、LLM-AggreFact</p><p>迁移与边界｜可用于辅助检查；目标领域要用人工标签校准，不把其输出当金标</p><pre>MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents，EMNLP 2024
+一次来源：https://aclanthology.org/2024.emnlp-main.499/
+核对深度：A,C
+阅读范围：见20261011阅读矩阵
+做了什么：小型 evidence-claim 核验器、合成训练、LLM-AggreFact
+迁移与边界：可用于辅助检查；目标领域要用人工标签校准，不把其输出当金标
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N13] RefChecker: Reference-based Fine-grained Hallucination Checker and Benchmark for Large Language Models <a target="_blank" rel="noopener" href="https://arxiv.org/html/2405.14486v1">原文 ↗</a></summary><div><p>做了什么｜将回答拆为声明三元组，判定支持、中立或矛盾；考察核验器依赖内部知识。</p><p>迁移与边界｜迁移到带主体、期间、单位的原子声明；抽取器也可能丢限定条件，必须人工校准。</p><pre>RefChecker: Reference-based Fine-grained Hallucination Checker and Benchmark for Large Language Models，2024作者版本2405.14486v1
+一次来源：https://arxiv.org/html/2405.14486v1
+核对深度：M
+阅读范围：三元组检查、附录A/B错误分析
+做了什么：将回答拆为声明三元组，判定支持、中立或矛盾；考察核验器依赖内部知识。
+迁移与边界：迁移到带主体、期间、单位的原子声明；抽取器也可能丢限定条件，必须人工校准。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N15] Towards Long Context Hallucination Detection <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.findings-naacl.436/">原文 ↗</a></summary><div><p>做了什么｜在BookSum上合成无依据/矛盾错误；分块编码及聚合使小编码器处理长上下文核验。</p><p>迁移与边界｜核验器也需要长文能力；生成器与核验器分开评估，书籍合成错误需做金融域校准。</p><pre>Towards Long Context Hallucination Detection，Findings NAACL 2025
+一次来源：https://aclanthology.org/2025.findings-naacl.436/
+核对深度：M
+阅读范围：论文§1–4、数据统计
+做了什么：在BookSum上合成无依据/矛盾错误；分块编码及聚合使小编码器处理长上下文核验。
+迁移与边界：核验器也需要长文能力；生成器与核验器分开评估，书籍合成错误需做金融域校准。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N27] PHANTOM: A Benchmark for Hallucination Detection in Financial Long-Context QA <a target="_blank" rel="noopener" href="https://papers.nips.cc/paper_files/paper/2025/hash/b8badadce3f482ba340ff870f4894441-Abstract-Datasets_and_Benchmarks_Track.html">原文 ↗</a></summary><div><p>做了什么｜金融披露长上下文幻觉检测，控制长度和证据位置，并训练小模型检测器。</p><p>迁移与边界｜金融直接证据但目标是检测；连续文档加长不等于独立item数增加，不提供重排NDCG金标。</p><pre>PHANTOM: A Benchmark for Hallucination Detection in Financial Long-Context QA，NeurIPS 2025 Datasets and Benchmarks
+一次来源：https://papers.nips.cc/paper_files/paper/2025/hash/b8badadce3f482ba340ff870f4894441-Abstract-Datasets_and_Benchmarks_Track.html
+核对深度：M
+阅读范围：此前§3、§5数据与检测器训练
+做了什么：金融披露长上下文幻觉检测，控制长度和证据位置，并训练小模型检测器。
+迁移与边界：金融直接证据但目标是检测；连续文档加长不等于独立item数增加，不提供重排NDCG金标。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N35] When Financial Fine-tuning Fails: A Three-Level Detectability Analysis of Numerical Hallucination in Domain-Adapted Language Models <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2609.04806">原文 ↗</a></summary><div><p>做了什么｜在特定金融摘要微调设置观察无依据数字/定量表述增加，讨论模板注入。</p><p>迁移与边界｜后训练须测数字克制和缺证据组；小规模特定设置不能推论所有金融微调必然有害。</p><pre>When Financial Fine-tuning Fails: A Three-Level Detectability Analysis of Numerical Hallucination in Domain-Adapted Language Models，2026；本综述依据arXiv版本，另检出Neurocomputing出版页
+一次来源：https://arxiv.org/abs/2609.04806
+核对深度：M
+阅读范围：此前方法核对；本轮摘要与出版线索
+做了什么：在特定金融摘要微调设置观察无依据数字/定量表述增加，讨论模板注入。
+迁移与边界：后训练须测数字克制和缺证据组；小规模特定设置不能推论所有金融微调必然有害。
+来源批次：20261012整合补充</pre></div></details></div></details><details open><summary>2.2 出处错配与item归属错误</summary><div><p>方向结论｜全池能找到同一句话，仍可能归错item；合法引用ID不保证支持。</p><p>本题实验｜给定原子声明，只按指定item及其出处核验，再查全池定位串绑源。</p><details><summary>[P52] ALCE <a target="_blank" rel="noopener" href="https://aclanthology.org/2023.emnlp-main.398/">原文 ↗</a></summary><div><p>做了什么｜引用生成、正确性与完整性评价</p><p>迁移与边界｜引文出现、支持断言、覆盖所有断言是不同检查</p><pre>Enabling Large Language Models to Generate Text with Citations / ALCE，EMNLP 2023
+一次来源：https://aclanthology.org/2023.emnlp-main.398/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：引用生成、正确性与完整性评价
+迁移与边界：引文出现、支持断言、覆盖所有断言是不同检查
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N06] LongCite: Enabling LLMs to Generate Fine-grained Citations in Long-Context QA <a target="_blank" rel="noopener" href="https://arxiv.org/html/2409.02897v1">原文 ↗</a></summary><div><p>做了什么｜CoF自动构造句级引用SFT数据；比较带引用与不带引用的问答正确性。</p><p>迁移与边界｜联合输出可能有额外负担，但训练后可以改善；本题需实测排序与理由联合任务，不能预设一定更差。</p><pre>LongCite: Enabling LLMs to Generate Fine-grained Citations in Long-Context QA，Findings ACL 2025；所读2409.02897v1
+一次来源：https://arxiv.org/html/2409.02897v1
+核对深度：M
+阅读范围：§2–3、表3
+做了什么：CoF自动构造句级引用SFT数据；比较带引用与不带引用的问答正确性。
+迁移与边界：联合输出可能有额外负担，但训练后可以改善；本题需实测排序与理由联合任务，不能预设一定更差。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N07] FRONT: Learning Fine-Grained Grounded Citations for Attributed Large Language Models <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.findings-acl.838/">原文 ↗</a></summary><div><p>做了什么｜先抽引用片段再生成回答的SFT，随后用一致/不一致回答做DPO。</p><p>迁移与边界｜直接近邻：证据先行加DPO已经存在；我们的差异须由金融绑定、扩容干扰及排序约束实验证明。</p><pre>FRONT: Learning Fine-Grained Grounded Citations for Attributed Large Language Models，Findings ACL 2024
+一次来源：https://aclanthology.org/2024.findings-acl.838/
+核对深度：M
+阅读范围：作者HTML2408.04568v1 §3、表1
+做了什么：先抽引用片段再生成回答的SFT，随后用一致/不一致回答做DPO。
+迁移与边界：直接近邻：证据先行加DPO已经存在；我们的差异须由金融绑定、扩容干扰及排序约束实验证明。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N12] RAGChecker: A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation <a target="_blank" rel="noopener" href="https://arxiv.org/html/2408.08067v1">原文 ↗</a></summary><div><p>做了什么｜拆分检索覆盖、上下文利用、相关/无关噪声敏感及无依据生成；增加上下文可同时提高覆盖与噪声。</p><p>迁移与边界｜理由来自池中另一条目应单独查归属，不能只检查全池支持；原框架是RAG诊断，不是列表重排。</p><pre>RAGChecker: A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation，2024作者版本2408.08067v1
+一次来源：https://arxiv.org/html/2408.08067v1
+核对深度：M
+阅读范围：诊断指标、§4.3–4.4
+做了什么：拆分检索覆盖、上下文利用、相关/无关噪声敏感及无依据生成；增加上下文可同时提高覆盖与噪声。
+迁移与边界：理由来自池中另一条目应单独查归属，不能只检查全池支持；原框架是RAG诊断，不是列表重排。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N23] FinRank: An Evidence-Grounded Benchmark for Financial Question Answering and Retrieval over SEC Filings <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2608.07400">原文 ↗</a></summary><div><p>做了什么｜提供公开金融问题、来源限定的支持证据及跨公司/期间困难负例。</p><p>迁移与边界｜最接近主数据；原池小、逐项理由待标，扩容未判断项不能当0；已下载不等于标签无误。</p><pre>FinRank: An Evidence-Grounded Benchmark for Financial Question Answering and Retrieval over SEC Filings，2026预印本2608.07400
+一次来源：https://arxiv.org/abs/2608.07400
+核对深度：M,D
+阅读范围：此前论文/数据核验；本轮摘要复核
+做了什么：提供公开金融问题、来源限定的支持证据及跨公司/期间困难负例。
+迁移与边界：最接近主数据；原池小、逐项理由待标，扩容未判断项不能当0；已下载不等于标签无误。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N26] FinDVer: Explainable Claim Verification over Long and Hybrid-Content Financial Documents <a target="_blank" rel="noopener" href="https://arxiv.org/html/2411.05764v1">原文 ↗</a></summary><div><p>做了什么｜研究金融声明核验、证据与解释；部分设置完整上下文/推理有益。</p><p>迁移与边界｜金融事实核验辅助集；不是排序金标，同报告变体必须防泄漏，解释字段并非全部完整。</p><pre>FinDVer: Explainable Claim Verification over Long and Hybrid-Content Financial Documents，EMNLP 2024；2411.05764v1
+一次来源：https://arxiv.org/html/2411.05764v1
+核对深度：M,D
+阅读范围：此前§5.2–5.5和JSON核验
+做了什么：研究金融声明核验、证据与解释；部分设置完整上下文/推理有益。
+迁移与边界：金融事实核验辅助集；不是排序金标，同报告变体必须防泄漏，解释字段并非全部完整。
+来源批次：20261012整合补充</pre></div></details></div></details><details open><summary>2.3 支持性≠贡献性≠内部推理忠实</summary><div><p>方向结论｜外部证据支持可以评测；生成解释不自动等于模型真实决策过程。</p><p>本题实验｜正文以证据一致性为目标；删证据或替换主体测试敏感性，避免声称证明内部CoT。</p><details><summary>[P49] ERASER <a target="_blank" rel="noopener" href="https://aclanthology.org/2020.acl-main.408/">原文 ↗</a></summary><div><p>做了什么｜理由抽取金标、sufficiency/comprehensiveness 删除检验</p><p>迁移与边界｜证据效用可迁移；遮蔽 OOD 与替代证据使因果解释有限</p><pre>ERASER: A Benchmark to Evaluate Rationalized NLP Models，ACL 2020
+一次来源：https://aclanthology.org/2020.acl-main.408/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：理由抽取金标、sufficiency/comprehensiveness 删除检验
+迁移与边界：证据效用可迁移；遮蔽 OOD 与替代证据使因果解释有限
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P50] Faithfulness Tests for NLE <a target="_blank" rel="noopener" href="https://aclanthology.org/2023.acl-short.25/">原文 ↗</a></summary><div><p>做了什么｜反事实预测变化是否在理由提及、输入重建测试</p><p>迁移与边界｜反事实检验不是新指标；不完备，失败率不是总体不忠实率</p><pre>Faithfulness Tests for Natural Language Explanations，ACL 2023
+一次来源：https://aclanthology.org/2023.acl-short.25/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：反事实预测变化是否在理由提及、输入重建测试
+迁移与边界：反事实检验不是新指标；不完备，失败率不是总体不忠实率
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P51] Walk the Talk <a target="_blank" rel="noopener" href="https://proceedings.iclr.cc/paper_files/paper/2025/file/b5ec50eb177908f21f78ed0d76ed525c-Paper-Conference.pdf">原文 ↗</a></summary><div><p>做了什么｜概念反事实＋层级贝叶斯估计，比较实际影响与解释声称影响</p><p>迁移与边界｜避免把文本蕴含叫内部因果忠实；仍依赖干预有效性假设</p><pre>Walk the Talk? Measuring the Faithfulness of Large Language Model Explanations，ICLR 2025
+一次来源：https://proceedings.iclr.cc/paper_files/paper/2025/file/b5ec50eb177908f21f78ed0d76ed525c-Paper-Conference.pdf
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：概念反事实＋层级贝叶斯估计，比较实际影响与解释声称影响
+迁移与边界：避免把文本蕴含叫内部因果忠实；仍依赖干预有效性假设
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P56] LMs Don&#x27;t Always Say What They Think <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2305.04388">原文 ↗</a></summary><div><p>做了什么｜干预偏置对结果与表述影响的对照</p><p>迁移与边界｜看起来有道理的 CoT 不是行为忠实保证</p><pre>Language Models Don&#x27;t Always Say What They Think: Unfaithful Explanations in Chain-of-Thought Prompting，2023 作者论文
+一次来源：https://arxiv.org/abs/2305.04388
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：干预偏置对结果与表述影响的对照
+迁移与边界：看起来有道理的 CoT 不是行为忠实保证
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P57] CoT in the Wild <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2503.08679">原文 ↗</a></summary><div><p>做了什么｜自然场景 CoT 忠实性研究</p><p>迁移与边界｜辅助背景；不把非 rerank 实验量直接套到业务</p><pre>Chain-of-Thought Reasoning In The Wild Is Not Always Faithful，2025 作者论文
+一次来源：https://arxiv.org/abs/2503.08679
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：自然场景 CoT 忠实性研究
+迁移与边界：辅助背景；不把非 rerank 实验量直接套到业务
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P71] Survey of Faithful Model Explanation <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.cl-2.6/">原文 ↗</a></summary><div><p>做了什么｜解释忠实性概念与评价综述</p><p>迁移与边界｜明确术语、排除过度因果结论；不以综述代替原方法</p><pre>Towards Faithful Model Explanation in NLP: A Survey，Computational Linguistics 2024
+一次来源：https://aclanthology.org/2024.cl-2.6/
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：解释忠实性概念与评价综述
+迁移与边界：明确术语、排除过度因果结论；不以综述代替原方法
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N09] ContextCite: Attributing Model Generation to Context <a target="_blank" rel="noopener" href="https://arxiv.org/html/2409.00729v1">原文 ↗</a></summary><div><p>做了什么｜通过上下文消融拟合代理模型，估计哪些来源影响某条生成陈述。</p><p>迁移与边界｜用于区分贡献性归因与支持性引用；额外前向成本高，归因到错误证据仍可能是不正确理由。</p><pre>ContextCite: Attributing Model Generation to Context，NeurIPS 2024
+一次来源：https://arxiv.org/html/2409.00729v1
+核对深度：M
+阅读范围：§1–3方法定义及应用概述
+做了什么：通过上下文消融拟合代理模型，估计哪些来源影响某条生成陈述。
+迁移与边界：用于区分贡献性归因与支持性引用；额外前向成本高，归因到错误证据仍可能是不正确理由。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N08] SelfCite: Self-Supervised Alignment for Context Attribution in Large Language Models <a target="_blank" rel="noopener" href="https://arxiv.org/html/2502.09604v1">原文 ↗</a></summary><div><p>做了什么｜删除/保留引用上下文构造自监督信号，用BoN与SimPO改善引用；分析长度捷径和随机扰动失效。</p><p>迁移与边界｜证据干预奖励已有；借鉴长度匹配与真实错误偏好。模型概率依赖不等于文本蕴含，更不等于金融事实真实。</p><pre>SelfCite: Self-Supervised Alignment for Context Attribution in Large Language Models，ICML 2025
+一次来源：https://arxiv.org/html/2502.09604v1
+核对深度：M
+阅读范围：§2、§4.1–4.6
+做了什么：删除/保留引用上下文构造自监督信号，用BoN与SimPO改善引用；分析长度捷径和随机扰动失效。
+迁移与边界：证据干预奖励已有；借鉴长度匹配与真实错误偏好。模型概率依赖不等于文本蕴含，更不等于金融事实真实。
+来源批次：20261012整合补充</pre></div></details></div></details><details open><summary>2.4 排序质量与集合/次序稳定</summary><div><p>方向结论｜必须用相关性qrels测质量，再用配对扰动测稳定；不以两次重合率代替正确性。</p><p>本题实验｜NDCG@20、Evidence Recall@20、同池Top20重合及共同项顺序一致；未判断项保留unknown。</p><details><summary>[P01] RankGPT <a target="_blank" rel="noopener" href="https://aclanthology.org/2023.emnlp-main.923/">原文 ↗</a></summary><div><p>做了什么｜生成 ID 排列；滑窗及排序蒸馏；典型 N=100、b=20</p><p>迁移与边界｜排名生成的基础基线；滑窗已有；不能把清洗后的排列当原始协议成功率</p><pre>RankGPT / Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents，EMNLP 2023
+一次来源：https://aclanthology.org/2023.emnlp-main.923/
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：生成 ID 排列；滑窗及排序蒸馏；典型 N=100、b=20
+迁移与边界：排名生成的基础基线；滑窗已有；不能把清洗后的排列当原始协议成功率
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P11] BSC <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.emnlp-main.1661/">原文 ↗</a></summary><div><p>做了什么｜N=30/90，b=30；STB/BTS 改变同伴或仅改变顺序</p><p>迁移与边界｜直接研究批量评分位置偏差和分组；窗口足够仍会退化</p><pre>Batched Self-Consistency Improves LLM Relevance Assessment and Ranking，EMNLP 2025
+一次来源：https://aclanthology.org/2025.emnlp-main.1661/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：N=30/90，b=30；STB/BTS 改变同伴或仅改变顺序
+迁移与边界：直接研究批量评分位置偏差和分组；窗口足够仍会退化
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P17] InvariRank <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2604.27599">原文 ↗</a></summary><div><p>做了什么｜跨候选 mask、共享位置参照、LambdaRank；推荐候选 K=25</p><p>迁移与边界｜推荐评分任务；阻断候选交互换稳定，普通聊天 API 不能实现</p><pre>One Pass, Any Order: Position-Invariant Listwise Reranking for LLM-Based Recommendation / InvariRank，2026 作者版本
+一次来源：https://arxiv.org/abs/2604.27599
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：跨候选 mask、共享位置参照、LambdaRank；推荐候选 K=25
+迁移与边界：推荐评分任务；阻断候选交互换稳定，普通聊天 API 不能实现
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P27] CompRank <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.11700">原文 ↗</a></summary><div><p>做了什么｜分段 token/KV 压缩、候选独立表征、attention 直接评分、CopyNet 监督；30–500 条分析</p><p>迁移与边界｜**直接长池解码失败证据**；完整排列的 missing IDs 不能照搬为 Top-20 错误定义；非理由忠实性实验</p><pre>CompRank: Efficient LLM Reranking via Token-Level Compression and Decoding-Free Scoring，2026 预印本
+一次来源：https://arxiv.org/abs/2606.11700
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：分段 token/KV 压缩、候选独立表征、attention 直接评分、CopyNet 监督；30–500 条分析
+迁移与边界：**直接长池解码失败证据**；完整排列的 missing IDs 不能照搬为 Top-20 错误定义；非理由忠实性实验
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P69] How Good Are Rerankers? <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.findings-emnlp.305/">原文 ↗</a></summary><div><p>做了什么｜benchmark、训练重合、效率与 FutureQueryEval</p><p>迁移与边界｜关注数据污染；新时间不自动证明训练未见</p><pre>How Good are LLM-based Rerankers? An Empirical Analysis of State-of-the-Art Reranking Models，Findings EMNLP 2025
+一次来源：https://aclanthology.org/2025.findings-emnlp.305/
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：benchmark、训练重合、效率与 FutureQueryEval
+迁移与边界：关注数据污染；新时间不自动证明训练未见
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N23] FinRank: An Evidence-Grounded Benchmark for Financial Question Answering and Retrieval over SEC Filings <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2608.07400">原文 ↗</a></summary><div><p>做了什么｜提供公开金融问题、来源限定的支持证据及跨公司/期间困难负例。</p><p>迁移与边界｜最接近主数据；原池小、逐项理由待标，扩容未判断项不能当0；已下载不等于标签无误。</p><pre>FinRank: An Evidence-Grounded Benchmark for Financial Question Answering and Retrieval over SEC Filings，2026预印本2608.07400
+一次来源：https://arxiv.org/abs/2608.07400
+核对深度：M,D
+阅读范围：此前论文/数据核验；本轮摘要复核
+做了什么：提供公开金融问题、来源限定的支持证据及跨公司/期间困难负例。
+迁移与边界：最接近主数据；原池小、逐项理由待标，扩容未判断项不能当0；已下载不等于标签无误。
+来源批次：20261012整合补充</pre></div></details></div></details><details open><summary>2.5 覆盖、弃答与格式错误</summary><div><p>方向结论｜空理由、少推、重复、池外ID、截断属于不同失效，不能混成一个幻觉率。</p><p>本题实验｜完整K、合法ID、理由覆盖和无错列表比例；拒断言正确性单列，finish_reason单列。</p><details><summary>[P27] CompRank <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.11700">原文 ↗</a></summary><div><p>做了什么｜分段 token/KV 压缩、候选独立表征、attention 直接评分、CopyNet 监督；30–500 条分析</p><p>迁移与边界｜**直接长池解码失败证据**；完整排列的 missing IDs 不能照搬为 Top-20 错误定义；非理由忠实性实验</p><pre>CompRank: Efficient LLM Reranking via Token-Level Compression and Decoding-Free Scoring，2026 预印本
+一次来源：https://arxiv.org/abs/2606.11700
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：分段 token/KV 压缩、候选独立表征、attention 直接评分、CopyNet 监督；30–500 条分析
+迁移与边界：**直接长池解码失败证据**；完整排列的 missing IDs 不能照搬为 Top-20 错误定义；非理由忠实性实验
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P55] Attribute or Abstain <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.emnlp-main.463/">原文 ↗</a></summary><div><p>做了什么｜长文档归因、作答与拒答评价</p><p>迁移与边界｜拒绝/缺证据要计可用覆盖率，不能拒绝一切刷支持率</p><pre>Attribute or Abstain: Large Language Models as Long Document Assistants，EMNLP 2024
+一次来源：https://aclanthology.org/2024.emnlp-main.463/
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：长文档归因、作答与拒答评价
+迁移与边界：拒绝/缺证据要计可用覆盖率，不能拒绝一切刷支持率
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N05] Sufficient Context: A New Lens on Retrieval Augmented Generation Systems <a target="_blank" rel="noopener" href="https://arxiv.org/html/2411.06037v1">原文 ↗</a></summary><div><p>做了什么｜区分输入是否含足够作答信息与模型能否正确作答，设计充分性标注。</p><p>迁移与边界｜理由支持、查询相关、证据充分是三个标签；缺证据组单独测拒绝无依据断言，不能混入充分组解释长度效应。</p><pre>Sufficient Context: A New Lens on Retrieval Augmented Generation Systems，ICLR 2025；所读2411.06037v1
+一次来源：https://arxiv.org/html/2411.06037v1
+核对深度：M
+阅读范围：§3定义、标注与AutoRater设置
+做了什么：区分输入是否含足够作答信息与模型能否正确作答，设计充分性标注。
+迁移与边界：理由支持、查询相关、证据充分是三个标签；缺证据组单独测拒绝无依据断言，不能混入充分组解释长度效应。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N14] The FACTS Grounding Leaderboard <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2501.03200">原文 ↗</a></summary><div><p>做了什么｜长文条件生成先检查是否完成请求，再判是否完全有依据，汇总多评审结果。</p><p>迁移与边界｜同时测任务完成与理由可靠，防止少输出获得虚高精度；不是金融重排金标。</p><pre>The FACTS Grounding Leaderboard，2025作者版本2501.03200
+一次来源：https://arxiv.org/abs/2501.03200
+核对深度：A
+阅读范围：摘要与评测流程说明
+做了什么：长文条件生成先检查是否完成请求，再判是否完全有依据，汇总多评审结果。
+迁移与边界：同时测任务完成与理由可靠，防止少输出获得虚高精度；不是金融重排金标。
+来源批次：20261012整合补充</pre></div></details></div></details><details open><summary>2.6 金融公开数据能提供什么</summary><div><p>方向结论｜优先公开披露item+chunk；QA和检测数据需改造，不能冒充现成长池排序金标。</p><p>本题实验｜FinRank主数据候选质量审计；FinQA绑定诊断；其他数据作为按需扩展。</p><details><summary>[N23] FinRank: An Evidence-Grounded Benchmark for Financial Question Answering and Retrieval over SEC Filings <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2608.07400">原文 ↗</a></summary><div><p>做了什么｜提供公开金融问题、来源限定的支持证据及跨公司/期间困难负例。</p><p>迁移与边界｜最接近主数据；原池小、逐项理由待标，扩容未判断项不能当0；已下载不等于标签无误。</p><pre>FinRank: An Evidence-Grounded Benchmark for Financial Question Answering and Retrieval over SEC Filings，2026预印本2608.07400
+一次来源：https://arxiv.org/abs/2608.07400
+核对深度：M,D
+阅读范围：此前论文/数据核验；本轮摘要复核
+做了什么：提供公开金融问题、来源限定的支持证据及跨公司/期间困难负例。
+迁移与边界：最接近主数据；原池小、逐项理由待标，扩容未判断项不能当0；已下载不等于标签无误。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N24] FinQA: A Dataset of Numerical Reasoning over Financial Data <a target="_blank" rel="noopener" href="https://aclanthology.org/2021.emnlp-main.300/">原文 ↗</a></summary><div><p>做了什么｜财报表格/正文、金融问题、支持证据和程序，为数值推理提供监督。</p><p>迁移与边界｜可抽实体/指标item配原文chunk做可控诊断；答案和程序仅放评测侧；不是FiQA。</p><pre>FinQA: A Dataset of Numerical Reasoning over Financial Data，EMNLP 2021
+一次来源：https://aclanthology.org/2021.emnlp-main.300/
+核对深度：M,D
+阅读范围：此前论文与已下载dev字段核验
+做了什么：财报表格/正文、金融问题、支持证据和程序，为数值推理提供监督。
+迁移与边界：可抽实体/指标item配原文chunk做可控诊断；答案和程序仅放评测侧；不是FiQA。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N25] FinDER: Financial Dataset for Question Answering and Evaluating Retrieval-Augmented Generation <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2504.15800">原文 ↗</a></summary><div><p>做了什么｜提供公开金融问题、参考证据与回答，并发布报告资源。</p><p>迁移与边界｜作为扩展/替代；本地未完成Parquet与报告全量对齐，不声称现成完整长池qrels。</p><pre>FinDER: Financial Dataset for Question Answering and Evaluating Retrieval-Augmented Generation，2025作者版本2504.15800
+一次来源：https://arxiv.org/abs/2504.15800
+核对深度：A,C
+阅读范围：此前摘要、数据卡与目录元数据
+做了什么：提供公开金融问题、参考证据与回答，并发布报告资源。
+迁移与边界：作为扩展/替代；本地未完成Parquet与报告全量对齐，不声称现成完整长池qrels。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N26] FinDVer: Explainable Claim Verification over Long and Hybrid-Content Financial Documents <a target="_blank" rel="noopener" href="https://arxiv.org/html/2411.05764v1">原文 ↗</a></summary><div><p>做了什么｜研究金融声明核验、证据与解释；部分设置完整上下文/推理有益。</p><p>迁移与边界｜金融事实核验辅助集；不是排序金标，同报告变体必须防泄漏，解释字段并非全部完整。</p><pre>FinDVer: Explainable Claim Verification over Long and Hybrid-Content Financial Documents，EMNLP 2024；2411.05764v1
+一次来源：https://arxiv.org/html/2411.05764v1
+核对深度：M,D
+阅读范围：此前§5.2–5.5和JSON核验
+做了什么：研究金融声明核验、证据与解释；部分设置完整上下文/推理有益。
+迁移与边界：金融事实核验辅助集；不是排序金标，同报告变体必须防泄漏，解释字段并非全部完整。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N27] PHANTOM: A Benchmark for Hallucination Detection in Financial Long-Context QA <a target="_blank" rel="noopener" href="https://papers.nips.cc/paper_files/paper/2025/hash/b8badadce3f482ba340ff870f4894441-Abstract-Datasets_and_Benchmarks_Track.html">原文 ↗</a></summary><div><p>做了什么｜金融披露长上下文幻觉检测，控制长度和证据位置，并训练小模型检测器。</p><p>迁移与边界｜金融直接证据但目标是检测；连续文档加长不等于独立item数增加，不提供重排NDCG金标。</p><pre>PHANTOM: A Benchmark for Hallucination Detection in Financial Long-Context QA，NeurIPS 2025 Datasets and Benchmarks
+一次来源：https://papers.nips.cc/paper_files/paper/2025/hash/b8badadce3f482ba340ff870f4894441-Abstract-Datasets_and_Benchmarks_Track.html
+核对深度：M
+阅读范围：此前§3、§5数据与检测器训练
+做了什么：金融披露长上下文幻觉检测，控制长度和证据位置，并训练小模型检测器。
+迁移与边界：金融直接证据但目标是检测；连续文档加长不等于独立item数增加，不提供重排NDCG金标。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N28] FinLongDocQA / Document-Level Numerical Reasoning across Single and Multiple Tables in Financial Reports <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2604.03664">原文 ↗</a></summary><div><p>做了什么｜长财报中的证据定位与数值问答，关联来源和可执行推理。</p><p>迁移与边界｜长文档金融资源补充；未下载全量，不因包含出处就称为列表重排基准。</p><pre>FinLongDocQA / Document-Level Numerical Reasoning across Single and Multiple Tables in Financial Reports，2026预印本2604.03664
+一次来源：https://arxiv.org/abs/2604.03664
+核对深度：A,C
+阅读范围：此前摘要、作者仓库说明；本轮题名核对
+做了什么：长财报中的证据定位与数值问答，关联来源和可执行推理。
+迁移与边界：长文档金融资源补充；未下载全量，不因包含出处就称为列表重排基准。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N21] TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance <a target="_blank" rel="noopener" href="https://aclanthology.org/2021.acl-long.254/">原文 ↗</a></summary><div><p>做了什么｜金融表格与正文混合问答，提供数值推导和尺度，TAGOP先抽取再运算。</p><p>迁移与边界｜可扩展指标/单位诊断；问答答案不能直接转为全候选相关性等级，当前不增加为必做主数据。</p><pre>TAT-QA: A Question Answering Benchmark on a Hybrid of Tabular and Textual Content in Finance，ACL 2021
+一次来源：https://aclanthology.org/2021.acl-long.254/
+核对深度：A
+阅读范围：摘要与作者数据说明
+做了什么：金融表格与正文混合问答，提供数值推导和尺度，TAGOP先抽取再运算。
+迁移与边界：可扩展指标/单位诊断；问答答案不能直接转为全候选相关性等级，当前不增加为必做主数据。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N22] MultiHiertt: Numerical Reasoning over Multi Hierarchical Tabular and Textual Data <a target="_blank" rel="noopener" href="https://aclanthology.org/2022.acl-long.454/">原文 ↗</a></summary><div><p>做了什么｜多层表头、多表和长正文问答，标注支持事实及推理；漏读表头可选错数值。</p><p>迁移与边界｜补充实体/层级/期间绑定视角；表格展开必须保留层级，当前仅列扩展资源。</p><pre>MultiHiertt: Numerical Reasoning over Multi Hierarchical Tabular and Textual Data，ACL 2022
+一次来源：https://aclanthology.org/2022.acl-long.454/
+核对深度：A
+阅读范围：摘要、引言与示例
+做了什么：多层表头、多表和长正文问答，标注支持事实及推理；漏读表头可选错数值。
+迁移与边界：补充实体/层级/期间绑定视角；表格展开必须保留层级，当前仅列扩展资源。
+来源批次：20261012整合补充</pre></div></details></div></details></div></details></section><section id="s3"><details open><summary>RQ3 如何缓解与后训练</summary><div><details open><summary>3.1 小组排序与候选管理</summary><div><p>方向结论｜滑窗、pairwise、setwise、树/锦标赛解决单次比较规模，但可能损失召回。</p><p>本题实验｜统一首检候选与预算，记录进入Top20前的漏召回、调用与token总量。</p><details><summary>[P01] RankGPT <a target="_blank" rel="noopener" href="https://aclanthology.org/2023.emnlp-main.923/">原文 ↗</a></summary><div><p>做了什么｜生成 ID 排列；滑窗及排序蒸馏；典型 N=100、b=20</p><p>迁移与边界｜排名生成的基础基线；滑窗已有；不能把清洗后的排列当原始协议成功率</p><pre>RankGPT / Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents，EMNLP 2023
+一次来源：https://aclanthology.org/2023.emnlp-main.923/
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：生成 ID 排列；滑窗及排序蒸馏；典型 N=100、b=20
+迁移与边界：排名生成的基础基线；滑窗已有；不能把清洗后的排列当原始协议成功率
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P02] PRP <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.findings-naacl.97/">原文 ↗</a></summary><div><p>做了什么｜PRP 两文档比较，结合排序算法</p><p>迁移与边界｜比较成本取决于算法；不是所有 PRP 都做全配对</p><pre>Large Language Models are Effective Text Rankers with Pairwise Ranking Prompting，Findings NAACL 2024
+一次来源：https://aclanthology.org/2024.findings-naacl.97/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：PRP 两文档比较，结合排序算法
+迁移与边界：比较成本取决于算法；不是所有 PRP 都做全配对
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P03] Setwise <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2310.09497">原文 ↗</a></summary><div><p>做了什么｜短集合选优，m 叉堆等排序程序</p><p>迁移与边界｜一次判断多个候选已有；组大小与调用次数共同影响成本</p><pre>A Setwise Approach for Effective and Highly Efficient Zero-shot Ranking with Large Language Models，作者版本/SIGIR 2024
+一次来源：https://arxiv.org/abs/2310.09497
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：短集合选优，m 叉堆等排序程序
+迁移与边界：一次判断多个候选已有；组大小与调用次数共同影响成本
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P04] PRP-Graph <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.acl-long.313/">原文 ↗</a></summary><div><p>做了什么｜偏好比较构图、置信度与图聚合</p><p>迁移与边界｜图聚合、选择性比较与置信加权已有</p><pre>PRP-Graph: Pairwise Ranking Prompting to LLMs with Graph Aggregation for Effective Text Re-ranking，ACL 2024
+一次来源：https://aclanthology.org/2024.acl-long.313/
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：偏好比较构图、置信度与图聚合
+迁移与边界：图聚合、选择性比较与置信加权已有
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P05] ListT5 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2402.15838">原文 ↗</a></summary><div><p>做了什么｜分文档编码、FiD、小组锦标赛及缓存</p><p>迁移与边界｜小模型、分候选编码的实用参照；不输出逐条证据理由</p><pre>ListT5: Listwise Reranking with Fusion-in-Decoder Improves Zero-shot Retrieval，2024 作者版本
+一次来源：https://arxiv.org/abs/2402.15838
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：分文档编码、FiD、小组锦标赛及缓存
+迁移与边界：小模型、分候选编码的实用参照；不输出逐条证据理由
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P08] TourRank <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2406.11678">原文 ↗</a></summary><div><p>做了什么｜多轮分组、淘汰与聚合</p><p>迁移与边界｜锦标赛流程不是新方法；本矩阵未核验全部附录</p><pre>TourRank: Utilizing Large Language Models for Documents Ranking with a Tournament-Inspired Strategy，2024 起作者版本
+一次来源：https://arxiv.org/abs/2406.11678
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：多轮分组、淘汰与聚合
+迁移与边界：锦标赛流程不是新方法；本矩阵未核验全部附录
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P09] BracketRank <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.acl-long.153/">原文 ↗</a></summary><div><p>做了什么｜推理式竞争淘汰、自适应分组、多轨处理</p><p>迁移与边界｜推理＋淘汰已有；不能只用新 pipeline 名称体现差异</p><pre>BracketRank: Large Language Model Document Ranking via Reasoning-based Competitive Elimination，ACL 2026
+一次来源：https://aclanthology.org/2026.acl-long.153/
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：推理式竞争淘汰、自适应分组、多轨处理
+迁移与边界：推理＋淘汰已有；不能只用新 pipeline 名称体现差异
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P15] Whole-Pool Setwise <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.01782">原文 ↗</a></summary><div><p>做了什么｜全池迭代选优/劣、DualEnd；已读更新版</p><p>迁移与边界｜长窗口不代表总 tokens 少；重复读取全池可能近似二次增长</p><pre>More Efficient LLM Reranking with Whole-Pool, Setwise, Long-Context Language Models，2026 预印本
+一次来源：https://arxiv.org/abs/2606.01782
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：全池迭代选优/劣、DualEnd；已读更新版
+迁移与边界：长窗口不代表总 tokens 少；重复读取全池可能近似二次增长
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P27] CompRank <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.11700">原文 ↗</a></summary><div><p>做了什么｜分段 token/KV 压缩、候选独立表征、attention 直接评分、CopyNet 监督；30–500 条分析</p><p>迁移与边界｜**直接长池解码失败证据**；完整排列的 missing IDs 不能照搬为 Top-20 错误定义；非理由忠实性实验</p><pre>CompRank: Efficient LLM Reranking via Token-Level Compression and Decoding-Free Scoring，2026 预印本
+一次来源：https://arxiv.org/abs/2606.11700
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：分段 token/KV 压缩、候选独立表征、attention 直接评分、CopyNet 监督；30–500 条分析
+迁移与边界：**直接长池解码失败证据**；完整排列的 missing IDs 不能照搬为 Top-20 错误定义；非理由忠实性实验
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N20] Hierarchical Reranking for Scalable Financial RAG System <a target="_blank" rel="noopener" href="https://arxiv.org/html/2607.27523v1">原文 ↗</a></summary><div><p>做了什么｜金融任务中两阶段重排、表格规范化及长上下文切分融合；上下文管理收益较小。</p><p>迁移与边界｜金融管线近邻；64k阈值非普适，文中统计稳定措辞不能替代显著性证据，不是逐item理由评测。</p><pre>Hierarchical Reranking for Scalable Financial RAG System，2026预印本2607.27523v1
+一次来源：https://arxiv.org/html/2607.27523v1
+核对深度：M
+阅读范围：§3–6、表2–3
+做了什么：金融任务中两阶段重排、表格规范化及长上下文切分融合；上下文管理收益较小。
+迁移与边界：金融管线近邻；64k阈值非普适，文中统计稳定措辞不能替代显著性证据，不是逐item理由评测。
+来源批次：20261012整合补充</pre></div></details></div></details><details open><summary>3.2 金融卡片与规则约束</summary><div><p>方向结论｜结构字段匹配、证据卡和元数据过滤是直接近邻，必须作为强基线。</p><p>本题实验｜真实可抽字段与oracle字段分开；卡片保留出处回指，核查压缩是否丢表头/否定。</p><details><summary>[P29] FinCARDS <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.findings-acl.1244/">原文 ↗</a></summary><div><p>做了什么｜实体/指标/时期/逐字数值/证据字段；BM25→卡片筛选→随机分组 Borda；N≤150、b≈15–25、≤5 轮、Jaccard 早停</p><p>迁移与边界｜**结构证据＋长文档稳定排序直接近邻**；输出审计轨迹，未以逐条自由理由忠实性金标作为主指标</p><pre>FinCARDS: Card-Based Analyst Reranking for Financial Document Question Answering，Findings ACL 2026
+一次来源：https://aclanthology.org/2026.findings-acl.1244/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：实体/指标/时期/逐字数值/证据字段；BM25→卡片筛选→随机分组 Borda；N≤150、b≈15–25、≤5 轮、Jaccard 早停
+迁移与边界：**结构证据＋长文档稳定排序直接近邻**；输出审计轨迹，未以逐条自由理由忠实性金标作为主指标
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N20] Hierarchical Reranking for Scalable Financial RAG System <a target="_blank" rel="noopener" href="https://arxiv.org/html/2607.27523v1">原文 ↗</a></summary><div><p>做了什么｜金融任务中两阶段重排、表格规范化及长上下文切分融合；上下文管理收益较小。</p><p>迁移与边界｜金融管线近邻；64k阈值非普适，文中统计稳定措辞不能替代显著性证据，不是逐item理由评测。</p><pre>Hierarchical Reranking for Scalable Financial RAG System，2026预印本2607.27523v1
+一次来源：https://arxiv.org/html/2607.27523v1
+核对深度：M
+阅读范围：§3–6、表2–3
+做了什么：金融任务中两阶段重排、表格规范化及长上下文切分融合；上下文管理收益较小。
+迁移与边界：金融管线近邻；64k阈值非普适，文中统计稳定措辞不能替代显著性证据，不是逐item理由评测。
+来源批次：20261012整合补充</pre></div></details></div></details><details open><summary>3.3 分离排序、取证与理由生成</summary><div><p>方向结论｜先定位证据，再生成或核验理由；局部读取可减少跨item污染。</p><p>本题实验｜冻结同一排名比较全池解释和局部解释；再测端到端质量，防止任务更简单造成虚假增益。</p><details><summary>[N07] FRONT: Learning Fine-Grained Grounded Citations for Attributed Large Language Models <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.findings-acl.838/">原文 ↗</a></summary><div><p>做了什么｜先抽引用片段再生成回答的SFT，随后用一致/不一致回答做DPO。</p><p>迁移与边界｜直接近邻：证据先行加DPO已经存在；我们的差异须由金融绑定、扩容干扰及排序约束实验证明。</p><pre>FRONT: Learning Fine-Grained Grounded Citations for Attributed Large Language Models，Findings ACL 2024
+一次来源：https://aclanthology.org/2024.findings-acl.838/
+核对深度：M
+阅读范围：作者HTML2408.04568v1 §3、表1
+做了什么：先抽引用片段再生成回答的SFT，随后用一致/不一致回答做DPO。
+迁移与边界：直接近邻：证据先行加DPO已经存在；我们的差异须由金融绑定、扩容干扰及排序约束实验证明。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N19] ReClaim: Ground Every Sentence <a target="_blank" rel="noopener" href="https://arxiv.org/html/2407.01796v1">原文 ↗</a></summary><div><p>做了什么｜交替产生引用与声明，可拆为ReferModel和ClaimModel并约束引用解码。</p><p>迁移与边界｜局部证据生成/验证是强基线；出处字符串正确不保证陈述语义支持，也没有排名任务。</p><pre>ReClaim: Ground Every Sentence，Findings NAACL 2025；所读2407.01796v1
+一次来源：https://arxiv.org/html/2407.01796v1
+核对深度：M
+阅读范围：§3方法、训练设置、表3–4
+做了什么：交替产生引用与声明，可拆为ReferModel和ClaimModel并约束引用解码。
+迁移与边界：局部证据生成/验证是强基线；出处字符串正确不保证陈述语义支持，也没有排名任务。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N06] LongCite: Enabling LLMs to Generate Fine-grained Citations in Long-Context QA <a target="_blank" rel="noopener" href="https://arxiv.org/html/2409.02897v1">原文 ↗</a></summary><div><p>做了什么｜CoF自动构造句级引用SFT数据；比较带引用与不带引用的问答正确性。</p><p>迁移与边界｜联合输出可能有额外负担，但训练后可以改善；本题需实测排序与理由联合任务，不能预设一定更差。</p><pre>LongCite: Enabling LLMs to Generate Fine-grained Citations in Long-Context QA，Findings ACL 2025；所读2409.02897v1
+一次来源：https://arxiv.org/html/2409.02897v1
+核对深度：M
+阅读范围：§2–3、表3
+做了什么：CoF自动构造句级引用SFT数据；比较带引用与不带引用的问答正确性。
+迁移与边界：联合输出可能有额外负担，但训练后可以改善；本题需实测排序与理由联合任务，不能预设一定更差。
+来源批次：20261012整合补充</pre></div></details><details><summary>[P33] JudgeRank <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2411.00142">原文 ↗</a></summary><div><p>做了什么｜query 分析→query-aware 抽取摘要→Yes/No 概率；BRIGHT</p><p>迁移与边界｜先证据分析再评分已有；是 pointwise 多阶段，非一次 Top-20 全池输出</p><pre>JudgeRank: Leveraging Large Language Models for Reasoning-Intensive Reranking，2024 起作者论文
+一次来源：https://arxiv.org/abs/2411.00142
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：query 分析→query-aware 抽取摘要→Yes/No 概率；BRIGHT
+迁移与边界：先证据分析再评分已有；是 pointwise 多阶段，非一次 Top-20 全池输出
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P34] DeAR <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.findings-emnlp.306/">原文 ↗</a></summary><div><p>做了什么｜Stage1 pointwise KL＋排序监督；Stage2 约 20K 教师理由/排列 SFT，细排 Top-20</p><p>迁移与边界｜分开细粒度评分与跨文档推理已有；未直接证明自由理由忠实</p><pre>DeAR: Dual-Stage Document Reranking with Reasoning Agents via LLM Distillation，Findings EMNLP 2025
+一次来源：https://aclanthology.org/2025.findings-emnlp.306/
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：Stage1 pointwise KL＋排序监督；Stage2 约 20K 教师理由/排列 SFT，细排 Top-20
+迁移与边界：分开细粒度评分与跨文档推理已有；未直接证明自由理由忠实
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P38] Explain-then-Rank <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.findings-acl.1167/">原文 ↗</a></summary><div><p>做了什么｜多解释合成 meta-NLE，再用神经 ranker 评分；TREC19–22/NTCIR14；MSE、CB-ECE、nDCG</p><p>迁移与边界｜解释不确定性与分数校准已有；meta-NLE 可遗漏或添加事实，非来源真实性保证</p><pre>Explain then Rank: Scale Calibration of Neural Rankers Using Natural Language Explanations from LLMs，Findings ACL 2025
+一次来源：https://aclanthology.org/2025.findings-acl.1167/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：多解释合成 meta-NLE，再用神经 ranker 评分；TREC19–22/NTCIR14；MSE、CB-ECE、nDCG
+迁移与边界：解释不确定性与分数校准已有；meta-NLE 可遗漏或添加事实，非来源真实性保证
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P78] Rerank Before You Reason <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.findings-acl.1289/">原文 ↗</a></summary><div><p>做了什么｜BrowseComp-Plus；输入/缓存/输出加权 ETC；检索100、细排10/20/50、给 agent Top-5</p><p>迁移与边界｜业务 agent 成本近邻；ETC 系数不是普适价格，跨模型需额外折算</p><pre>Rerank Before You Reason: Analyzing Reranking Tradeoffs through Effective Token Cost in Deep Search Agents，Findings ACL 2026
+一次来源：https://aclanthology.org/2026.findings-acl.1289/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：BrowseComp-Plus；输入/缓存/输出加权 ETC；检索100、细排10/20/50、给 agent Top-5
+迁移与边界：业务 agent 成本近邻；ETC 系数不是普适价格，跨模型需额外折算
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details></div></details><details open><summary>3.4 排序蒸馏与证据SFT</summary><div><p>方向结论｜排序蒸馏、解释监督和抗干扰SFT均已有；数据构造比换训练名更关键。</p><p>本题实验｜普通SFT、普通难负例SFT、金融绑定难负例SFT；同训练量、同底座、同格式。</p><details><summary>[P06] RankZephyr <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2312.02724">原文 ↗</a></summary><div><p>做了什么｜列表排序蒸馏，数量/顺序泛化</p><p>迁移与边界｜专门排序模型基线；本矩阵不据摘要填写详细训练预算</p><pre>RankZephyr: Effective and Robust Zero-Shot Listwise Reranking is a Breeze!，2023 起作者版本
+一次来源：https://arxiv.org/abs/2312.02724
+核对深度：A,C
+阅读范围：见20261011阅读矩阵
+做了什么：列表排序蒸馏，数量/顺序泛化
+迁移与边界：专门排序模型基线；本矩阵不据摘要填写详细训练预算
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P07] FIRST <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.emnlp-main.491/">原文 ↗</a></summary><div><p>做了什么｜首个标识符 token 的 logits 排名</p><p>迁移与边界｜减少解码，不消除长输入 prefill；API 需支持相应概率</p><pre>FIRST: Faster Improved Listwise Reranking with Single Token Decoding，EMNLP 2024
+一次来源：https://aclanthology.org/2024.emnlp-main.491/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：首个标识符 token 的 logits 排名
+迁移与边界：减少解码，不消除长输入 prefill；API 需支持相应概率
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P30] ExaRanker <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2301.10521">原文 ↗</a></summary><div><p>做了什么｜标签＋解释监督训练 seq2seq ranker</p><p>迁移与边界｜解释作训练信号已有；标签正确不保证解释依据正确</p><pre>ExaRanker: Explanation-Augmented Neural Ranker，2023 作者论文
+一次来源：https://arxiv.org/abs/2301.10521
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：标签＋解释监督训练 seq2seq ranker
+迁移与边界：解释作训练信号已有；标签正确不保证解释依据正确
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P31] ExaRanker Open Models <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2402.06334">原文 ↗</a></summary><div><p>做了什么｜开源模型生成解释用于排序训练</p><p>迁移与边界｜降低教师费用；具体效果以原任务为界，未核验所有训练细节</p><pre>ExaRanker-Open: Synthetic Explanation for IR using Open-Source LLMs，2024 作者论文
+一次来源：https://arxiv.org/abs/2402.06334
+核对深度：A,C
+阅读范围：见20261011阅读矩阵
+做了什么：开源模型生成解释用于排序训练
+迁移与边界：降低教师费用；具体效果以原任务为界，未核验所有训练细节
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P32] Rank1 <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2502.18418">原文 ↗</a></summary><div><p>做了什么｜DeepSeek-R1 相关性推理蒸馏、pointwise；60 万以上原始推理例</p><p>迁移与边界｜测试时推理可帮助复杂相关性判断；并非 long-list 理由绑定研究</p><pre>Rank1: Test-Time Compute for Reranking in Information Retrieval，2025 作者论文
+一次来源：https://arxiv.org/abs/2502.18418
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：DeepSeek-R1 相关性推理蒸馏、pointwise；60 万以上原始推理例
+迁移与边界：测试时推理可帮助复杂相关性判断；并非 long-list 理由绑定研究
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N32] RAFT: Adapting Language Model to Domain Specific RAG <a target="_blank" rel="noopener" href="https://arxiv.org/html/2403.10131v1">原文 ↗</a></summary><div><p>做了什么｜相关证据与干扰混合的域内问答SFT，并利用解释/引用监督。</p><p>迁移与边界｜必须比较RAFT式普通抗干扰训练；其缺oracle仍作答设计不适合原样移植为证据不足拒断言。</p><pre>RAFT: Adapting Language Model to Domain Specific RAG，2024作者版本2403.10131v1
+一次来源：https://arxiv.org/html/2403.10131v1
+核对深度：M
+阅读范围：此前§3、§5
+做了什么：相关证据与干扰混合的域内问答SFT，并利用解释/引用监督。
+迁移与边界：必须比较RAFT式普通抗干扰训练；其缺oracle仍作答设计不适合原样移植为证据不足拒断言。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N16] Making Retrieval-Augmented Language Models Robust to Irrelevant Context <a target="_blank" rel="noopener" href="https://arxiv.org/html/2310.01558v1">原文 ↗</a></summary><div><p>做了什么｜使用NLI判断证据相关并构造不同检索质量的训练混合；少量参数高效微调改善抗干扰问答。</p><p>迁移与边界｜普通混合干扰SFT必须作为基线；无上下文也正确的回答不自动满足本题仅依据输入的约束。</p><pre>Making Retrieval-Augmented Language Models Robust to Irrelevant Context，ICLR 2024；所读2310.01558v1
+一次来源：https://arxiv.org/html/2310.01558v1
+核对深度：M
+阅读范围：§2–3
+做了什么：使用NLI判断证据相关并构造不同检索质量的训练混合；少量参数高效微调改善抗干扰问答。
+迁移与边界：普通混合干扰SFT必须作为基线；无上下文也正确的回答不自动满足本题仅依据输入的约束。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N17] SFR-RAG: Towards Contextually Faithful LLMs <a target="_blank" rel="noopener" href="https://arxiv.org/html/2409.09916v1">原文 ↗</a></summary><div><p>做了什么｜围绕相关/干扰、冲突、引用、不可回答等情况设计RAG训练与评测。</p><p>迁移与边界｜金融后训练需包含缺证据和冲突；概述不足以完整复现原训练数据，9B长文不直接适配24GB。</p><pre>SFR-RAG: Towards Contextually Faithful LLMs，2024作者版本2409.09916v1
+一次来源：https://arxiv.org/html/2409.09916v1
+核对深度：M
+阅读范围：§1–2训练概述
+做了什么：围绕相关/干扰、冲突、引用、不可回答等情况设计RAG训练与评测。
+迁移与边界：金融后训练需包含缺证据和冲突；概述不足以完整复现原训练数据，9B长文不直接适配24GB。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N06] LongCite: Enabling LLMs to Generate Fine-grained Citations in Long-Context QA <a target="_blank" rel="noopener" href="https://arxiv.org/html/2409.02897v1">原文 ↗</a></summary><div><p>做了什么｜CoF自动构造句级引用SFT数据；比较带引用与不带引用的问答正确性。</p><p>迁移与边界｜联合输出可能有额外负担，但训练后可以改善；本题需实测排序与理由联合任务，不能预设一定更差。</p><pre>LongCite: Enabling LLMs to Generate Fine-grained Citations in Long-Context QA，Findings ACL 2025；所读2409.02897v1
+一次来源：https://arxiv.org/html/2409.02897v1
+核对深度：M
+阅读范围：§2–3、表3
+做了什么：CoF自动构造句级引用SFT数据；比较带引用与不带引用的问答正确性。
+迁移与边界：联合输出可能有额外负担，但训练后可以改善；本题需实测排序与理由联合任务，不能预设一定更差。
+来源批次：20261012整合补充</pre></div></details></div></details><details open><summary>3.5 偏好优化与反事实证据</summary><div><p>方向结论｜DPO/SimPO可学习正确和错误理由差异，但要防长度偏好与合成错误失真。</p><p>本题实验｜同输入、同排名、近等长理由偏好；实体/期间替换与自然模型错误各自消融。</p><details><summary>[N07] FRONT: Learning Fine-Grained Grounded Citations for Attributed Large Language Models <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.findings-acl.838/">原文 ↗</a></summary><div><p>做了什么｜先抽引用片段再生成回答的SFT，随后用一致/不一致回答做DPO。</p><p>迁移与边界｜直接近邻：证据先行加DPO已经存在；我们的差异须由金融绑定、扩容干扰及排序约束实验证明。</p><pre>FRONT: Learning Fine-Grained Grounded Citations for Attributed Large Language Models，Findings ACL 2024
+一次来源：https://aclanthology.org/2024.findings-acl.838/
+核对深度：M
+阅读范围：作者HTML2408.04568v1 §3、表1
+做了什么：先抽引用片段再生成回答的SFT，随后用一致/不一致回答做DPO。
+迁移与边界：直接近邻：证据先行加DPO已经存在；我们的差异须由金融绑定、扩容干扰及排序约束实验证明。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N08] SelfCite: Self-Supervised Alignment for Context Attribution in Large Language Models <a target="_blank" rel="noopener" href="https://arxiv.org/html/2502.09604v1">原文 ↗</a></summary><div><p>做了什么｜删除/保留引用上下文构造自监督信号，用BoN与SimPO改善引用；分析长度捷径和随机扰动失效。</p><p>迁移与边界｜证据干预奖励已有；借鉴长度匹配与真实错误偏好。模型概率依赖不等于文本蕴含，更不等于金融事实真实。</p><pre>SelfCite: Self-Supervised Alignment for Context Attribution in Large Language Models，ICML 2025
+一次来源：https://arxiv.org/html/2502.09604v1
+核对深度：M
+阅读范围：§2、§4.1–4.6
+做了什么：删除/保留引用上下文构造自监督信号，用BoN与SimPO改善引用；分析长度捷径和随机扰动失效。
+迁移与边界：证据干预奖励已有；借鉴长度匹配与真实错误偏好。模型概率依赖不等于文本蕴含，更不等于金融事实真实。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N09] ContextCite: Attributing Model Generation to Context <a target="_blank" rel="noopener" href="https://arxiv.org/html/2409.00729v1">原文 ↗</a></summary><div><p>做了什么｜通过上下文消融拟合代理模型，估计哪些来源影响某条生成陈述。</p><p>迁移与边界｜用于区分贡献性归因与支持性引用；额外前向成本高，归因到错误证据仍可能是不正确理由。</p><pre>ContextCite: Attributing Model Generation to Context，NeurIPS 2024
+一次来源：https://arxiv.org/html/2409.00729v1
+核对深度：M
+阅读范围：§1–3方法定义及应用概述
+做了什么：通过上下文消融拟合代理模型，估计哪些来源影响某条生成陈述。
+迁移与边界：用于区分贡献性归因与支持性引用；额外前向成本高，归因到错误证据仍可能是不正确理由。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N10] LongReward: Improving Long-context Large Language Models with AI Feedback <a target="_blank" rel="noopener" href="https://arxiv.org/html/2410.21252v1">原文 ↗</a></summary><div><p>做了什么｜分别评价帮助性、逻辑性、忠实性、完整性，构造偏好并以DPO及CE正则训练。</p><p>迁移与边界｜多维奖励已存在；可迁移局部检查和覆盖约束，原32张H800配置不能作为单卡24GB可行性证据。</p><pre>LongReward: Improving Long-context Large Language Models with AI Feedback，ACL 2025；所读2410.21252v1
+一次来源：https://arxiv.org/html/2410.21252v1
+核对深度：M
+阅读范围：§3.2–4.1
+做了什么：分别评价帮助性、逻辑性、忠实性、完整性，构造偏好并以DPO及CE正则训练。
+迁移与边界：多维奖励已存在；可迁移局部检查和覆盖约束，原32张H800配置不能作为单卡24GB可行性证据。
+来源批次：20261012整合补充</pre></div></details><details><summary>[P45] PEX <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.emnlp-main.797/">原文 ↗</a></summary><div><p>做了什么｜条件概率/weight-of-evidence 评测解释与判断一致，重选解释、DPO</p><p>迁移与边界｜分类任务；使模型被理由说服不等于事实支持，也不是充分因果忠实</p><pre>A Necessary Step toward Faithfulness: Measuring and Improving Consistency in Free-Text Explanations / PEX，EMNLP 2025
+一次来源：https://aclanthology.org/2025.emnlp-main.797/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：条件概率/weight-of-evidence 评测解释与判断一致，重选解释、DPO
+迁移与边界：分类任务；使模型被理由说服不等于事实支持，也不是充分因果忠实
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P19] OC-SFT <a target="_blank" rel="noopener" href="https://arxiv.org/html/2608.26762v2">原文 ↗</a></summary><div><p>做了什么｜组内等级 token 评分、教师监督＋排列一致性；N=100、b=20</p><p>迁移与边界｜明确区分 nDCG 与决策稳定；仓库当前 source-only，不含已验证可下载的 adapters/silver labels</p><pre>Equal Ranking Quality, Different Decisions: Measuring and Reducing Order Dependence in LLM Scorers / OC-SFT，2026 预印本
+一次来源：https://arxiv.org/html/2608.26762v2
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：组内等级 token 评分、教师监督＋排列一致性；N=100、b=20
+迁移与边界：明确区分 nDCG 与决策稳定；仓库当前 source-only，不含已验证可下载的 adapters/silver labels
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P47] Training for Self-Explanation Faithfulness <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2607.21090">原文 ↗</a></summary><div><p>做了什么｜干预是否翻转决策与解释是否提到干预对齐，GRPO；Phi-CCT；检测复制/沉默等作弊</p><p>迁移与边界｜**反事实解释奖励直接近邻**；任务是分类/常识，非来源支持；固定基模影响标签会随训练过时</p><pre>Training Large Language Models for Self-Explanation Faithfulness，2026 作者论文/另有 Re-Align workshop 版本
+一次来源：https://arxiv.org/abs/2607.21090
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：干预是否翻转决策与解释是否提到干预对齐，GRPO；Phi-CCT；检测复制/沉默等作弊
+迁移与边界：**反事实解释奖励直接近邻**；任务是分类/常识，非来源支持；固定基模影响标签会随训练过时
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details></div></details><details open><summary>3.6 RL与细粒度奖励</summary><div><p>方向结论｜排序GRPO与引用PPO已有；单一NDCG奖励不覆盖理由归属，单一支持率会鼓励少说。</p><p>本题实验｜先验证奖励与人工一致，再比较SFT/DPO/可选GRPO；保持排名和覆盖门槛。</p><details><summary>[P20] TSSetRank <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.acl-long.94/">原文 ↗</a></summary><div><p>做了什么｜GRPO 训练 b=10 相关性判断器；Thompson sampling 覆盖 N=100</p><p>迁移与边界｜上下文＋自适应预算直接近邻；调度规则不是 RL 学到的策略</p><pre>Contextual Relevance and Adaptive Sampling for LLM-Based Document Reranking / TS-SetRank，ACL 2026
+一次来源：https://aclanthology.org/2026.acl-long.94/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：GRPO 训练 b=10 相关性判断器；Thompson sampling 覆盖 N=100
+迁移与边界：上下文＋自适应预算直接近邻；调度规则不是 RL 学到的策略
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P35] REA-RANK <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.emnlp-main.125/">原文 ↗</a></summary><div><p>做了什么｜GRPO：归一化 nDCG@10＋格式；N=100、b=20</p><p>迁移与边界｜RL 排序质量直接基线；奖励不核对每句证据</p><pre>REARANK: Reasoning Re-ranking Agent via Reinforcement Learning，EMNLP 2025
+一次来源：https://aclanthology.org/2025.emnlp-main.125/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：GRPO：归一化 nDCG@10＋格式；N=100、b=20
+迁移与边界：RL 排序质量直接基线；奖励不核对每句证据
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P36] Rank-R1 <a target="_blank" rel="noopener" href="https://cs.uwaterloo.ca/~jimmylin/publications/Zhuang_etal_SIGIR2026_RankR1.pdf">原文 ↗</a></summary><div><p>做了什么｜GRPO b=20 集合选优；相关命中＋格式奖励</p><p>迁移与边界｜2025 预印本的正式更新；不直接优化有序 Top-20 或理由出处</p><pre>Rank-R1: Enhancing Reasoning in LLM-based Document Rerankers via Reinforcement Learning，SIGIR 2026 作者正式版
+一次来源：https://cs.uwaterloo.ca/~jimmylin/publications/Zhuang_etal_SIGIR2026_RankR1.pdf
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：GRPO b=20 集合选优；相关命中＋格式奖励
+迁移与边界：2025 预印本的正式更新；不直接优化有序 Top-20 或理由出处
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P37] ERank <a target="_blank" rel="noopener" href="https://ojs.aaai.org/index.php/AAAI/article/view/40261">原文 ↗</a></summary><div><p>做了什么｜细粒度 pointwise SFT＋列表导出奖励 GRPO；公开 4B</p><p>迁移与边界｜**资源适配强基线**；推理仍单条输入，原多卡训练不等于 24GB 可复现</p><pre>ERank: Fusing Supervised Fine-Tuning and Reinforcement Learning for Effective and Efficient Text Reranking，AAAI 2026
+一次来源：https://ojs.aaai.org/index.php/AAAI/article/view/40261
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：细粒度 pointwise SFT＋列表导出奖励 GRPO；公开 4B
+迁移与边界：**资源适配强基线**；推理仍单条输入，原多卡训练不等于 24GB 可复现
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P46] RationaleRM <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.acl-long.1924/">原文 ↗</a></summary><div><p>做了什么｜MetaJudge 原子理由一对一匹配；AP rationale×outcome 奖励，GRPO</p><p>迁移与边界｜“结果＋理由奖励”及乘法门控已存在；人类理由对齐不等于唯一正确内部推理</p><pre>Outcome Accuracy is Not Enough: Aligning the Reasoning Process of Reward Models，ACL 2026
+一次来源：https://aclanthology.org/2026.acl-long.1924/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：MetaJudge 原子理由一对一匹配；AP rationale×outcome 奖励，GRPO
+迁移与边界：“结果＋理由奖励”及乘法门控已存在；人类理由对齐不等于唯一正确内部推理
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P48] FaithLens <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.findings-acl.689/">原文 ↗</a></summary><div><p>做了什么｜幻觉检测＋解释；合成筛选 SFT→GRPO，正确性＋解释帮助弱模型分类</p><p>迁移与边界｜可作 verifier 参考；解释易懂/可预测标签≠真实反映 reranker 依据</p><pre>FaithLens: Detecting and Explaining Faithfulness Hallucination，Findings ACL 2026
+一次来源：https://aclanthology.org/2026.findings-acl.689/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：幻觉检测＋解释；合成筛选 SFT→GRPO，正确性＋解释帮助弱模型分类
+迁移与边界：可作 verifier 参考；解释易懂/可预测标签≠真实反映 reranker 依据
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N18] Training Language Models to Generate Text with Citations via Fine-grained Rewards <a target="_blank" rel="noopener" href="https://arxiv.org/html/2402.04315v1">原文 ↗</a></summary><div><p>做了什么｜将正确性、引用召回及精确度信号用于拒绝采样和PPO，比较细粒度与整体奖励。</p><p>迁移与边界｜直接排除“忠实性加覆盖reward本身全新”的表述；原输入少量文档，不研究250项排序。</p><pre>Training Language Models to Generate Text with Citations via Fine-grained Rewards，2024作者版本2402.04315v1
+一次来源：https://arxiv.org/html/2402.04315v1
+核对深度：M
+阅读范围：§2、§4与错误分析
+做了什么：将正确性、引用召回及精确度信号用于拒绝采样和PPO，比较细粒度与整体奖励。
+迁移与边界：直接排除“忠实性加覆盖reward本身全新”的表述；原输入少量文档，不研究250项排序。
+来源批次：20261012整合补充</pre></div></details><details><summary>[P60] RRPO <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.acl-long.1406/">原文 ↗</a></summary><div><p>做了什么｜下游答案效果奖励、reference baseline 降方差</p><p>迁移与边界｜正式版已核验；训练方差下降不等于输入排列稳定</p><pre>Optimizing RAG Rerankers with LLM Feedback via Reinforcement Learning / RRPO，ACL 2026
+一次来源：https://aclanthology.org/2026.acl-long.1406/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：下游答案效果奖励、reference baseline 降方差
+迁移与边界：正式版已核验；训练方差下降不等于输入排列稳定
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P61] SRPO <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2607.25268">原文 ↗</a></summary><div><p>做了什么｜输出排名距离影响优势；经典 LTR 与 E2Rank-0.6B、16 候选</p><p>迁移与边界｜top-weighted 排序 RL 已有；PL 采样排列不等于生成长理由 rollout</p><pre>Structure-aware Relative Policy Optimization for Ranking / SRPO，2026 预印本
+一次来源：https://arxiv.org/abs/2607.25268
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：输出排名距离影响优势；经典 LTR 与 E2Rank-0.6B、16 候选
+迁移与边界：top-weighted 排序 RL 已有；PL 采样排列不等于生成长理由 rollout
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P62] PA-GRPO <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.acl-long.1621/">原文 ↗</a></summary><div><p>做了什么｜PA-GRPO：跨输入排列身份一致性＋正确性；选择题/成对 judge</p><p>迁移与边界｜简单排列一致 reward 已有；迁移到 ties 和有序 Top-20 需要新验证</p><pre>Mitigating Selection Bias in Large Language Models via Permutation-Aware GRPO，ACL 2026
+一次来源：https://aclanthology.org/2026.acl-long.1621/
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：PA-GRPO：跨输入排列身份一致性＋正确性；选择题/成对 judge
+迁移与边界：简单排列一致 reward 已有；迁移到 ties 和有序 Top-20 需要新验证
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details></div></details><details open><summary>3.7 稳定性训练及推理聚合</summary><div><p>方向结论｜多排列聚合与顺序一致训练已有；一致可能只是稳定地错误。</p><p>本题实验｜监督真实相关性并跨扰动一致；不能要求新增更相关证据时仍保持旧排名。</p><details><summary>[P10] PSC <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.naacl-long.129/">原文 ↗</a></summary><div><p>做了什么｜PSC 多排列聚合；Top-100 滑窗与 Top-20 直接输入</p><p>迁移与边界｜排列投票已是强基线；额外调用必须计费</p><pre>Found in the Middle: Permutation Self-Consistency Improves Listwise Ranking in Large Language Models，NAACL 2024
+一次来源：https://aclanthology.org/2024.naacl-long.129/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：PSC 多排列聚合；Top-100 滑窗与 Top-20 直接输入
+迁移与边界：排列投票已是强基线；额外调用必须计费
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P11] BSC <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.emnlp-main.1661/">原文 ↗</a></summary><div><p>做了什么｜N=30/90，b=30；STB/BTS 改变同伴或仅改变顺序</p><p>迁移与边界｜直接研究批量评分位置偏差和分组；窗口足够仍会退化</p><pre>Batched Self-Consistency Improves LLM Relevance Assessment and Ranking，EMNLP 2025
+一次来源：https://aclanthology.org/2025.emnlp-main.1661/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：N=30/90，b=30；STB/BTS 改变同伴或仅改变顺序
+迁移与边界：直接研究批量评分位置偏差和分组；窗口足够仍会退化
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P17] InvariRank <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2604.27599">原文 ↗</a></summary><div><p>做了什么｜跨候选 mask、共享位置参照、LambdaRank；推荐候选 K=25</p><p>迁移与边界｜推荐评分任务；阻断候选交互换稳定，普通聊天 API 不能实现</p><pre>One Pass, Any Order: Position-Invariant Listwise Reranking for LLM-Based Recommendation / InvariRank，2026 作者版本
+一次来源：https://arxiv.org/abs/2604.27599
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：跨候选 mask、共享位置参照、LambdaRank；推荐候选 K=25
+迁移与边界：推荐评分任务；阻断候选交互换稳定，普通聊天 API 不能实现
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P19] OC-SFT <a target="_blank" rel="noopener" href="https://arxiv.org/html/2608.26762v2">原文 ↗</a></summary><div><p>做了什么｜组内等级 token 评分、教师监督＋排列一致性；N=100、b=20</p><p>迁移与边界｜明确区分 nDCG 与决策稳定；仓库当前 source-only，不含已验证可下载的 adapters/silver labels</p><pre>Equal Ranking Quality, Different Decisions: Measuring and Reducing Order Dependence in LLM Scorers / OC-SFT，2026 预印本
+一次来源：https://arxiv.org/html/2608.26762v2
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：组内等级 token 评分、教师监督＋排列一致性；N=100、b=20
+迁移与边界：明确区分 nDCG 与决策稳定；仓库当前 source-only，不含已验证可下载的 adapters/silver labels
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P58] StableRAG <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.acl-long.1188/">原文 ↗</a></summary><div><p>做了什么｜Top-5 QA，排列隐藏状态聚类、偏好数据、DPO</p><p>迁移与边界｜优化下游回答生成器；不是 250 条 reranker，但排列幻觉后训练已有</p><pre>Stable-RAG: Mitigating Retrieval-Permutation-Induced Hallucinations in Retrieval-Augmented Generation，ACL 2026
+一次来源：https://aclanthology.org/2026.acl-long.1188/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：Top-5 QA，排列隐藏状态聚类、偏好数据、DPO
+迁移与边界：优化下游回答生成器；不是 250 条 reranker，但排列幻觉后训练已有
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details></div></details><details open><summary>3.8 核验器、拒断言与机制干预</summary><div><p>方向结论｜检测器或规则可直接清除部分错误；内部检索头路线需要可访问模型。</p><p>本题实验｜程序回填/局部检查先做；若已解决则不强行RL，剩余语义错误才值得后训练。</p><details><summary>[P55] Attribute or Abstain <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.emnlp-main.463/">原文 ↗</a></summary><div><p>做了什么｜长文档归因、作答与拒答评价</p><p>迁移与边界｜拒绝/缺证据要计可用覆盖率，不能拒绝一切刷支持率</p><pre>Attribute or Abstain: Large Language Models as Long Document Assistants，EMNLP 2024
+一次来源：https://aclanthology.org/2024.emnlp-main.463/
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：长文档归因、作答与拒答评价
+迁移与边界：拒绝/缺证据要计可用覆盖率，不能拒绝一切刷支持率
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P79] MiniCheck <a target="_blank" rel="noopener" href="https://aclanthology.org/2024.emnlp-main.499/">原文 ↗</a></summary><div><p>做了什么｜小型 evidence-claim 核验器、合成训练、LLM-AggreFact</p><p>迁移与边界｜可用于辅助检查；目标领域要用人工标签校准，不把其输出当金标</p><pre>MiniCheck: Efficient Fact-Checking of LLMs on Grounding Documents，EMNLP 2024
+一次来源：https://aclanthology.org/2024.emnlp-main.499/
+核对深度：A,C
+阅读范围：见20261011阅读矩阵
+做了什么：小型 evidence-claim 核验器、合成训练、LLM-AggreFact
+迁移与边界：可用于辅助检查；目标领域要用人工标签校准，不把其输出当金标
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[N15] Towards Long Context Hallucination Detection <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.findings-naacl.436/">原文 ↗</a></summary><div><p>做了什么｜在BookSum上合成无依据/矛盾错误；分块编码及聚合使小编码器处理长上下文核验。</p><p>迁移与边界｜核验器也需要长文能力；生成器与核验器分开评估，书籍合成错误需做金融域校准。</p><pre>Towards Long Context Hallucination Detection，Findings NAACL 2025
+一次来源：https://aclanthology.org/2025.findings-naacl.436/
+核对深度：M
+阅读范围：论文§1–4、数据统计
+做了什么：在BookSum上合成无依据/矛盾错误；分块编码及聚合使小编码器处理长上下文核验。
+迁移与边界：核验器也需要长文能力；生成器与核验器分开评估，书籍合成错误需做金融域校准。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N27] PHANTOM: A Benchmark for Hallucination Detection in Financial Long-Context QA <a target="_blank" rel="noopener" href="https://papers.nips.cc/paper_files/paper/2025/hash/b8badadce3f482ba340ff870f4894441-Abstract-Datasets_and_Benchmarks_Track.html">原文 ↗</a></summary><div><p>做了什么｜金融披露长上下文幻觉检测，控制长度和证据位置，并训练小模型检测器。</p><p>迁移与边界｜金融直接证据但目标是检测；连续文档加长不等于独立item数增加，不提供重排NDCG金标。</p><pre>PHANTOM: A Benchmark for Hallucination Detection in Financial Long-Context QA，NeurIPS 2025 Datasets and Benchmarks
+一次来源：https://papers.nips.cc/paper_files/paper/2025/hash/b8badadce3f482ba340ff870f4894441-Abstract-Datasets_and_Benchmarks_Track.html
+核对深度：M
+阅读范围：此前§3、§5数据与检测器训练
+做了什么：金融披露长上下文幻觉检测，控制长度和证据位置，并训练小模型检测器。
+迁移与边界：金融直接证据但目标是检测；连续文档加长不等于独立item数增加，不提供重排NDCG金标。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N11] RHIO: Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization <a target="_blank" rel="noopener" href="https://arxiv.org/html/2501.13573v1">原文 ↗</a></summary><div><p>做了什么｜屏蔽检索头生成模型内生错误；正负控制符联合监督，配合对比解码。</p><p>迁移与边界｜提供真实分布负例构造路线；不是DPO或GRPO，需访问内部头且额外解码有成本。</p><pre>RHIO: Improving Contextual Faithfulness of Large Language Models via Retrieval Heads-Induced Optimization，2025作者版本2501.13573v1
+一次来源：https://arxiv.org/html/2501.13573v1
+核对深度：M
+阅读范围：§2–6
+做了什么：屏蔽检索头生成模型内生错误；正负控制符联合监督，配合对比解码。
+迁移与边界：提供真实分布负例构造路线；不是DPO或GRPO，需访问内部头且额外解码有成本。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N02] Retrieval Head Mechanistically Explains Long-Context Factuality <a target="_blank" rel="noopener" href="https://arxiv.org/html/2404.15574v1">原文 ↗</a></summary><div><p>做了什么｜识别复制上下文信息的注意力头；屏蔽检索头比随机屏蔽更损害提取任务。</p><p>迁移与边界｜可用开源小模型做辅助干预；注意力图相关性本身不足以证明因果，闭源API不能直接复现。</p><pre>Retrieval Head Mechanistically Explains Long-Context Factuality，ICLR 2025；所读作者版本2404.15574v1
+一次来源：https://arxiv.org/html/2404.15574v1
+核对深度：M
+阅读范围：§2–4
+做了什么：识别复制上下文信息的注意力头；屏蔽检索头比随机屏蔽更损害提取任务。
+迁移与边界：可用开源小模型做辅助干预；注意力图相关性本身不足以证明因果，闭源API不能直接复现。
+来源批次：20261012整合补充</pre></div></details><details><summary>[N34] Context-faithful Prompting for Large Language Models <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2303.11315">原文 ↗</a></summary><div><p>做了什么｜意见式提示、反事实示例改善上下文忠实性，涉及知识冲突和拒答。</p><p>迁移与边界｜作为低成本提示基线；不能预设必须后训练，需检查金融真实错误是否仍存在。</p><pre>Context-faithful Prompting for Large Language Models，Findings EMNLP 2023
+一次来源：https://arxiv.org/abs/2303.11315
+核对深度：A
+阅读范围：本轮摘要与版本信息
+做了什么：意见式提示、反事实示例改善上下文忠实性，涉及知识冲突和拒答。
+迁移与边界：作为低成本提示基线；不能预设必须后训练，需检查金融真实错误是否仍存在。
+来源批次：20261012整合补充</pre></div></details></div></details></div></details></section><section id="s4"><details open><summary>04 创新边界与实验落点</summary><div><details open><summary>A 归因贡献</summary><div><p>从“长度”拆成N、L、主体数、相似干扰、位置与联合任务</p><p>三种条件：固定N变L；近固定L变N；固定证据增困难负例</p><p>同模板金融/非金融只是域敏感性诊断，不等于证明金融独有机制</p><p>近邻：N01/N03/N29/N30/N31、P29；行为干预优先，检索头可选</p></div></details><details open><summary>B 评测贡献</summary><div><p>为公开FinRank/FinQA构造出处可追溯的item+chunk长池</p><p>原子声明→绑定item→局部证据→支持/矛盾/不足→串绑来源</p><p>质量：NDCG/Evidence Recall；可靠：支持率/错绑率/覆盖/无错列表率</p><p>近邻：N12/N13/N23/N27、P52；先解决扩容标签与来源质量</p></div></details><details open><summary>C 方法候选：绑定感知偏好训练</summary><div><p>起点：短窗小模型，明确主体/期间/指标/单位/出处</p><p>SFT格式与证据监督→近等长自然错误/受控错绑偏好→DPO</p><p>正确排名而理由错的偏好对，尽量保持排名不变以隔离理由训练</p><p>近邻：FRONT/SelfCite/LongReward/FinCARDS；不是新发明DPO或引用奖励</p><p>GRPO作为可选，不以单卡24GB承诺250项单次长上下文训练</p></div></details><details open><summary>D 必须击败的简单方案</summary><div><p>元数据过滤＋出处规则；只用chunk；只用item</p><p>同一排名下局部证据解释；程序回填可直接判定的理由</p><p>普通SFT、普通困难负例SFT、通用引用DPO</p><p>同输入信息、模型、训练量、输出覆盖和总预算；简单方案解决即收窄贡献</p></div></details><details open><summary>E 实验优先次序</summary><div><p>E0 数据审计与去泄漏；扩容新候选unknown需补判</p><p>E1 20–30题试验确认现象；这不是正式显著性证据</p><p>E2 配对归因与完整错误标注；E3 SFT/DPO及消融</p><p>E4 公司/报告/期间隔离测试及候选规模外推</p><p>按query或报告bootstrap；同题多个排列不能当独立样本</p></div></details><details open><summary>F 尚未证明与失败出口</summary><div><p>没有证据证明所有金融长池一定比其他域更容易幻觉</p><p>没有完整扩容qrels、模型效果或训练结果</p><p>若只格式错，做约束生成；若全靠元数据解决，不包装成RL创新</p><p>若仅能做短窗，应报告系统级长池，而非模型原生长上下文改进</p></div></details></div></details></section><section id="s5"><details open><summary>05 外围文献与检索边界</summary><div><details open><summary>保留但非核心必读</summary><div><details><summary>[P16] Self-Calibrated Listwise Reranking with Large Language Models / SCaLR <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2411.04602">原文 ↗</a></summary><div><p>做了什么｜分候选编码、点式/列表视角校准；N 可达 1000</p><p>迁移与边界｜一般可扩展全局比较不是空白；这里未独立确认最终会议版本</p><pre>Self-Calibrated Listwise Reranking with Large Language Models / SCaLR，2024 起作者版本
+一次来源：https://arxiv.org/abs/2411.04602
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：分候选编码、点式/列表视角校准；N 可达 1000
+迁移与边界：一般可扩展全局比较不是空白；这里未独立确认最终会议版本
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P21] Active Learners as Efficient PRP Rerankers <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2605.14236">原文 ↗</a></summary><div><p>做了什么｜主动挑选偏好比较，噪声、集合/排序恢复</p><p>迁移与边界｜“只比较不确定对”已有；必须同预算比较</p><pre>Active Learners as Efficient PRP Rerankers，2026 预印本
+一次来源：https://arxiv.org/abs/2605.14236
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：主动挑选偏好比较，噪声、集合/排序恢复
+迁移与边界：“只比较不确定对”已有；必须同预算比较
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P22] Generate to Accelerate: Improved Reranking via LLM-Generated Pivot Documents / DynamicRLT <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2604.09492">原文 ↗</a></summary><div><p>做了什么｜生成 pivot、动态分区/滑动策略</p><p>迁移与边界｜合成参考不是真候选；需固定论文/代码版本</p><pre>Generate to Accelerate: Improved Reranking via LLM-Generated Pivot Documents / DynamicRLT，2026 预印本
+一次来源：https://arxiv.org/abs/2604.09492
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：生成 pivot、动态分区/滑动策略
+迁移与边界：合成参考不是真候选；需固定论文/代码版本
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P23] BoundaryMORPH: Budgeted Reranking via Active Set Selection for Diffuse Retrieval <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2609.27213">原文 ↗</a></summary><div><p>做了什么｜GP 先验与边界不确定性分配评估预算</p><p>迁移与边界｜极近的主动预算工作；潜在相关性≠同次判断观测误差依赖</p><pre>BoundaryMORPH: Budgeted Reranking via Active Set Selection for Diffuse Retrieval，2026-09 预印本
+一次来源：https://arxiv.org/abs/2609.27213
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：GP 先验与边界不确定性分配评估预算
+迁移与边界：极近的主动预算工作；潜在相关性≠同次判断观测误差依赖
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P24] Compress-then-Rank: Faster and Better Listwise Reranking with Large Language Models via Ranking-Aware Passage Compression <a target="_blank" rel="noopener" href="https://ojs.aaai.org/index.php/AAAI/article/view/40811">原文 ↗</a></summary><div><p>做了什么｜C2R：每段多向量压缩、共享 Mistral-7B、联合 SFT；典型 8 向量/段；评测 Top-100</p><p>迁移与边界｜压缩器训练约千万预训练段落；并非“提示词摘要＋排序”；向量无现成可展示引文</p><pre>Compress-then-Rank: Faster and Better Listwise Reranking with Large Language Models via Ranking-Aware Passage Compression，AAAI 2026
+一次来源：https://ojs.aaai.org/index.php/AAAI/article/view/40811
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：C2R：每段多向量压缩、共享 Mistral-7B、联合 SFT；典型 8 向量/段；评测 Top-100
+迁移与边界：压缩器训练约千万预训练段落；并非“提示词摘要＋排序”；向量无现成可展示引文
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P25] Leveraging Passage Embeddings for Efficient Listwise Reranking with Large Language Models / PE-Rank <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2406.14848">原文 ↗</a></summary><div><p>做了什么｜逐段 embedding 输入、对齐/排序训练、动态受限解码</p><p>迁移与边界｜合法候选选择与压缩已有；需本地模型改造</p><pre>Leveraging Passage Embeddings for Efficient Listwise Reranking with Large Language Models / PE-Rank，2024 起作者版本
+一次来源：https://arxiv.org/abs/2406.14848
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：逐段 embedding 输入、对齐/排序训练、动态受限解码
+迁移与边界：合法候选选择与压缩已有；需本地模型改造
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P26] ResRank: Unifying Retrieval and Listwise Reranking via End-to-End Joint Training with Residual Passage Compression <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2604.22180">原文 ↗</a></summary><div><p>做了什么｜编码成单向量，残差结合原表征与列表上下文，端到端联合训练</p><p>迁移与边界｜信息保留与跨候选交互已有设计；不解决展示理由出处</p><pre>ResRank: Unifying Retrieval and Listwise Reranking via End-to-End Joint Training with Residual Passage Compression，2026 预印本
+一次来源：https://arxiv.org/abs/2604.22180
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：编码成单向量，残差结合原表征与列表上下文，端到端联合训练
+迁移与边界：信息保留与跨候选交互已有设计；不解决展示理由出处
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P28] Query-focused and Memory-aware Reranker for Long Context Processing / QRRanker <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2602.12192">原文 ↗</a></summary><div><p>做了什么｜query-focused heads 选取与对比排序训练、记忆去噪；50 文档训练</p><p>迁移与边界｜注意力打分可避开生成排列；关注 QA/记忆，不证明注意力是内部原因</p><pre>Query-focused and Memory-aware Reranker for Long Context Processing / QRRanker，2026 预印本
+一次来源：https://arxiv.org/abs/2602.12192
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：query-focused heads 选取与对比排序训练、记忆去噪；50 文档训练
+迁移与边界：注意力打分可避开生成排列；关注 QA/记忆，不证明注意力是内部原因
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P39] ReasoningRec: Bridging Personalized Recommendations and Human-Interpretable Explanations through LLM Reasoning <a target="_blank" rel="noopener" href="https://aclanthology.org/2025.findings-naacl.454/">原文 ↗</a></summary><div><p>做了什么｜用户偏好/厌恶＋item 描述，教师解释蒸馏；MovieLens/Amazon；AUC、BERTScore</p><p>迁移与边界｜主要是用户-item 喜好预测，不能描述为 250 产品 listwise 重排证据</p><pre>ReasoningRec: Bridging Personalized Recommendations and Human-Interpretable Explanations through LLM Reasoning，Findings NAACL 2025
+一次来源：https://aclanthology.org/2025.findings-naacl.454/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：用户偏好/厌恶＋item 描述，教师解释蒸馏；MovieLens/Amazon；AUC、BERTScore
+迁移与边界：主要是用户-item 喜好预测，不能描述为 250 产品 listwise 重排证据
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P40] RecExplainer: Aligning Large Language Models for Explaining Recommendation Models <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2311.10947">原文 ↗</a></summary><div><p>做了什么｜行为、意图、混合对齐 LLM 与推荐模型；决策模仿及解释评价</p><p>迁移与边界｜解释外部 ranker 与同一 LLM 自解释是两种目标；好评不是内部忠实性证明</p><pre>RecExplainer: Aligning Large Language Models for Explaining Recommendation Models，2023 起作者版本
+一次来源：https://arxiv.org/abs/2311.10947
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：行为、意图、混合对齐 LLM 与推荐模型；决策模仿及解释评价
+迁移与边界：解释外部 ranker 与同一 LLM 自解释是两种目标；好评不是内部忠实性证明
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P41] Beyond Ranking Accuracy: Evaluating LLM-Cited Feature Rationales for Next Basket Repurchase Recommendation <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2608.30333">原文 ↗</a></summary><div><p>做了什么｜28 历史特征卡片→得分＋3 个特征名＋理由；跨模型特征遮蔽；Instacart/DC</p><p>迁移与边界｜排序效果与特征证据效用分别评测；不以 SHAP 当绝对金标；不研究长文本池</p><pre>Beyond Ranking Accuracy: Evaluating LLM-Cited Feature Rationales for Next Basket Repurchase Recommendation，2026-08 预印本
+一次来源：https://arxiv.org/abs/2608.30333
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：28 历史特征卡片→得分＋3 个特征名＋理由；跨模型特征遮蔽；Instacart/DC
+迁移与边界：排序效果与特征证据效用分别评测；不以 SHAP 当绝对金标；不研究长文本池
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P42] CFE2 / Counterfactual Editing for Search Result Explanation <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2301.10389">原文 ↗</a></summary><div><p>做了什么｜编辑 query 使原次优文档超过原最优；FlipRate、接近度、流畅度、人工评价</p><p>迁移与边界｜反事实解释排名已有；主要编辑 query，非长池跨 chunk 理由纠错</p><pre>CFE2 / Counterfactual Editing for Search Result Explanation，2023 起作者版本、ICTIR 2024
+一次来源：https://arxiv.org/abs/2301.10389
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：编辑 query 使原次优文档超过原最优；FlipRate、接近度、流畅度、人工评价
+迁移与边界：反事实解释排名已有；主要编辑 query，非长池跨 chunk 理由纠错
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P43] CREDENCE: Counterfactual Explanations for Document Ranking <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2302.04983">原文 ↗</a></summary><div><p>做了什么｜交互式修改 query、目标/其他文档解释排名</p><p>迁移与边界｜不能宣称首次对文档排序做反事实干预</p><pre>CREDENCE: Counterfactual Explanations for Document Ranking，2023 作者版本
+一次来源：https://arxiv.org/abs/2302.04983
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：交互式修改 query、目标/其他文档解释排名
+迁移与边界：不能宣称首次对文档排序做反事实干预
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P44] Pair Difficulty Matters: Rethinking Pairwise LLM-as-a-Judge Evaluation and Consistency <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2609.37577">原文 ↗</a></summary><div><p>做了什么｜BT 强度差视角，按 gold-gap 分桶一致性与人类排名</p><p>迁移与边界｜近难对不稳定不一定有害；理论依赖 BT，非长池结论或普适因果定律</p><pre>Pair Difficulty Matters: Rethinking Pairwise LLM-as-a-Judge Evaluation and Consistency，2026-09 预印本
+一次来源：https://arxiv.org/abs/2609.37577
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：BT 强度差视角，按 gold-gap 分桶一致性与人类排名
+迁移与边界：近难对不稳定不一定有害；理论依赖 BT，非长池结论或普适因果定律
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P59] Chunks as Arms: Multi-Armed Bandit-Guided Sampling for Long-Context LLM Preference Optimization <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.acl-long.161/">原文 ↗</a></summary><div><p>做了什么｜LongMab：chunk bandit/UCB rollout 构造 DPO 偏好</p><p>迁移与边界｜自适应证据采样可迁移；训练样本选择不等于推理预算调度</p><pre>Chunks as Arms: Multi-Armed Bandit-Guided Sampling for Long-Context LLM Preference Optimization，ACL 2026
+一次来源：https://aclanthology.org/2026.acl-long.161/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：LongMab：chunk bandit/UCB rollout 构造 DPO 偏好
+迁移与边界：自适应证据采样可迁移；训练样本选择不等于推理预算调度
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P66] Certified Error Control of Candidate Set Pruning for Two-Stage Relevance Ranking <a target="_blank" rel="noopener" href="https://aclanthology.org/2022.emnlp-main.23/">原文 ↗</a></summary><div><p>做了什么｜校准集、风险置信界、剪枝阈值，处理排名损失不可达约束</p><p>迁移与边界｜已有风险控制剪枝；保证是分布/期望风险与校准置信，不是每 query、每理由无错</p><pre>Certified Error Control of Candidate Set Pruning for Two-Stage Relevance Ranking，EMNLP 2022
+一次来源：https://aclanthology.org/2022.emnlp-main.23/
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：校准集、风险置信界、剪枝阈值，处理排名损失不可达约束
+迁移与边界：已有风险控制剪枝；保证是分布/期望风险与校准置信，不是每 query、每理由无错
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P67] ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.acl-long.1005/">原文 ↗</a></summary><div><p>做了什么｜强推理数据与排序训练、公开作者代码/模型入口</p><p>迁移与边界｜理由能力的补充强基线；未核验全部训练章节，不把 CoT 当证据金标</p><pre>ReasonRank: Empowering Passage Ranking with Strong Reasoning Ability，ACL 2026
+一次来源：https://aclanthology.org/2026.acl-long.1005/
+核对深度：A,C
+阅读范围：见20261011阅读矩阵
+做了什么：强推理数据与排序训练、公开作者代码/模型入口
+迁移与边界：理由能力的补充强基线；未核验全部训练章节，不把 CoT 当证据金标
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P68] Don&#x27;t Be Misled by Style: A Style-Adaptive Reranker for Capturing Effective Knowledge in RAG / SARK <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.acl-long.302/">原文 ↗</a></summary><div><p>做了什么｜风格增强、支持性与列表偏好联合训练</p><p>迁移与边界｜内容保持改写的稳健训练也已有，不能把风格增强本身说成空白</p><pre>Don&#x27;t Be Misled by Style: A Style-Adaptive Reranker for Capturing Effective Knowledge in RAG / SARK，ACL 2026
+一次来源：https://aclanthology.org/2026.acl-long.302/
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：风格增强、支持性与列表偏好联合训练
+迁移与边界：内容保持改写的稳健训练也已有，不能把风格增强本身说成空白
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P70] A Survey of Reasoning-Intensive Retrieval: Progress and Challenges <a target="_blank" rel="noopener" href="https://aclanthology.org/2026.acl-long.1949/">原文 ↗</a></summary><div><p>做了什么｜推理密集检索综述</p><p>迁移与边界｜用于线索追踪，不能把其所有引用计成已读论文</p><pre>A Survey of Reasoning-Intensive Retrieval: Progress and Challenges，ACL 2026
+一次来源：https://aclanthology.org/2026.acl-long.1949/
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：推理密集检索综述
+迁移与边界：用于线索追踪，不能把其所有引用计成已读论文
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P72] BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2104.08663">原文 ↗</a></summary><div><p>做了什么｜多领域检索；FiQA/NFCorpus/SciFact 发布包已解析</p><p>迁移与边界｜相关性 qrels 无理由金标；已下载不等于所有测试负例都有人工判定</p><pre>BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models，2021
+一次来源：https://arxiv.org/abs/2104.08663
+核对深度：A,C,D
+阅读范围：见20261011阅读矩阵
+做了什么：多领域检索；FiQA/NFCorpus/SciFact 发布包已解析
+迁移与边界：相关性 qrels 无理由金标；已下载不等于所有测试负例都有人工判定
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P73] BRIGHT: A Realistic and Challenging Benchmark for Reasoning-Intensive Retrieval <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2407.12883">原文 ↗</a></summary><div><p>做了什么｜需要推理的 query-document 相关性</p><p>迁移与边界｜有助判断 CoT 是否必要；不同检索器/改写影响候选质量</p><pre>BRIGHT: A Realistic and Challenging Benchmark for Reasoning-Intensive Retrieval，2024 起作者论文
+一次来源：https://arxiv.org/abs/2407.12883
+核对深度：A,C
+阅读范围：见20261011阅读矩阵
+做了什么：需要推理的 query-document 相关性
+迁移与边界：有助判断 CoT 是否必要；不同检索器/改写影响候选质量
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P74] T2Ranking: A large-scale Chinese Benchmark for Passage Ranking <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2304.03679">原文 ↗</a></summary><div><p>做了什么｜中文 30 万以上 queries、200 万以上 passages、四级相关性</p><p>迁移与边界｜贴中文业务；只核验资源入口/结构，尚未下载解析；需构建检索池，无理由标签</p><pre>T2Ranking: A large-scale Chinese Benchmark for Passage Ranking，2023
+一次来源：https://arxiv.org/abs/2304.03679
+核对深度：A,C
+阅读范围：见20261011阅读矩阵
+做了什么：中文 30 万以上 queries、200 万以上 passages、四级相关性
+迁移与边界：贴中文业务；只核验资源入口/结构，尚未下载解析；需构建检索池，无理由标签
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P75] FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2508.14052">原文 ↗</a></summary><div><p>做了什么｜文档类型排序、单文档 chunk 排序，0/1/2 相关性；长金融证据</p><p>迁移与边界｜文中规模口径有差异；本次未确认完整 chunk/qrels 下载包，不能承诺开箱复现</p><pre>FinAgentBench: A Benchmark Dataset for Agentic Retrieval in Financial Question Answering，2025
+一次来源：https://arxiv.org/abs/2508.14052
+核对深度：M
+阅读范围：见20261011阅读矩阵
+做了什么：文档类型排序、单文档 chunk 排序，0/1/2 相关性；长金融证据
+迁移与边界：文中规模口径有差异；本次未确认完整 chunk/qrels 下载包，不能承诺开箱复现
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P76] Attention in Large Language Models Yields Efficient Zero-Shot Re-Rankers / ICR <a target="_blank" rel="noopener" href="https://proceedings.iclr.cc/paper_files/paper/2025/file/b5b1890a7c1a79fe9b32b0f442347089-Paper-Conference.pdf">原文 ↗</a></summary><div><p>做了什么｜attention 聚合，N/A 查询校准，两次 forward 不生成排名</p><p>迁移与边界｜无生成评分代表基线；O(1) forward 次数不是 O(1) FLOPs/显存</p><pre>Attention in Large Language Models Yields Efficient Zero-Shot Re-Rankers / ICR，ICLR 2025
+一次来源：https://proceedings.iclr.cc/paper_files/paper/2025/file/b5b1890a7c1a79fe9b32b0f442347089-Paper-Conference.pdf
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：attention 聚合，N/A 查询校准，两次 forward 不生成排名
+迁移与边界：无生成评分代表基线；O(1) forward 次数不是 O(1) FLOPs/显存
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P77] PRISM: Prompt-Refined In-Context System Modeling for Financial Retrieval <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2511.14130">原文 ↗</a></summary><div><p>做了什么｜基于文档类型和任务的提示推理金融检索</p><p>迁移与边界｜补充 FinAgentBench 相关工作，尚未核验全部实验</p><pre>PRISM: Prompt-Refined In-Context System Modeling for Financial Retrieval，2025 起作者论文
+一次来源：https://arxiv.org/abs/2511.14130
+核对深度：A
+阅读范围：见20261011阅读矩阵
+做了什么：基于文档类型和任务的提示推理金融检索
+迁移与边界：补充 FinAgentBench 相关工作，尚未核验全部实验
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details><details><summary>[P80] Rethinking Reasoning in Document Ranking: Why Chain-of-Thought Falls Short <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2510.08985">原文 ↗</a></summary><div><p>做了什么｜控制 direct/reason 与 point/list；ECE、TPR/TNR、跨域与 GRPO 对照</p><p>迁移与边界｜**必要反例**：部分设置 CoT 过置信、负例假阳性更多；不能推成所有 CoT 无效</p><pre>Rethinking Reasoning in Document Ranking: Why Chain-of-Thought Falls Short，2025 起预印本
+一次来源：https://arxiv.org/abs/2510.08985
+核对深度：M,C
+阅读范围：见20261011阅读矩阵
+做了什么：控制 direct/reason 与 point/list；ECE、TPR/TNR、跨域与 GRPO 对照
+迁移与边界：**必要反例**：部分设置 CoT 过置信、负例假阳性更多；不能推成所有 CoT 无效
+来源批次：20261011沿用，未在本轮全部重读</pre></div></details></div></details><details open><summary>检索方式</summary><div><p>长上下文/实体绑定/相似干扰；金融证据/财报/重排；引用/幻觉评测；SFT/DPO/SimPO/PPO/GRPO</p><p>前向主题搜索 + 近邻论文参考文献追踪；优先作者论文、ACL、PMLR、NeurIPS、OpenReview及作者仓库</p><p>工作级去重：预印本与会议版不重复计；本批次是范围综述，不声称穷尽全部文献</p></div></details><details open><summary>重点复现阅读顺序</summary><div><p>FinCARDS/FinRank → LongCite/FRONT → SelfCite/细粒度引用PPO → 绑定机制/长度控制 → RAGChecker/PHANTOM</p></div></details></div></details></section><script>function search(q){document.querySelectorAll('summary').forEach(s=>{let ok=q&&s.textContent.toLowerCase().includes(q.toLowerCase());s.classList.toggle('hit',!!ok);if(ok){let p=s.parentElement;while(p){if(p.tagName==='DETAILS')p.open=true;p=p.parentElement}}})}</script></main></html>
